@@ -1,5 +1,3 @@
-
-
 <!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <!-- Compiled and minified JavaScript -->
@@ -7,7 +5,6 @@
 <nav>
     <div class="nav-wrapper">
         <div class="#1e88e5 blue darken-1 right">
-            <a class="waves-effect waves-light btn">Inscrire utilisateur</a>
             <a class="waves-effect waves-light btn right">Déconnexion</a>
         </div>
     </div>
