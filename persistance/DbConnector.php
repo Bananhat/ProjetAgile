@@ -8,7 +8,8 @@ class DbConnector
      */
     public function getConnection()
     {
-        $dsn = "mysql:host=" . DB_USER. ";dbname=" . DB_NAME . ';charset=utf8';
+        $dsn = "mysql:host=" . DB_HOST. ";dbname=" . DB_NAME . ';charset=utf8';
+        echo $dsn;
         try {
             $pdo = new \PDO($dsn, DB_USER, DB_PASSWORD);
         } catch (\PDOException $exception) {

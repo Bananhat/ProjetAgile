@@ -13,7 +13,7 @@ function authenticate_user_by_username($username, $password){
 
     if(empty($username) || empty($password)){
         return false;
-    }
+}
 
     $user = new User();
 
@@ -54,8 +54,6 @@ function insert_user($username, $password, $role){
 
     return false;
 }
-
-
 
 /**
  * Permet de récupérer l'instance de l'utilisateur actuellement connecté
