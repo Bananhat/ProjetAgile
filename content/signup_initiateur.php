@@ -2,6 +2,7 @@
 include('../includes/utils_page.php');
 include('../persistance/DbUserWriter.php');
 include('../persistance/DbConnector.php');
+include('../settings.php');
 get_header();
 
 
@@ -32,9 +33,9 @@ get_header();
             $confirmPassword = $_POST['confirm'];
 
     if($confirmPassword == $newUserPassword) {
-
         $userWriter = new DbUserWriter(new DbConnector());
         $userWriter->writeNewUser($newUserFirstName, $newUserName, $newUserEmail, $newUserPassword, 'initiateur');
+        echo "okay";
     }
     else {
         echo 'Les mots de passe doivent correspondre!';
