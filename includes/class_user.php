@@ -42,7 +42,7 @@ class User
         }
 
 
-        $prep=$db->prepare('SELECT * FROM user WHERE id = :id');
+        $prep=$db->prepare('SELECT * FROM USER WHERE id = :id');
 
         $prep->bindParam(':id', $user_id);
 
