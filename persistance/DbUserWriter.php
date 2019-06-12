@@ -1,5 +1,5 @@
 <?php declare(strict_types=1);
-
+/*
 require_once ("../settings.php");
 require_once ("DbConnector.php");
 
@@ -7,6 +7,7 @@ $dbConnector = new DbConnector();
 $dbUserWriter = new DbUserWriter($dbConnector);
 
 var_dump($dbUserWriter->writeNewUser("Maik", "Neubert", "neubert_maik@test.de", "123456", "initiator"));
+*/
 
 class DbUserWriter
 {
