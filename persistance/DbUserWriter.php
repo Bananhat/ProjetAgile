@@ -33,7 +33,7 @@ class DbUserWriter
             SODIUM_CRYPTO_PWHASH_MEMLIMIT_SENSITIVE
         );
 
-        $statement = $pdo->prepare('INSERT INTO `USER`(`FirstName`, `Name`, `E-mail`, `Password`, `Role`)
+        $statement = $pdo->prepare('INSERT INTO `USER`(`FirstName`, `Name`, `email`, `Password`, `Role`)
             VALUES (:firstname, :name, :email, :password, :role)');
 
         $statement->bindParam(':firstname', $firstName);

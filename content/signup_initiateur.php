@@ -30,11 +30,20 @@ get_header();
 
     if($confirmPassword == $password) {
         $user_id = insert_user($username, $password, $role);
-
         if(!$user_id)
         {
             echo '<div class="notification is-danger">Erreur</div>';
         }
+
+        $newUserFirstName = $_POST['newUserfirstName'];
+        $newUserName = $_POST['newUserName'];
+        $newUserEmail = $_POST['newUserEmail'];
+        $newUserPassword= $_POST['newUserPassword'];
+        $newUserRole = $_POST['newUserRole'];
+
+        $userWriter = new DbUserWriter(new DbConnector());
+        $userWriter->writeNewUser($newUserFirstName, $newUserName, $newUserEmail, $newUserPassword, $newUserRole);
+
     }
     else {
         echo '<div class="notification is-danger">Les mots de passe doivent correspondre!</div>';
