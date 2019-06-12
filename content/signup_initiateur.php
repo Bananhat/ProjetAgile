@@ -3,6 +3,7 @@ include('../includes/utils_page.php');
 include('../persistance/DbUserWriter.php');
 include('../persistance/DbConnector.php');
 include('../settings.php');
+
 get_header();
 
 

@@ -14,7 +14,7 @@
             <?php
             if($user) {
                 if(is_admin($user->get('id'))){
-                    echo '<a class="wave-effect waves-light btn">Modifier les rôles</a>';
+                    echo ' <a class="wave-effect waves-light btn" href="changerLesRoles.php">Modifier les rôles</a>';
                 }
             }
             ?>
