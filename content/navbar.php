@@ -12,7 +12,7 @@ include('changerLesRoles.php');?>
     <div class="nav-wrapper">
         <div class="#1e88e5 blue darken-1">
             <a class="waves-effect waves-light btn">Déconnexion</a>
-            <a class="wave-effect waves-light btn">Modifier les rôles</a>
+            <a class="wave-effect waves-light btn ">Modifier les rôles</a>
             <?php $user = get_logged_user();
 				  if(is_admin($user))
 				  {
