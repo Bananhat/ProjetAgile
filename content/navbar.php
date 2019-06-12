@@ -8,17 +8,24 @@
 <nav>
     <div class="nav-wrapper">
         <div class="#1e88e5 blue darken-1">
-
-            <a class="waves-effect waves-light btn">Inscrire utilisateur</a>
-            <a class="waves-effect waves-light btn right" href="signin.php?disconnect">Déconnexion</a>
-            <a class="wave-effect waves-light btn">Modifier les rôles</a>
             <?php
-            $user = get_logged_user();
+            $user = get_logged_user();?>
+            <a class="waves-effect waves-light btn right" href="signin.php?disconnect">Déconnexion</a>
+            <?php
+            if($user) {
+                if(is_admin($user->get('id'))){
+                    echo '<a class="wave-effect waves-light btn">Modifier les rôles</a>';
+                }
+            }
+            ?>
+
+<?php
             if($user) {
                 if (is_admin($user->get('id'))) {
                     echo '<a class="waves-effect waves-light btn">Inscrire utilisateur</a>';
                 }
-            }?>
+            }
+            ?>
         </div>
     </div>
 </nav>

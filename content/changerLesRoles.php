@@ -1,11 +1,4 @@
-
 <?php
-    function getall()
-    {
-        global $db;
-        $req = "select * from user where role like('%initiateur%')";
-        foreach ($req as $user)
-        {
-            echo '$user->get()';
-        }?>
-    }
+include('../includes/utils_page.php');
+get_header();
+
