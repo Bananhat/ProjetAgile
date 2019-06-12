@@ -25,10 +25,9 @@ if(isset($_POST['submit'])){
         }
     }
     else{
-
-        
         $username = $_POST['email'];
         $password = $_POST['password'];
+
 
         $auth = authenticate_user_by_username($username, $password); //modele
 
@@ -43,7 +42,7 @@ if(isset($_POST['submit'])){
 ?>
 
 
-	<form action="signin.php">
+	<form method="POST" action="signin.php">
   		<div class="formulaire" style="margin-top: 10%; margin-left: 30%; width: 25%;">
     		<label for="email"><b>Email</b></label>
     		<input type="text" placeholder="Email" name="email" required>
@@ -51,8 +50,8 @@ if(isset($_POST['submit'])){
     		<label for="mdp"><b>Mot de passe</b></label>
     		<input type="password" placeholder="Mot de passe" name="password" required>
 
-    		
-  			<button class="btn waves-effect waves-light" type="submit" name="action">Se connecter<i class="material-icons right">send</i>
+            <input type="submit" name="submit" id="submit" value="Créer le comtpe" class="button is-block is-warning has-text-black is-fullwidth has-text-weight-medium" />
+  			<button class="btn waves-effect waves-light" type="submit" name="submit">Se connecter<i class="material-icons right">send</i>
   			</button>
 
   		</div>
