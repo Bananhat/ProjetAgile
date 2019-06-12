@@ -5,9 +5,8 @@
 <!-- Compiled and minified JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
 
-<?php include('../includes/class_user.php');
-include('../includes/class_users.php');
-include('../includes/utils_user.php');?>
+<?php
+include('changerLesRoles.php');?>
 
 <nav>
     <div class="nav-wrapper">
