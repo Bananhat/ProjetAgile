@@ -37,7 +37,7 @@ function authenticate_user_by_username($username, $password){
 function insert_user($username, $password, $role){
     global $db;
 
-    $password = md5($password);
+        $password = md5($password);
 
     $req = "INSERT INTO users(username, password, role) VALUES(?, ?, ?)";
     $args = array($username, $password, $role);
