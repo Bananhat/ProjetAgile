@@ -1,40 +1,63 @@
-<!Doctype html>
-<html>
-	<head>
-		<meta charset="utf-8"/>
-		<title>Plongée</title>
-		
-		<!--Import Google Icon Font-->
-		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		
-		<!-- Compiled and minified CSS -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">  
+<?php
+include_once('../includes/utils_page.php');
+get_header();
 
-		<!--Let browser know website is optimized for mobile-->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	
-	</head>
-    <body>
+if(isset($_GET['disconnect'])){
+    if(get_logged_user()){
+        disconnect_current_user(); //a modif avec modele
+    }
+}
+
+if(isset($_POST['submit'])){
+    $non_remplis = array();
+
+    foreach($_POST as $key=>$value){
+        if(empty($value))
+            $non_remplis[] = $key;
+    }
+
+    if(count($non_remplis) > 0){
+        echo 'Veuillez remplir ces champs : <br />';
+
+        foreach($non_remplis as $non_rempli)
+        {
+            echo $non_rempli.'<br />';
+        }
+    }
+    else{
+        $username = $_POST['email'];
+        $password = $_POST['password'];
 
 
-	<form action="signin.php">
-		<center>
-  		<div class="formulaire">
+        $auth = authenticate_user_by_username($username, $password); //modele
+
+        if(!$auth){
+            echo '<div class="notification is-danger">Erreur</div>';
+        }
+        else{
+            header('Location: signup_initiateur.php');
+        }
+    }
+}
+?>
+
+
+	<form method="POST" action="signin.php">
+  		<div class="formulaire" style="margin-top: 10%; margin-left: 30%; width: 25%;">
     		<label for="email"><b>Email</b></label>
     		<input type="text" placeholder="Email" name="email" required>
 
     		<label for="mdp"><b>Mot de passe</b></label>
-    		<input type="password" placeholder="Mot de passe" name="mdp" required>
+    		<input type="password" placeholder="Mot de passe" name="password" required>
 
-    		
-  			<button class="btn waves-effect waves-light" type="submit" name="action">Se connecter<i class="material-icons right">send</i>
+            <input type="submit" name="submit" id="submit" value="Créer le comtpe" class="button is-block is-warning has-text-black is-fullwidth has-text-weight-medium" />
+  			<button class="btn waves-effect waves-light" type="submit" name="submit">Se connecter<i class="material-icons right">send</i>
   			</button>
 
   		</div>
-		<div class="mdp">
+		<div class="mdp" style="margin-left: 45%; width: 25%;">
     		<span class="mdp"><a href="#">Mot de passe oublié ?</a></span>
   		</div>
-  	</center>
 	</form> 
-</body>
-</html>
+
+<?php include('footer.php'); ?>

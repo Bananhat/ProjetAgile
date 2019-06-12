@@ -13,7 +13,7 @@
           </div>
           <div class="copyright">
             <div class="container">
-            © 2014 PoissonRouge
+            © 2014 TeamPoissonRouge
             </div>
           </div>
         </footer>

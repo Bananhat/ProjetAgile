@@ -17,7 +17,7 @@ function authenticate_user_by_username($username, $password){
 
     $user = new User();
 
-   if($user->init_by_username($username, md5($password))){
+   if($user->init_by_username($username, $password)){
        $_SESSION['user'] = $user;
        return true;
    }
@@ -89,16 +89,4 @@ function is_admin($user_id){
     $user = new User();
     $user->init_by_id($user_id);
     return $user->get('role') == 'admin';
-}
-
-function is_importateur($user_id){
-    $user = new User();
-    $user->init_by_id($user_id);
-    return $user->get('role') == 'importateur';
-}
-
-function is_exportateur($user_id){
-    $user = new User();
-    $user->init_by_id($user_id);
-    return $user->get('role') == 'exportateur';
 }

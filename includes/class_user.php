@@ -93,6 +93,7 @@ class User
 
 
 
+
     /**
      * Méthode permettant de récupérer la valeur d'un attribut de l'utilisateur
      * @param string $key Attribut souhaité
