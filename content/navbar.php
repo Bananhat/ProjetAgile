@@ -12,9 +12,10 @@
             <a class="waves-effect waves-light btn">Inscrire utilisateur</a>
             <a class="waves-effect waves-light btn right" href="signin.php?disconnect">Déconnexion</a>
             <a class="wave-effect waves-light btn">Modifier les rôles</a>
-            <?php $user = get_logged_user();
+            <?php
+            $user = get_logged_user();
             if($user) {
-                if (is_admin($user)) {
+                if (is_admin($user->get('id'))) {
                     echo '<a class="waves-effect waves-light btn">Inscrire utilisateur</a>';
                 }
             }?>

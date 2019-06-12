@@ -35,7 +35,7 @@ class User
     public function init_by_id($user_id){
         global $db;
 
-        $req = "SELECT * FROM users WHERE id = ?";
+        $req = "SELECT * FROM user WHERE id = ?";
         $db->prepare($req);
         $row = $db->execute_prepared_query(array($user_id))[0];
 
