@@ -2,8 +2,8 @@
 
 ini_set('display_errors','off');
 
-define('DB_USER', 'agile1');
-define('DB_PASSWORD', 'Lociimae1Auchi9U');
+define('DB_USER', 'root');
+define('DB_PASSWORD', '');
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'agile1_bd');
 
