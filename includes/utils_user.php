@@ -13,7 +13,7 @@ function authenticate_user_by_username($username, $password){
 
     if(empty($username) || empty($password)){
         return false;
-    }
+}
 
     $user = new User();
 
