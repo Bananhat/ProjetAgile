@@ -20,15 +20,14 @@ class DbUserWriter
 
     public function writeNewUser($firstName, $name, $email, $password, $role) : bool
     {
-        echo "test";
+
         try {
             $pdo = $this->dbConnector->getConnection();
         } catch (Exception $e) {
-            var_dump($e);
 
             return false;
         }
-        
+
         $statement = $pdo->prepare('INSERT INTO `user`(`firstName`, `name`, `email`, `password`, `role`)
             VALUES (:firstname, :name, :email, :password, :role)');
 
@@ -37,7 +36,7 @@ class DbUserWriter
         $statement->bindParam(':email', $email);
         $statement->bindParam(':password', $password);
         $statement->bindParam(':role', $role);
-        var_dump($statement);
+
         $suc = $statement->execute();
         return $suc;
     }

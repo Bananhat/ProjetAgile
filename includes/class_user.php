@@ -33,27 +33,33 @@ class User
      * @return bool Faux en cas d'erreur, vrai sinon
      */
     public function init_by_id($user_id){
-        global $db;
 
-        $req = "SELECT * FROM user WHERE id = ?";
-        $db->prepare($req);
-        $row = $db->execute_prepared_query(array($user_id))[0];
+        try {
+            $db = getInstanceOfDb();
+        } catch (Exception $e) {
 
-        if(!$row){
             return false;
         }
 
-        $this->ID = $row['id'];
 
+        $prep=$db->prepare('SELECT * FROM user WHERE id = :id');
 
-        unset($row['id']);
-        unset($row['password']);
+        $prep->bindParam(':id', $user_id);
 
-        foreach($row as $key=>$value){
+        $suc = $prep->execute();
+        $resultat = $prep->fetch();
+
+        $this->ID = $resultat['id'];
+
+        unset($resultat['id']);
+        unset($resultat['password']);
+
+        foreach($resultat as $key=>$value)
+        {
             $this->attr[$key] = $value;
         }
 
-        return true;
+        return $suc;
     }
 
 
@@ -68,26 +74,31 @@ class User
             return false;
         }
 
-        global $db;
-        $req = "SELECT * FROM user WHERE email = ? AND password = ?";
-        $db->prepare($req);
-        $row = $db->execute_prepared_query(array($username, $password))[0];
+        try {
+            $db = getInstanceOfDb();
+        } catch (Exception $e) {
 
-        if(!$row){
             return false;
         }
 
-        $this->ID = $row['id'];
+        $prep=$db->prepare('SELECT * FROM USER WHERE email = :email AND password = :pass');
+        $prep->bindParam(':email', $username);
+        $prep->bindParam(':pass', $password);
+        $suc = $prep->execute();
 
+        $resultat = $prep->fetch();
 
-        unset($row['id']);
-        unset($row['password']);
+        $this->ID = $resultat['id'];
 
-        foreach($row as $key=>$value){
+        unset($resultat['id']);
+        unset($resultat['password']);
+
+        foreach($resultat as $key=>$value)
+        {
             $this->attr[$key] = $value;
         }
 
-        return true;
+        return $suc;
     }
 
 
@@ -124,34 +135,6 @@ class User
 
         $this->attr[$key] = $value;
         return true;
-    }
-
-
-    /**
-     * Permet de sauvegarder l'utilisateur dans la base de données. Cette fonction doit être appelée notamment quand on change des attributs de l'utilisateur, avec la méthode <b>set</b> par exemple
-     * @return bool|mixed Faux en cas d'erreur ou si l'instance n'est pas initialisée, Vrai sinon.
-     */
-    public function save(){
-        if($this->ID == -1) return false;
-
-        $req = "UPDATE users SET ";
-
-        $args = array();
-
-        foreach($this->attr as $key=>$value){
-            $req .= "$key = ?, ";
-            $args[] = $value;
-        }
-
-        $req = substr($req, 0, strlen($req) - 2);
-
-        $req .= " WHERE id = ?";
-        $args[] = $this->ID;
-
-        global $db;
-        if(!$db->prepare($req)) return false;
-
-        return $db->execute_prepared_query($args);
     }
 
 }

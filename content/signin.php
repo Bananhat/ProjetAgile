@@ -35,7 +35,7 @@ if(isset($_SESSION['user'])){
             if (!$auth) {
                 echo 'Erreur';
             } else {
-                header('Location: signup_initiateur.php');
+                header('Location:  changerLesRoles.php');
             }
         }
 

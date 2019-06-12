@@ -16,6 +16,7 @@ function authenticate_user_by_username($username, $password){
 }
 
     $user = new User();
+
    if($user->init_by_username($username, $password)){
        $_SESSION['user'] = $user;
        return true;
@@ -24,36 +25,6 @@ function authenticate_user_by_username($username, $password){
    return false;
 
 }
-
-
-/**
- * permet d'inscrire un utilisateur dans la base
- * @param string $username Le username de l'utilisateur
- * @param string $password Mot de passe de l'utilisateur
- * @param string $role Rôle de l'utilisateur
- * @return bool|int Faux en cas d'erreur, l'ID de l'utilisateur créé si l'inscription s'est bien faite
- */
-function insert_user($username, $password, $role){
-    global $db;
-
-        $password = md5($password);
-
-    $req = "INSERT INTO users(username, password, role) VALUES(?, ?, ?)";
-    $args = array($username, $password, $role);
-
-    if(!$db->prepare($req)) return false;
-
-    if($db->execute_prepared_query($args)){
-        $req = "SELECT id FROM users WHERE username = ?";
-
-        if(!$db->prepare($req)) return false;
-
-        return $db->execute_prepared_query(array($username))[0]['id'];
-    }
-
-    return false;
-}
-
 /**
  * Permet de récupérer l'instance de l'utilisateur actuellement connecté
  * @return User|null L'instance de l'utilisateur s'il est connecté, null sinon
@@ -78,9 +49,6 @@ function disconnect_current_user(){
         unset($_SESSION['user']);
     }
 }
-
-
-
 
 function is_admin($user_id){
     $user = new User();

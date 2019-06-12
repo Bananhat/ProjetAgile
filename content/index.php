@@ -1,5 +1,6 @@
 
-<?php include_once('../includes/utils_page.php');
+<?php
+include_once('../includes/utils_page.php');
 get_header();
 ?>
     <h1 class="card-panel #90caf9 blue lighten-3 center">Bienvenue sur Plouf !</h1>
@@ -8,4 +9,4 @@ get_header();
         Sur ce site vous pouvez consulter et indiquer les compétences validées lors de vos séances de plongée.
       </p>
     </div>
-<?php require('footer.php') ?>
+<?php include_once('footer.php') ?>
