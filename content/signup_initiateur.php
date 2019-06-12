@@ -48,11 +48,20 @@ get_header();
 
 <form method="POST" action="signup.php">
     <div class="formulaire" style="margin-top: 10%; margin-left: 30%; width: 25%;">
+        <label for ="FirstName"><b>Prénom</b></label>
+        <input type ="text" placeholder="Prénom" name="FirstName" required>
+
+        <label for="Name"><b>Nom</b></label>
+        <input type="text" placeholder="Nom" name="Name" required>
+
         <label for="email"><b>Email</b></label>
         <input type="text" placeholder="Email" name="email" required>
 
         <label for="mdp"><b>Mot de passe</b></label>
         <input type="password" placeholder="Mot de passe" name="password" required>
+
+        <label for="confirm"><b>Confirmer le mot de passe</b></label>
+        <input type="password" placeholder="Confirmer le mot de passe" name="confirm" required>
 
         <input type="submit" name="submit" id="submit" value="Créer le comtpe" class="button is-block is-warning has-text-black is-fullwidth has-text-weight-medium" />
         <button class="btn waves-effect waves-light" type="submit" name="submit">creer<i class="material-icons right">send</i>
