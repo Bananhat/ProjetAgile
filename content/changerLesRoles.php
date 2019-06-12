@@ -3,4 +3,8 @@
 include('../includes/class_users.php');
 include('../includes/utils_user.php');?>
 
-<?php foreach (User)
+<?php $users = get_logged_user();/*recup tous les utilisateurs*/
+        foreach ($users as $user)
+        {
+            echo $user->get();
+        }?>
