@@ -4,7 +4,8 @@ get_header();
 if(isset($_SESSION['user'])){
     header('Location: index.php');
 }
-    if (isset($_GET['disconnect'])) {
+    if (isset($_GET['disconnect']))
+    {
         if (get_logged_user()) {
             disconnect_current_user(); //a modif avec modele
         }
