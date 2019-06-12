@@ -69,8 +69,7 @@ class User
         }
 
         global $db;
-
-        $req = "SELECT * FROM users WHERE username = ? AND password = ?";
+        $req = "SELECT * FROM USER WHERE email = ? AND password = ?";
         $db->prepare($req);
         $row = $db->execute_prepared_query(array($username, $password))[0];
 

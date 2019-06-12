@@ -8,7 +8,7 @@
     <div class="nav-wrapper">
         <div class="#1e88e5 blue darken-1">
             <a class="waves-effect waves-light btn">Inscrire utilisateur</a>
-            <a class="waves-effect waves-light btn right">Déconnexion</a>
+            <a class="waves-effect waves-light btn right" href="signin.php?disconnect">Déconnexion</a>
         </div>
     </div>
 </nav>
