@@ -56,6 +56,6 @@ if(isset($_SESSION['user'])){
 		<div class="mdp" style="margin-left: 45%; width: 25%;">
     		<span class="mdp"><a href="#">Mot de passe oublié ?</a></span>
   		</div>
-	</form> 
+	</form>
 
 <?php include('footer.php'); ?>

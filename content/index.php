@@ -9,4 +9,5 @@ get_header();
         Sur ce site vous pouvez consulter et indiquer les compétences validées lors de vos séances de plongée.
       </p>
     </div>
-<?php include_once('footer.php') ?>
+
+<?php get_footer(); ?>
