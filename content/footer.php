@@ -6,9 +6,6 @@
                 <h5>Contact</h5>
                 <p></p>
               </div>
-              <div class="col l4 offset-l2 s12">
-                <h5>Links</h5>
-              </div>
             </div>
           </div>
           <div class="copyright">
