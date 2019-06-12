@@ -55,8 +55,6 @@ function insert_user($username, $password, $role){
     return false;
 }
 
-
-
 /**
  * Permet de récupérer l'instance de l'utilisateur actuellement connecté
  * @return User|null L'instance de l'utilisateur s'il est connecté, null sinon
