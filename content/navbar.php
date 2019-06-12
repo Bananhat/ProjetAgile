@@ -5,12 +5,6 @@
 <!-- Compiled and minified JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
 
-<<<<<<< HEAD
-=======
-<?php
-include('changerLesRoles.php');?>
-
->>>>>>> 001680471f59a7d66093aebf2ffddf221030b126
 <nav>
     <div class="nav-wrapper">
         <div class="#1e88e5 blue darken-1">
