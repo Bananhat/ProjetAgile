@@ -25,7 +25,6 @@ class DbUserWriter
         } catch (Exception $e) {
             return false;
         }
-        echo "Hello";
 
         $password = sodium_crypto_pwhash_str(
             $password,
@@ -33,7 +32,7 @@ class DbUserWriter
             SODIUM_CRYPTO_PWHASH_MEMLIMIT_SENSITIVE
         );
 
-        $statement = $pdo->prepare('INSERT INTO `USER`(`FirstName`, `Name`, `email`, `Password`, `Role`)
+        $statement = $pdo->prepare('INSERT INTO `user`(`firstName`, `name`, `email`, `password`, `role`)
             VALUES (:firstname, :name, :email, :password, :role)');
 
         $statement->bindParam(':firstname', $firstName);

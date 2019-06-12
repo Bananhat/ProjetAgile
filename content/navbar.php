@@ -10,7 +10,7 @@
         <div class="#1e88e5 blue darken-1">
             <?php
             $user = get_logged_user();?>
-            <a class="waves-effect waves-light btn right" href="signin.php?disconnect">Déconnexion</a>
+            <a class="waves-effect waves-light btn" href="signin.php?disconnect">Déconnexion</a>
             <?php
             if($user) {
                 if(is_admin($user->get('id'))){
@@ -22,7 +22,7 @@
 <?php
             if($user) {
                 if (is_admin($user->get('id'))) {
-                    echo '<a class="waves-effect waves-light btn">Inscrire utilisateur</a>';
+                    echo '<a class="waves-effect waves-light btn" href="signup_initiateur.php">Inscrire utilisateur</a>';
                 }
             }
             ?>

@@ -50,8 +50,7 @@ if(isset($_SESSION['user'])){
 
     		<label for="mdp"><b>Mot de passe</b></label>
     		<input type="password" placeholder="Mot de passe" name="password" required>
-  			<input class="btn waves-effect waves-light" type="submit" name="submit">
-  			</input>
+  			<input class="btn waves-effect waves-light" type="submit" name="submit" />
 
   		</div>
 		<div class="mdp" style="margin-left: 45%; width: 25%;">
