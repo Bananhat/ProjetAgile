@@ -1,12 +1,6 @@
 <?php declare(strict_types=1);
 
-require_once ("./../settings.php");
-require_once ("DbConnector.php");
 
-$dbConnector = new DbConnector();
-$dbUserWriter = new DbUserUpdater($dbConnector);
-
-var_dump($dbUserWriter->updateUserName(1, "Neubert", "test"));
 
 class DbUserUpdater
 {
