@@ -4,8 +4,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
 <nav>
     <div class="nav-wrapper">
-        <div class="#1e88e5 blue darken-1 right">
-            <a class="waves-effect waves-light btn right">Déconnexion</a>
+        <div class="#1e88e5 blue darken-1">
+            <a class="waves-effect waves-light btn">Déconnexion</a>
         </div>
     </div>
 </nav>
