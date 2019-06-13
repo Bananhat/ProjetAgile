@@ -94,9 +94,158 @@
 2019-06-13 12:00:35 [execStatement       ] select * from studendtrials inner join skill on studendtrials.skill_id = skill.id							inner join competences on skill.competence_id = competences.id where studendtrials.id = :studid Successfull: 
 2019-06-13 12:00:35 [execStatement       ] . 42S02, 1146, La table 'agile1_bd.studendtrials' n'existe pas
 >>>>>>> f7aed7e2aa93e85a9fa82d9876831be6ef670824
+<<<<<<< HEAD
+2019-06-13 12:26:44 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 12:26:46 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 12:26:46 [deleteStudent       ] delete from student where id_student = :userid Successfull: 1
+2019-06-13 12:26:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 12:26:52 [updateStudentName   ] UPDATE student set firstName = :firstname, name = :username where id_student = :userid Successfull: 1
+2019-06-13 12:26:54 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 12:26:54 [deleteStudent       ] delete from student where id_student = :userid Successfull: 1
+2019-06-13 12:28:59 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 12:28:59 [writeNewUser        ] INSERT INTO `user`(`firstName`, `name`, `email`, `password`, `role`)            VALUES (:firstname, :name, :email, :password, :role) Successfull: 1
+2019-06-13 12:32:21 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 12:33:13 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 12:33:13 [updateUserRole      ] UPDATE user set role = :userrole where id = :userid Successfull: 1
+2019-06-13 12:33:22 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 12:33:22 [updateUserRole      ] UPDATE user set role = :userrole where id = :userid Successfull: 1
+=======
 2019-06-13 13:02:25 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
 2019-06-13 13:02:25 [execStatement       ] select * from studendtrials inner join skill on studendtrials.skill_id = skill.id							inner join competences on skill.competence_id = competences.id 							inner join student on student.id_student = studendtrials.student_id 							where student.id_student = :studid Successfull: 1
 2019-06-13 13:02:25 [execStatement       ] . 00000, , 
+<<<<<<< HEAD
+>>>>>>> f2c9eb76a90c31ba61dedaa1b11448f5e59ed089
+2019-06-13 13:49:26 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:49:26 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:49:28 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:49:28 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:49:35 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:49:35 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:50:39 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:50:39 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:50:40 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:50:40 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:50:41 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:50:41 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:50:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:50:43 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:51:16 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:51:16 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:52:05 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:52:05 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:52:48 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:52:48 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:52:58 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:52:58 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:53:03 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:53:03 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:53:06 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:53:06 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:53:07 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:53:07 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:53:07 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:53:07 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:53:07 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:53:07 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:53:10 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:53:10 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:53:11 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:53:11 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:53:15 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:53:15 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:53:17 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:53:17 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:53:20 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:53:20 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:53:33 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:53:33 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:55:05 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:55:05 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:55:05 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:55:05 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:55:06 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:55:06 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:55:06 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:55:06 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:55:08 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:55:08 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:56:18 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:56:18 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:56:56 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:56:56 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:57:07 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:57:07 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:57:09 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:57:09 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:57:11 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:57:11 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:57:20 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:57:20 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:57:31 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:57:31 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:57:34 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:57:34 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:57:42 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:57:42 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:58:01 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:58:01 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:58:28 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:58:28 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:58:29 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:58:29 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:58:59 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:58:59 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:59:24 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:59:24 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:59:25 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:59:25 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:59:30 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:59:30 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:59:32 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:59:32 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:59:39 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:59:39 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:59:41 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:59:41 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:59:46 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:59:46 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:59:47 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:59:47 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:59:57 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:59:57 [updateSkillCompetence] . 00000, , 
+2019-06-13 13:59:59 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:59:59 [updateSkillCompetence] . 00000, , 
+2019-06-13 14:00:00 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 14:00:00 [updateSkillCompetence] . 00000, , 
+2019-06-13 14:00:16 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 14:00:16 [updateSkillCompetence] . 00000, , 
+2019-06-13 14:00:18 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 14:00:18 [deleteStudent       ] delete from student where id_student = :userid Successfull: 1
+2019-06-13 14:00:20 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 14:00:20 [updateSkillCompetence] . 00000, , 
+2019-06-13 14:00:32 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 14:00:32 [deleteStudent       ] delete from student where id_student = :userid Successfull: 1
+2019-06-13 14:00:33 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 14:00:33 [updateSkillCompetence] . 00000, , 
+2019-06-13 14:00:34 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 14:00:34 [updateSkillCompetence] . 00000, , 
+2019-06-13 14:00:38 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 14:00:38 [updateSkillCompetence] . 00000, , 
+2019-06-13 14:00:39 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 14:00:39 [updateSkillCompetence] . 00000, , 
+2019-06-13 14:00:39 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 14:00:53 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 14:00:53 [updateSkillCompetence] . 00000, , 
+2019-06-13 14:01:54 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 14:01:54 [updateSkillCompetence] . 00000, , 
+2019-06-13 14:01:58 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 14:01:58 [updateSkillCompetence] . 00000, , 
+2019-06-13 14:01:58 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 14:01:58 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 14:01:58 [updateSkillCompetence] . 00000, , 
+2019-06-13 14:02:09 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 14:02:09 [updateSkillCompetence] . 00000, , 
+=======
 2019-06-13 13:23:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
 2019-06-13 13:23:45 [execStatement       ] select * from student                                    left join studendtrials on studendtrials.student_id = student.id_student                                    left join skill on skill_id = studendtrials.skill_id                                    left join competences on competences.id = skill.competence_id                                    where student.id_student = :studid Successfull: 1
 2019-06-13 13:23:45 [execStatement       ] . 00000, , 
@@ -151,6 +300,7 @@
 2019-06-13 13:49:27 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
 2019-06-13 13:49:27 [execStatement       ] SELECT * FROM competences WHERE niveau = (SELECT level FROM student WHERE id_student = :id) Successfull: 1
 2019-06-13 13:49:27 [execStatement       ] . 00000, , 
+<<<<<<< HEAD
 2019-06-13 13:59:03 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
 2019-06-13 13:59:03 [execStatement       ] select * from student                                    left join studendtrials on studendtrials.student_id = student.id_student                                    left join skill on skill_id = studendtrials.skill_id                                    left join competences on competences.id = skill.competence_id                                    where student.id_student = :studid order by competences.id asc Successfull: 1
 2019-06-13 13:59:03 [execStatement       ] . 00000, , 
@@ -187,3 +337,6 @@
 2019-06-13 14:00:55 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
 2019-06-13 14:00:55 [execStatement       ] SELECT * FROM competences WHERE niveau =  Successfull: 
 2019-06-13 14:00:55 [execStatement       ] . 42000, 1064, Erreur de syntaxe près de '' à la ligne 1
+=======
+>>>>>>> 7777ac6ce0a73b19a53fae8f1821fa9488df4beb
+>>>>>>> 3a741905bd81f78bc45f7e2402ba406e7d769dfe

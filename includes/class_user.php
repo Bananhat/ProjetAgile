@@ -85,10 +85,9 @@ class User
         $prep=$db->prepare('SELECT * FROM user WHERE email = :email AND password = :pass');
         $prep->bindParam(':email', $username);
         $prep->bindParam(':pass', $password);
-        $suc = $prep->execute();
+        $prep->execute();
 
         $resultat = $prep->fetch();
-
         $this->ID = $resultat['id'];
 
         unset($resultat['id']);

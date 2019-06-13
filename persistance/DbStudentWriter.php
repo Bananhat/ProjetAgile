@@ -22,7 +22,7 @@ class DbStudentWriter
             return false;
         }
 
-        $statement = $pdo->prepare('INSERT INTO `student`(`firstname`, `name`,`level`) VALUES (:firstName,:name,:level)');
+        $statement = $pdo->prepare('INSERT INTO `student`(`firstName`, `name`,`level`) VALUES (:firstName,:name,:level)');
 
         $statement->bindParam(':firstName', $firstName);
         $statement->bindParam(':name', $name);
@@ -47,7 +47,7 @@ class DbStudentWriter
             return false;
         }
 
-        $statement = $pdo->prepare('UPDATE student set firstname = :firstname, name = :username where id_student = :userid');
+        $statement = $pdo->prepare('UPDATE student set firstName = :firstname, name = :username where id_student = :userid');
         $statement->bindParam(':firstname', $newfirstname);
         $statement->bindParam(':userid', $userid);
         $statement->bindParam(':username', $newname);
