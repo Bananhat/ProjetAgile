@@ -1,9 +1,7 @@
 <?php
-include('../includes/utils_page.php');
+include_once('../includes/utils_page.php');
+include_once('../persistance/DbStudentWriter.php');
 include('../persistance/DbConnector.php');
-include('../persistance/DbUserUpdater.php');
-include('../persistance/DbStudentWriter.php');
-include('../settings.php');
 get_header();
 
 $user = get_logged_user();
@@ -15,11 +13,11 @@ try {
 }
 if($user) {
 
-    if ($_POST['submit'])
+    if (isset($_POST['submit']))
     {
 
         $userId = $_GET['id'];
-        $prenom = $_POST['prenom'];
+        $prenom = $_POST['firstName'];
         $nom = $_POST['name'];
 
 
@@ -33,7 +31,7 @@ if($user) {
         }
     }
 
-    $req = 'SELECT * FROM student WHERE id=:id';
+    $req = 'SELECT * FROM student WHERE id_student=:id';
     $reqStudent = $db->prepare($req);
     $reqStudent->execute(array('id' => $_GET['id']));
 ?>
@@ -46,7 +44,7 @@ if($user) {
     foreach ($reqStudent as $rowStudent)
     {
         echo '<form method="POST" action="fiche_eleve.php?id='.$_GET['id'] .'"> 
-        <input type="text" placeholder="' . $rowStudent['firstName'] . '" name="firstName" />
+        <input type="text" placeholder="' . $rowStudent['firstname'] . '" name="firstName" />
         <input type="text" placeholder="' . $rowStudent['name'] . '" name="name" />
         <input class="btn waves-effect waves-light" type="submit" id="submit" name="submit" value="Modifier" />
         </form>

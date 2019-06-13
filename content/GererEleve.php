@@ -13,6 +13,13 @@ try {
 }
 
 if ($user) {
+
+    if($_GET['supp'] == 'del')
+    {
+        $userID = $_GET['id'];
+        $studentWriter = new DbStudentWriter(new DbConnector());
+        $suc = $studentWriter->deleteStudent($userID);
+    }
    if (isset($_POST['submit'])) {
         $non_remplis = array();
 
@@ -68,8 +75,8 @@ if ($user) {
                 echo '<td>' . $rowStudent['firstName'] . '</td>';
                 echo '<td>' . $rowStudent['level'] . '</td>';
 
-                echo '<td><a class="waves-effect waves-light btn" href="fiche_eleve.php?id='.$rowStudent['id'] .'">Modifier</a></td>';
-                echo '<td><a class="waves-effect waves-light btn">Supprimer</a></td>';
+                echo '<td><a class="waves-effect waves-light btn" href="fiche_eleve.php?id='.$rowStudent['id_student'] .'">Modifier</a></td>';
+                echo '<td><a class="waves-effect waves-light btn" href="GererEleve.php?supp=del&id='.$rowStudent['id_student'].'">Supprimer</a></td>';
                 echo '</tr>';
             }
 

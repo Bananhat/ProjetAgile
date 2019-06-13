@@ -1,0 +1,69 @@
+2019-06-13 10:36:27 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 10:52:39 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 10:52:39 [deleteStudent       ] DELETE from student where id = :userid Successfull: 1
+2019-06-13 10:52:41 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 10:52:41 [deleteStudent       ] DELETE from student where id = :userid Successfull: 1
+2019-06-13 10:57:14 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 10:57:53 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 11:05:37 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 11:05:39 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 11:05:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 11:08:19 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 11:08:19 [updateStudentName   ] UPDATE student set firstname = :firstname, name = :username where id_student = :userid Successfull: 
+2019-06-13 11:09:03 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 11:09:03 [updateStudentName   ] UPDATE student set firstname = :firstname, name = :username where id_student = :userid Successfull: 
+2019-06-13 11:11:50 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 11:11:50 [deleteStudent       ] delete from student where id_student = :userid Successfull: 1
+2019-06-13 11:12:08 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 11:12:08 [deleteStudent       ] delete from student where id_student = :userid Successfull: 1
+2019-06-13 11:12:10 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 11:12:10 [deleteStudent       ] delete from student where id_student = :userid Successfull: 1
+2019-06-13 11:12:15 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 11:12:15 [updateStudentName   ] UPDATE student set firstname = :firstname, name = :username where id_student = :userid Successfull: 
+2019-06-13 11:13:54 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 11:13:54 [updateStudentName   ] UPDATE student set firstname = :firstname, name = :username where id_student = :userid Successfull: 
+2019-06-13 11:13:55 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 11:13:56 [updateStudentName   ] UPDATE student set firstname = :firstname, name = :username where id_student = :userid Successfull: 
+2019-06-13 11:14:10 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 11:14:10 [updateStudentName   ] UPDATE student set firstname = :firstname, name = :username where id_student = :userid Successfull: 
+2019-06-13 11:14:23 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 11:14:23 [updateStudentName   ] UPDATE student set firstname = :firstname, name = :username where id_student = :userid Successfull: 
+2019-06-13 11:14:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 11:14:52 [updateStudentName   ] UPDATE student set firstname = :firstname, name = :username where id_student = :userid Successfull: 
+2019-06-13 11:16:12 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 11:16:12 [updateStudentName   ] UPDATE student set firstname = :firstname, name = :username where id_student = :userid Successfull: 
+2019-06-13 11:16:31 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 11:16:31 [updateStudentName   ] UPDATE student set firstname = :firstname, name = :username where id_student = :userid Successfull: 
+2019-06-13 11:21:44 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 11:21:44 [updateStudentName   ] UPDATE student set firstname = :firstname, name = :username where id_student = :userid Successfull: 1
+2019-06-13 11:21:51 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 11:21:51 [updateStudentName   ] UPDATE student set firstname = :firstname, name = :username where id_student = :userid Successfull: 1
+2019-06-13 11:22:33 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 11:22:33 [updateStudentName   ] UPDATE student set firstname = :firstname, name = :username where id_student = :userid Successfull: 
+2019-06-13 11:22:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 11:22:43 [updateStudentName   ] UPDATE student set firstname = :firstname, name = :username where id_student = :userid Successfull: 
+2019-06-13 11:22:50 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 11:22:50 [updateStudentName   ] UPDATE student set firstname = :firstname, name = :username where id_student = :userid Successfull: 
+2019-06-13 11:22:54 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 11:22:54 [updateStudentName   ] UPDATE student set firstname = :firstname, name = :username where id_student = :userid Successfull: 
+2019-06-13 11:23:07 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 11:23:07 [updateStudentName   ] UPDATE student set firstname = :firstname, name = :username where id_student = :userid Successfull: 
+2019-06-13 11:23:12 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 11:23:12 [updateStudentName   ] UPDATE student set firstname = :firstname, name = :username where id_student = :userid Successfull: 
+2019-06-13 11:23:20 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 11:23:20 [updateStudentName   ] UPDATE student set firstname = :firstname, name = :username where id_student = :userid Successfull: 
+2019-06-13 11:23:39 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 11:23:39 [updateStudentName   ] UPDATE student set firstname = :firstname, name = :username where id_student = :userid Successfull: 
+2019-06-13 11:23:47 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 11:23:47 [updateStudentName   ] UPDATE student set firstname = :firstname, name = :username where id_student = :userid Successfull: 
+2019-06-13 11:24:03 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 11:24:03 [updateStudentName   ] UPDATE student set firstname = :firstname, name = :username where id_student = :userid Successfull: 
+2019-06-13 11:24:37 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 11:24:37 [updateStudentName   ] UPDATE student set firstname = :firstname, name = :username where id_student = :userid Successfull: 1
+2019-06-13 11:39:16 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 11:39:20 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 11:39:20 [deleteStudent       ] delete from student where id_student = :userid Successfull: 1
+2019-06-13 11:39:25 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 11:39:25 [updateStudentName   ] UPDATE student set firstname = :firstname, name = :username where id_student = :userid Successfull: 1
+2019-06-13 11:40:00 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 11:40:00 [updateUserRole      ] UPDATE user set role = :userrole where id = :userid Successfull: 1
