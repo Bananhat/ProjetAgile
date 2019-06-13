@@ -13,7 +13,8 @@ try {
 
 if($user)
 {
-    $reqUser=$db->query("SELECT * FROM USER WHERE role = 'student'");
-}
+    $reqAjjStudent=$db->query("INSERT INTO `user`(`firstName`, `name`,'role') VALUES (:firstName,:name,'student')");
+    $reqStudent=$db->query("SELECT * FROM USER WHERE role = 'student'");
+}?>
 
-get_footer();?>
+<?php get_footer();?>
