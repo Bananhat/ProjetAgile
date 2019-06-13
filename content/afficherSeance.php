@@ -40,7 +40,7 @@ if ($user) {
             <thead>
             <th>date</th>
             <th>skill à travailler</th>
-            <?php echo '<td><a class="waves-effect waves-light btn" href="ajoutSeance.php">Ajouter Séance</a></td>'?>
+            <?php echo '<td><a class="waves-effect waves-light btn" href="ajoutSeance.php?id='.$_GET['id'].'">Ajouter Séance</a></td>'?>
             </thead>
 
             <tbody>
@@ -52,7 +52,6 @@ if ($user) {
         echo '<td>' . $rowSeance['id_skill1'] . $rowSeance['id_skill2'] . $rowSeance['id_skill3'] . '</td>';
 
         echo '<td>';
-        echo '<td><a class="waves-effect waves-light btn" href="modifierSeance.php?id='.$rowSeance['id_seance'].'">Modifier</a></td>';
         echo '<td><a class="waves-effect waves-light btn" href="afficherSeance.php?supp=del&id='.$rowSeance['id_seance'].'">Supprimer</a></td>';
         echo '</td>';
 
