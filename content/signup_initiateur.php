@@ -49,7 +49,7 @@ get_header();
 }
 ?>
     <h3 class="title has-text-dark has-text-weight-bold" style="text-align:center;margin-bottom : 5%;">
-       Enregistrer un initiateurs</h3>
+       Enregistrer un initiateur</h3>
 
 <form method="POST" action="signup_initiateur.php">
     <div class="formulaire" style="margin-left: 30%; width: 25%;">

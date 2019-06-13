@@ -3,6 +3,13 @@
 
 class DbStudentWriter
 {
+    private $dbConnector;
+
+    public function __construct(DbConnector $dbConnector)
+    {
+        $this->dbConnector = $dbConnector;
+    }
+
     public function writeNewStudent($firstName,$name,$level) : bool
     {
 
@@ -21,5 +28,26 @@ class DbStudentWriter
 
         $suc = $statement->execute();
         return $suc;
+    }
+
+    public function updateStudentName($userid, $newfirstname, $newname) : bool
+    {
+        try
+        {
+            $pdo = $this->dbConnector->getConnection();
+
+        }
+        catch(Exception $e)
+        {
+            return false;
+        }
+
+        $statement = $pdo->prepare('UPDATE student set firstName = :firstname, name = :username where id = :userid');
+
+        $statement->bindParam(':firstname', $newfirstname);
+        $statement->bindParam(':userid', $userid);
+        $statement->bindParam(':username', $newname);
+
+        return $statement->execute();
     }
 }
