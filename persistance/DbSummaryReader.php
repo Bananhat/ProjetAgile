@@ -28,8 +28,21 @@ class DbSummaryReader
             $this->dbConnector::outlog($e);
             return false;
         }
-        $statement = $pdo->prepare("SELECT count(*) FROM `skill` where competence_id = :id");
+        $statement = $pdo->prepare("SELECT *, count(*) FROM `skill` where competence_id = :id");
         $statement->bindParam(':id', $id);
+
+        return $this->dbConnector->execStatement($statement);
+    }
+
+    public function getSkillsFromCompetenceId($id)
+    {
+        try {
+            $pdo = $this->dbConnector->getConnection();
+        } catch (Exception $e) {
+            $this->dbConnector::outlog($e);
+            return false;
+        }
+        $statement = $pdo->prepare("SELECT * FROM skill where competence_id = :id");
 
         return $this->dbConnector->execStatement($statement);
     }
