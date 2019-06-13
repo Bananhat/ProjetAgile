@@ -13,8 +13,8 @@ try {
 
 if($user)
 {
-    $reqAjjStudent=$db->prepare("INSERT INTO user(`firstName`, `name`,'role') VALUES (:firstName,:name,'student')");
-    $reqStudent=$db->query("SELECT * FROM user WHERE role = 'student'");?>
+    $reqAjjStudent=$db->prepare("INSERT INTO student(firstName, name,level) VALUES (:firstName,:name,:level)");
+    $reqStudent=$db->query("SELECT * FROM student");?>
 
     <h1 class="title has-text-dark has-text-weight-bold" style="text-align:center; margin-bottom:2%;margin-top:2%;">
     Visualiser les élèves</h1>
@@ -33,10 +33,17 @@ if($user)
             foreach ($reqStudent as $rowStudent)
             {
                 echo '<tr>';
-                echo '<td>' . $rowStudent['name'] . '</td>';
-                echo '<td>' . $rowStudent['firstName'] . '</td>';
+                echo '<td>' . $rowStudent['NAME'] . '</td>';
+                echo '<td>' . $rowStudent['FIRSTNAME'] . '</td>';
                 echo '</tr>';
-            }
+                /*<div class="formulaire" style="margin-top: 10%; margin-left: 30%; width: 25%;">
+                    <label for="name"><b>nom</b></label>
+                    <input type="text" placeholder="name" name="name" required>
+
+                    <label for="firstName"><b>prenom</b></label>
+                    <input type="text" placeholder="firstName" name="firstName" required>
+                </div>*/
+                }
 
             ?>
             </tbody>
