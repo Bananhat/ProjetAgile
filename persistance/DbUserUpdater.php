@@ -46,7 +46,7 @@ class DbUserUpdater
         return $statement->execute();
     }
 
-    public function deleteUserName($userid) : bool
+    public function deleteUser($userid) : bool
     {
         try
         {
