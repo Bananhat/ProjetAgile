@@ -59,7 +59,7 @@ class User
             $this->attr[$key] = $value;
         }
 
-        return $suc;
+        return $resultat;
     }
 
 
@@ -81,6 +81,7 @@ class User
             return false;
         }
 
+
         $prep=$db->prepare('SELECT * FROM user WHERE email = :email AND password = :pass');
         $prep->bindParam(':email', $username);
         $prep->bindParam(':pass', $password);
@@ -98,7 +99,7 @@ class User
             $this->attr[$key] = $value;
         }
 
-        return $suc;
+        return $resultat;
     }
 
 

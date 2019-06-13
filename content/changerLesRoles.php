@@ -29,7 +29,7 @@ if($user) {
     }
 
 
-     $reqUser=$db->query("SELECT * FROM user WHERE role = 'initiateur'");
+     $reqUser=$db->query("SELECT * FROM user;");
     ?>
     <h1 class="title has-text-dark has-text-weight-bold" style="text-align:center; margin-bottom:2%;margin-top:2%;">
         Visualiser les initiateurs</h1>
