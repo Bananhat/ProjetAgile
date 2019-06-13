@@ -28,7 +28,7 @@ class DbUserWriter
             return false;
         }
 
-        $statement = $pdo->prepare('INSERT INTO `USER`(`firstName`, `name`, `email`, `password`, `role`)
+        $statement = $pdo->prepare('INSERT INTO `user`(`firstName`, `name`, `email`, `password`, `role`)
             VALUES (:firstname, :name, :email, :password, :role)');
 
         $statement->bindParam(':firstname', $firstName);

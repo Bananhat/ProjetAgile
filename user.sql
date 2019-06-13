@@ -28,8 +28,8 @@ SET time_zone = "+00:00";
 -- Structure de la table `user`
 --
 
-DROP TABLE IF EXISTS `user`;
-CREATE TABLE IF NOT EXISTS `user` (
+DROP TABLE IF EXISTS `USER`;
+CREATE TABLE IF NOT EXISTS `USER` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `firstName` varchar(256) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `name` varchar(256) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 -- Déchargement des données de la table `user`
 --
 
-INSERT INTO `user` (`id`, `firstName`, `name`, `email`, `password`, `role`) VALUES
+INSERT INTO `USER` (`id`, `firstName`, `name`, `email`, `password`, `role`) VALUES
 (1, 'admin', 'admin', 'admin', 'adminagile1', 'admin');
 COMMIT;
 
