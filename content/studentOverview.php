@@ -61,7 +61,7 @@ $html = "";?>
                 }
                 else
                 {
-                    echo '<td>...</td>';
+                    echo '<td> </td>';
                 }
             }
         }
