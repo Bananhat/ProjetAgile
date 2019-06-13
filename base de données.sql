@@ -171,9 +171,9 @@ id_valide_1 int not null ,
 
 id_valide_2 int not null ,
 
-validated bool not null
+validated bool not null  , 
 
-, primary key (id_valide_1,id_valide_2)
+primary key (id_valide_1,id_valide_2)
 
 )
 
