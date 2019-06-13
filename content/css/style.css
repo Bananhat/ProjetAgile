@@ -6,14 +6,19 @@
 
 .page
 {
-	display:flex;
+	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
 }
 
 .site-content
 {
-	flex:1;
+	flex: 1;
+}
+
+header
+{
+	position: fixed;
 }
 
 html
@@ -23,16 +28,22 @@ html
 
 body
 {
-	height:100%;
-	margin : 0;
-	padding : 0;
+	height :100%;
+	margin: 0;
+	margin-bottom: 10%;
+	padding: 0;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
 }
 
 footer
 {
-	bottom:0;
-	left:0;
-	right:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
 	margin-top: 2%;
 	background-color: lightblue;
+	padding: 1rem;
+	z-index: 10;
 }

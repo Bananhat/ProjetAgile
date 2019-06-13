@@ -4,7 +4,7 @@ require_once("../settings.php");
 require_once("DbConnector.php");
 
 $db = new DbSummaryReader(new DbConnector());
-var_dump($db->getCommentFromStudent(4));
+var_dump($db->getStudentsWithAptitude());
 */
 
 class DbSummaryReader
@@ -26,13 +26,16 @@ class DbSummaryReader
             return false;
         }
 
-        $statement = $pdo->prepare('select * from studendtrials inner join skill on studendtrials.skill_id = skill.id
-							inner join competences on skill.competence_id = competences.id 
-							inner join student on student.id_student = studendtrials.student_id 
-							where student.id_student = :studid');
+        $statement = $pdo->prepare('select * from student
+                                    left join studendtrials on studendtrials.student_id = student.id_student
+                                    left join skill on skill_id = studendtrials.skill_id
+                                    left join competences on competences.id = skill.competence_id
+                                    where student.id_student = :studid');
 
         $statement->bindParam(':studid', $studentId);
-
+        //$statement->execute();
+        //$statement->fetchAll(2);
+        //var_dump($statement);
         return $this->dbConnector->execStatement($statement);
     }
 
@@ -98,4 +101,24 @@ class DbSummaryReader
 
         return $this->dbConnector->execStatement($statement);
     }
+
+    public function getStudentsInAptitude() : array
+    {
+        try {
+            $pdo = $this->dbConnector->getConnection();
+        } catch (Exception $e) {
+            $this->dbConnector::outlog($e);
+
+            return false;
+        }
+
+        $statement = $pdo->prepare('select * from studend
+                                    inner join studendtrials on student.id_student = studendtrials.student_id
+                                    where studendtrials.validated = false');
+
+
+        return $this->dbConnector->execStatement($statement);
+    }
+
+
 }
