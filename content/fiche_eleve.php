@@ -26,6 +26,7 @@ if($user) {
         if($suc)
         {
             echo 'mise a jour!';
+            header('Location: GererEleve.php');
         }else{
             echo 'erreur';
         }
