@@ -13,12 +13,10 @@ $html = "";?>
         <td></td>
         <?php
         $studentid = $_GET['id'];
-        echo "hqllo";
         $competence = $Dbreader->getCompetencesFromStudentId($studentid);
         foreach($competence as $comp)
         {
             $count = $Dbreader->getSkillCountFromCompetenceId($comp["id"]);
-            var_dump($count);
             echo "<td colspan=".$count[0]["count(*)"].">".$comp['name'].'</td>';
         }?>
     </tr>
@@ -28,10 +26,10 @@ $html = "";?>
         <?php
         foreach($competence as $comp)
         {
-            $aptitude = $Dbreader->
+            $aptitude = $Dbreader->getSkillsFromCompetenceId($comp['id']);
             foreach($aptitude as $apt)
             {
-                echo '<td>'.$apt.'</td>';
+                echo '<td>'.$apt['skill'].'</td>';
             }
         }?>
     </tr>
