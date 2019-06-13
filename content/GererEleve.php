@@ -43,13 +43,21 @@ if($user)
                 echo '</tr>';
 
             } ?>
+
             <div class="formulaire" style="margin-top: 10%; margin-left: 30%; width: 25%;">
                 <label for="name"><b>nom</b></label>
                 <input type="text" placeholder="name" name="name" required>
 
                 <label for="firstName"><b>prenom</b></label>
                 <input type="text" placeholder="firstName" name="firstName" required>
+<<<<<<< HEAD
             </div>-->
+=======
+
+                <label for="level"><b>level</b></label>
+                <input type="text" placeholder="level" name="level" required>
+            </div>
+>>>>>>> 3e7d194a900b60b968515cce1dd1cbc899aae7c0
             </tbody>
         </table>
     </div>
