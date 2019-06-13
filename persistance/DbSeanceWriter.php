@@ -9,7 +9,7 @@ class DbSeanceWriter
         $this->dbConnector = $dbConnector;
     }
 
-    public function writeNewSeance($Date, $id_skill1, $id_skill2, $id_skill3) : bool
+    public function writeNewSeance($student_id, $Date, $id_skill1, $id_skill2, $id_skill3) : bool
     {
         try {
             $pdo = $this->dbConnector->getConnection();
@@ -19,76 +19,18 @@ class DbSeanceWriter
             return false;
         }
 
-        echo ' preparation ';
-        $statement = $pdo->prepare('INSERT INTO `seance`(`date`, `id_skill1`, `id_skill2`, `id_skill3`)
-            VALUES (:date, :id1, :id2, :id3)');
+        $statement = $pdo->prepare('INSERT INTO `seance`(`student_id`,`date`, `id_skill1`, `id_skill2`, `id_skill3`)
+            VALUES (:student_id,:date, :id1, :id2, :id3)');
 
-        echo ' parametrage ';
-        echo $Date;
-        echo $id_skill1;
-        echo $id_skill2;
-        echo $id_skill3;
+        $statement->bindParam(':student_id', $student_id);
         $statement->bindParam(':date', $Date);
         $statement->bindParam(':id1', $id_skill1);
         $statement->bindParam(':id2', $id_skill2);
         $statement->bindParam(':id3', $id_skill3);
 
-        echo ' lancementRequête ';
-
         $suc = $statement->execute();
 
         return $suc;
-    }
-
-    public function updateSeanceName($id, $date, $id_skill1, $id_skill2, $id_skill3) : bool
-    {
-        try {
-            $pdo = $this->dbConnector->getConnection();
-        } catch (\Exception $exception) {
-            $this->dbConnector::outlog($exception);
-        }
-
-        echo 'id:';
-        echo $id;
-
-        $statement = $pdo->prepare('SELECT * FROM seance where id_seance = :id');
-        $statement->bindParam(':id', $id);
-        $attribut = $statement->execute();
-
-        echo '<br />'.'attribut:';
-        echo $attribut;
-        var_dump($attribut);
-
-        if($id_skill1 == null)
-        {
-            $id_skill1 = $attribut['id_skill1'];
-        }
-        if($id_skill2 == null)
-        {
-            $id_skill2 = $attribut['id_skill2'];
-        }
-        if($id_skill3 == null)
-        {
-            $id_skill3 = $attribut['id_skill3'];
-        }
-
-        echo '<br />'.'skill1:';
-        echo $id_skill1;
-        echo '<br />'.'skill2:';
-        echo $id_skill2;
-        echo '<br />'.'skill3:'.'<br />';
-        echo $id_skill3;
-
-        $statement = $pdo->prepare('UPDATE seance set date = :date, id_skill1 = :id_skill1,id_skill2 = :id_skill2 ,id_skill3 = :id_skill3 where competence_id = :id');
-        $statement->bindParam(':date', $date);
-        $statement->bindParam(':id_skill1', $id_skill1);
-        $statement->bindParam(':id_skill2', $id_skill2);
-        $statement->bindParam(':id_skill3', $id_skill3);
-        $statement->bindParam(':id', $id);
-
-        $success = $statement->execute();
-        $this->dbConnector::outlog($statement->errorInfo());
-        return $success;
     }
 
     public function deleteSeance(int $id) : bool

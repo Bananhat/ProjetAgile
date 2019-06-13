@@ -16744,7 +16744,23 @@
 2019-06-13 21:32:37 [execStatement       ] . []
 =======
 >>>>>>> d536b6e5e119813383b3d2164fb55a311d9862c2
+<<<<<<< HEAD
+2019-06-13 22:00:31 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 22:01:16 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 22:01:31 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 22:02:46 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 22:02:58 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 22:04:04 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 22:10:44 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 22:11:05 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 22:12:06 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 22:12:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 22:13:03 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 22:13:11 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 22:14:48 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+=======
 >>>>>>> a9363b2a572007d01197724e8ad4cd13a9d4b19f
+<<<<<<< HEAD
 2019-06-13 22:10:39 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
 2019-06-13 22:10:39 [writeNewUser        ] INSERT INTO `user`(`firstName`, `name`, `email`, `password`, `role`,`levelFormation` )            VALUES (:firstname, :name, :email, :password, :role, :form) Successfull: 1
 2019-06-13 22:18:47 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
@@ -16998,3 +17014,6 @@
 2019-06-13 22:19:13 [updateSkillCompetence] . ["00000",null,null]
 2019-06-13 22:19:29 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
 2019-06-13 22:19:29 [updateUserRole      ] UPDATE user set role = :userrole where id = :userid Successfull: 1
+=======
+>>>>>>> 28b6836e37014c36160ef370c19c3270b6f29947
+>>>>>>> 0f8d0a5767535df1e4b714067c231f0e515c5e32
