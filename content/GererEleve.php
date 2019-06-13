@@ -77,6 +77,7 @@ if ($user) {
                     </select>
                   </div>
                 </td>';
+                echo '<td><a class="waves-effect waves-light btn">Ajouter</a></td>';
             } ?>
             </tbody>
         </table>
