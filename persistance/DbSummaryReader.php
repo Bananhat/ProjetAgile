@@ -1,11 +1,11 @@
 <?php declare(strict_types=1);
-
+/*
 require_once("../settings.php");
 require_once("DbConnector.php");
 
 $db = new DbSummaryReader(new DbConnector());
-var_dump($db->readSummaryFromStudentId(1));
-
+var_dump($db->readSummaryFromStudentId(3));
+*/
 
 class DbSummaryReader
 {
@@ -27,7 +27,9 @@ class DbSummaryReader
         }
 
         $statement = $pdo->prepare('select * from studendtrials inner join skill on studendtrials.skill_id = skill.id
-							inner join competences on skill.competence_id = competences.id where studendtrials.id = :studid');
+							inner join competences on skill.competence_id = competences.id 
+							inner join student on student.id_student = studendtrials.student_id 
+							where student.id_student = :studid');
 
         $statement->bindParam(':studid', $studentId);
 
