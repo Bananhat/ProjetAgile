@@ -4,7 +4,11 @@ require_once("../settings.php");
 require_once("DbConnector.php");
 
 $db = new DbSummaryReader(new DbConnector());
+<<<<<<< Updated upstream
 var_dump($db->readSummaryFromStudentId(3));
+=======
+var_dump($db->getSkillCountFromId(3));
+>>>>>>> Stashed changes
 */
 
 class DbSummaryReader
@@ -16,11 +20,28 @@ class DbSummaryReader
         $this->dbConnector = $dbConnector;
     }
 
+    public function getSkillCountFromCompetenceId($id)
+    {
+        try {
+            $pdo = $this->dbConnector->getConnection();
+        } catch (Exception $e) {
+            $this->dbConnector::outlog($e);
+
+            return false;
+        }
+
+        $statement = $pdo->prepare("SELECT competence_id, count(*) FROM `skill` group by competence_id having competence_id = :id");
+        $statement->bindParam(':id', $id);
+        return $this->dbConnector->execStatement($statement);
+    }
+
+    #SELECT competence_id, count(*) FROM `skill` group by competence_id having competence_id = :id;
+
     public function getCompetencesFromStudentId($studentId)
     {
         $pdo = $this->dbConnector->getConnection();
 
-        $statement = $pdo->prepare("SELECT * FROM competences WHERE niveau = (SELECT level FROM student WHERE id_student = :id)");
+        $statement = $pdo->prepare("SELECT * FROM competences WHERE niveau = ");
         $statement->bindParam(':id', $studentId);
 
         return $this->dbConnector->execStatement($statement);
