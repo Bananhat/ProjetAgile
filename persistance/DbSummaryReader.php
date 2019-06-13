@@ -1,11 +1,11 @@
 <?php declare(strict_types=1);
-/*
+
 require_once("../settings.php");
 require_once("DbConnector.php");
 
 $db = new DbSummaryReader(new DbConnector());
-var_dump($db->getStudentsWithAptitude());
-*/
+var_dump($db->readSummaryFromStudentId(3));
+
 
 class DbSummaryReader
 {
@@ -40,7 +40,7 @@ class DbSummaryReader
                                     left join studendtrials on studendtrials.student_id = student.id_student
                                     left join skill on skill_id = studendtrials.skill_id
                                     left join competences on competences.id = skill.competence_id
-                                    where student.id_student = :studid');
+                                    where student.id_student = :studid order by competences.id asc');
 
         $statement->bindParam(':studid', $studentId);
         //$statement->execute();
