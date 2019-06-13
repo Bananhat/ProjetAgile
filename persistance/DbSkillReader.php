@@ -1,4 +1,20 @@
 <?php declare(strict_types=1);
+/*
+// An example for reading and processing the data from DbReader functions / classes
+
+include "DbConnector.php";
+include "../settings.php";
+
+$reader = new DbSkillReader(new DbConnector());
+$result = $reader->getAllSkills();
+
+foreach ($result as $key => $row)
+{
+    echo $row['skill'];
+    echo $row['id'];
+    echo "\n";
+}
+*/
 
 
 class DbSkillReader
