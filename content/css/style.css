@@ -35,4 +35,8 @@ footer
 	right:0;
 	margin-top: 2%;
 	background-color: lightblue;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
 }
