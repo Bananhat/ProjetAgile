@@ -1,7 +1,5 @@
 <?php declare(strict_types=1);
 
-require_once("../settings.php");
-require_once("DbConnector.php");
 /*
 $db = new DbSummaryReader(new DbConnector());
 <<<<<<< Updated upstream
@@ -10,6 +8,7 @@ var_dump($db->readSummaryFromStudentId(3));
 var_dump($db->getSkillCountFromId(3));
 >>>>>>> Stashed changes
 */
+
 
 
 class DbSummaryReader
@@ -156,7 +155,7 @@ class DbSummaryReader
         return $this->dbConnector->execStatement($statement);
     }
 
-    public function updateStudentComment(int $studentid, string $comment) : bool
+    public function updateStudentComment(int $studentid, string $comment, int $skill) : bool
     {
         try {
             $pdo = $this->dbConnector->getConnection();
@@ -165,10 +164,12 @@ class DbSummaryReader
             return false;
         }
 
-        $statement = $pdo->prepare('UPDATE student set comment = :comment where id = :id');
+        $statement = $pdo->prepare('UPDATE studendtrials set commentaire = :comment where student_id = :id and skill_id=:idskill');
         $statement->bindParam(':comment', $comment);
         $statement->bindParam(':id', $studentid);
+        $statement->bindParam(':idskill', $skill);
         $suc = $statement->execute();
+
         return $suc;
     }
 

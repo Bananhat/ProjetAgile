@@ -37,23 +37,23 @@ class DbAptitudeWriter
         return $suc;
     }
 
-    public function validateAptitude($aptitudeId, $validated) : bool
+    public function validateAptitude($studentid, $skillid, $validated) : bool
     {
         try {
             $pdo = $this->dbConnector->getConnection();
+
         } catch (Exception $e) {
 
             return false;
         }
 
-        $statement = $pdo->prepare('update `aptitude` set validated = :validated where id_apt = :aptid');
 
-        $statement->bindParam(':aptid', $aptitudeId);
+        $statement = $pdo->prepare('update `studendtrials` set validated = :validated where student_id = :aptid and skill_id = :skillid');
+        $statement->bindParam(':aptid', $studentid);
+        $statement->bindParam(':skillid', $skillid);
         $statement->bindParam(':validated', $validated);
-        $this->dbConnector::outlog("Executing: " . $statement);
-        $suc = $statement->execute();
-        $this->dbConnector::outlog(preg_replace( "/\r|\n/", "", $statement->queryString )  ." Successfull: $suc");
 
+        $suc = $statement->execute();
         return $suc;
     }
 
