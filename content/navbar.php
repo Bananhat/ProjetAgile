@@ -24,6 +24,7 @@
 
             <?php
             if($user) {
+                echo '<a class="waves-effect waves-light btn" href = "index.php">Acceuil</a>';
                 echo '<a class="waves-effect waves-light btn right" style="margin-top: 1%;" href="signin.php?disconnect">Déconnexion</a>';
                 if(is_admin($user->get('id'))){
                     echo '<ul id = "dropdown" class = "dropdown-content">';

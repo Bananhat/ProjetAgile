@@ -22,7 +22,7 @@ if ($user) {
         $skillUp = new DbSkillUpdater(new DbConnector());
 
         $suc = $skillUp->deleteSkill($userID);
-        header('Location: competences.php?competence_id='.$_GET['comp']);
+        header('Location: skills.php?competence_id='.$_GET['comp']);
     }
     if (isset($_POST['submit'])) {
         $non_remplis = array();
@@ -39,7 +39,7 @@ if ($user) {
                 echo $non_rempli . '<br />';
             }
         } else {
-
+            echo 'ezij';
             $name = $_POST['name'];
             $skillUp = new DbSkillWriter(new DbConnector());
             $suc = $skillUp->addSkill($name, $_GET['id']);
@@ -76,14 +76,14 @@ if ($user) {
                 echo '<tr>';
                 echo '<td>' . $row['skill'] . '</td>';
 
-                echo '<td><a class="waves-effect waves-light btn" href="fiche_eleve.php?id='.$row['id'] .'">Modifier</a></td>';
-                echo '<td><a class="waves-effect waves-light btn" href="competences.php?supp=del&comp='.$_GET['competence_id'].'&id='.$row['id'].'">Supprimer</a></td>';
+                echo '<td><a class="waves-effect waves-light btn" href="skills.php?id='.$row['id'] .'">Modifier</a></td>';
+                echo '<td><a class="waves-effect waves-light btn" href="skills.php?supp=del&comp='.$_GET['competence_id'].'&id='.$row['id'].'">Supprimer</a></td>';
                 echo '</tr>';
             }
 
             echo '<tr>
                 
-                   <form method="POST" action="competences.php?id='.$_GET['competence_id'].'">
+                   <form method="POST" action="skills.php?id='.$_GET['competence_id'].'">
        <td> <label for="name"><b>Aptitude</b></label><input type="text" placeholder="name" name="name" required></td>
              
             <td>      
