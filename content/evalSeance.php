@@ -20,7 +20,7 @@ if(isset($_POST['submit'])){
 
     //commentaire
     $upComment = new DbSummaryReader(new DbConnector());
-    $stat2=$upComment->updateStudentComment($_GET['idstud']);
+    $stat2=$upComment->updateStudentComment($_GET['idstud'], $_POST['commentaire'], $_GET['idskill']);
     if($stat2){
         echo 'bon2';
     }
