@@ -60,11 +60,25 @@ $html = "";?>
 
                 if($trial[0]["validated"] == 1)
                 {
-                    echo '<td id="tableau" style="background-color: green">Acquis</td>';
+                    if(!$trial[0]["commentaire"])
+                    {
+                        echo '<td id="tableau" style="background-color: green">Acquis</td>';
+                    }
+                    else
+                    {
+                        echo '<td id="tableau" class="lienSurvol" style="background-color: green">Acquis<span id="tableau" class="popup">'.$trial[0]['commentaire'].'</span></td>';
+                    }
                 }
                 else if($trial[0]["validated"] == 2)
                 {
-                    echo '<td id="tableau" style="background-color: orange">En Cours</td>';
+                    if(!$trial[0]["commentaire"])
+                    {
+                        echo '<td id="tableau" style="background-color: orange">En Cours</td>';
+                    }
+                    else
+                    {
+                        echo '<td id="tableau" class="lienSurvol" style="background-color: orange">En Cours<span id="tableau" class="popup">'.$trial[0]['commentaire'].'</span></td>';
+                    }
                 }
                 else
                 {
