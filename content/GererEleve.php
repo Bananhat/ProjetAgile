@@ -77,6 +77,7 @@ if ($user) {
 
                 echo '<td><a class="waves-effect waves-light btn" href="fiche_eleve.php?id='.$rowStudent['id_student'] .'">Modifier</a></td>';
                 echo '<td><a class="waves-effect waves-light btn" href="GererEleve.php?supp=del&id='.$rowStudent['id_student'].'">Supprimer</a></td>';
+                echo '<td><a class="waves-effect waves-light btn" href="studentOverview.php?id='. $rowStudent['id_student'] .'">Competences</a></td>';
                 echo '</tr>';
             }
 
