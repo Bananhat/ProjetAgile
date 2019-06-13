@@ -1,16 +1,20 @@
 
-
-<!--Import jQuery before materialize.js-->
+<!--
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<!-- Compiled and minified JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+<link rel = "stylesheet"
+    href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel = "stylesheet"
+    href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+<script type = "text/javascript"
+    src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+</script>-->
 
 <nav>
     <div class="nav-wrapper">
         <div class="#1e88e5 blue darken-1">
-
-            <a class="waves-effect waves-light btn" href="index.php">Acceuil</a>
-            <?php
+        <?php
             $user = get_logged_user();
             if(!$user){
                 echo '<a class="waves-effect waves-light btn" href="signin.php">Connexion</a>';
@@ -21,17 +25,14 @@
             if($user) {
                 echo '<a class="waves-effect waves-light btn right" style="margin-top: 1%;" href="signin.php?disconnect">Déconnexion</a>';
                 if(is_admin($user->get('id'))){
-                    echo ' <a class="wave-effect waves-light btn" href="changerLesRoles.php">Listes des initiateurs</a>';
-                    echo ' <a class="wave-effect waves-light btn" href="GererEleve.php">Liste des élèves</a>';
-                    echo ' <a class="wave-effect waves-light btn" href="competences.php">Gerer les competences</a>';
-                }
-            }
-            ?>
-
-<?php
-            if($user) {
-                if (is_admin($user->get('id'))) {
-                    echo '<a class="waves-effect waves-light btn" href="signup_initiateur.php">Inscrire initiateur</a>';
+                    echo '<ul id = "dropdown" class = "dropdown-content">';
+                    echo '<li><a href = "changerLesRoles.php">Liste des initiateurs</a></li>';
+                    echo '<li><a href = "GererEleve.php">Liste des élèves</span></a></li>';
+                    echo '<li><a href = "competences.php">Gerer les compétences</span></a></li>';
+                    echo '<li><a href = "signup_initiateur.php">Inscrire initiateur</span></a></li>';
+                    echo '</ul>';
+                  
+                    echo '<a class = "btn dropdown-button" href = "#" data-activates = "dropdown">Accueil<i class = "mdi-navigation-arrow-drop-down"></i></a>';
                 }
             }
             ?>
