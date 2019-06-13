@@ -12,7 +12,6 @@ try {
 }
 
 if ($user) {
-    $reqAjjStudent = $db->prepare("INSERT INTO student(firstName, name,level) VALUES (:firstName,:name,:level)");
     $reqStudent = $db->query("SELECT * FROM student");
 
     if (isset($_POST['submit'])) {
@@ -32,16 +31,11 @@ if ($user) {
         } else {
             $firstName = $_POST['firstName'];
             $name = $_POST['name'];
-            $name = $_POST['level'];
+            $level = $_POST['level'];
 
-
-            /*$auth = authenticate_user_by_username($username, $password); //modele
-
-            if (!$auth) {
-                echo 'Erreur';
             } else {
-                header('Location:  changerLesRoles.php');
-            }*/
+            $studentWriter = new DbStudentWriter(new DbConnector());
+            $studentWriter->writeNewStudent($firstName,$name,$level);
         }
 
     } ?>
