@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
-/*
+
 require_once("../settings.php");
 require_once("DbConnector.php");
-
+/*
 $db = new DbSummaryReader(new DbConnector());
 <<<<<<< Updated upstream
 var_dump($db->readSummaryFromStudentId(3));
@@ -10,6 +10,10 @@ var_dump($db->readSummaryFromStudentId(3));
 var_dump($db->getSkillCountFromId(3));
 >>>>>>> Stashed changes
 */
+
+$test = new DbSummaryReader(new DbConnector());
+var_dump($test->getDates(3));
+
 
 class DbSummaryReader
 {
@@ -56,8 +60,8 @@ class DbSummaryReader
             return false;
         }
 
-        $statement = $pdo->prepare("SELECT date FROM studendtrials WHERE student_id = :id ");
-        $statement->bindParam(':id', $id);
+        $statement = $pdo->prepare("SELECT date FROM studendtrials WHERE student_id=:id");
+        $statement->bindParam(':id', $studentId);
         return $this->dbConnector->execStatement($statement);
     }
 
