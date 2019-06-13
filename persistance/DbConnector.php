@@ -37,7 +37,12 @@ class DbConnector
         $calling_func = str_pad(debug_backtrace()[1]['function'], 20, " ");
         if ($GLOBALS["bEnableLogging"])
         {
-            $logmsg =  date('Y-m-d H:i:s') . " [$calling_func] $e";
+            if (is_array($e)) {
+                $msg = implode(", ", $e);
+                $logmsg =  date('Y-m-d H:i:s') . " [$calling_func] . $msg";
+            } else {
+                $logmsg =  date('Y-m-d H:i:s') . " [$calling_func] $e";
+            }
             if ($GLOBALS["bEchoLogs"])
             {
                 echo "<br>" .$logmsg;
