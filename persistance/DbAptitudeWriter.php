@@ -1,5 +1,12 @@
 <?php declare(strict_types=1);
 
+/*
+require_once("../settings.php");
+require_once("DbConnector.php");
+
+$db = new DbAptitudeWriter(new DbConnector());
+var_dump($db->validateAptitude(1, 0));
+*/
 
 class DbAptitudeWriter
 {
@@ -23,6 +30,24 @@ class DbAptitudeWriter
             VALUES (:aptitude, :validated)');
 
         $statement->bindParam(':aptitude', $aptitudeName);
+        $statement->bindParam(':validated', $validated);
+
+        $suc = $statement->execute();
+        return $suc;
+    }
+
+    public function validateAptitude($aptitudeId, $validated) : bool
+    {
+        try {
+            $pdo = $this->dbConnector->getConnection();
+        } catch (Exception $e) {
+
+            return false;
+        }
+
+        $statement = $pdo->prepare('update `aptitude` set validated = :validated where id_apt = :aptid');
+
+        $statement->bindParam(':aptid', $aptitudeId);
         $statement->bindParam(':validated', $validated);
 
         $suc = $statement->execute();

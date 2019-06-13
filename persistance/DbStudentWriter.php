@@ -3,6 +3,10 @@
 
 class DbStudentWriter
 {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 684dc74a316342a4c2c92446f5b9c009fbb65ac7
     private $dbConnector;
 
     public function __construct(DbConnector $dbConnector)

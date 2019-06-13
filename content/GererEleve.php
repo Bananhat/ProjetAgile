@@ -1,5 +1,6 @@
 <?php
 include_once('../includes/utils_page.php');
+include_once('../persistance/DbStudentWriter.php');
 get_header();
 
 $user = get_logged_user();
@@ -7,14 +8,11 @@ $user = get_logged_user();
 try {
     $db = getInstanceOfDb();
 } catch (Exception $e) {
-
     return false;
 }
 
 if ($user) {
-    $reqStudent = $db->query("SELECT * FROM student");
-
-    if (isset($_POST['submit'])) {
+   if (isset($_POST['submit'])) {
         $non_remplis = array();
 
         foreach ($_POST as $key => $value) {
@@ -34,10 +32,13 @@ if ($user) {
             $level = $_POST['level'];
 
             $studentWriter = new DbStudentWriter(new DbConnector());
-            $studentWriter->writeNewStudent($firstName,$name,$level);
+            $studentWriter->writeNewStudent($firstName, $name, $level);
         }
+    }
 
-    } ?>
+    $reqStudent = $db->query("SELECT * FROM student");
+
+} ?>
 
     <h1 class="title has-text-dark has-text-weight-bold" style="text-align:center; margin-bottom:2%;margin-top:2%;">
         Visualiser les élèves</h1>
@@ -52,36 +53,39 @@ if ($user) {
             <tbody>
             <?php
 
-
             foreach ($reqStudent as $rowStudent) {
                 echo '<tr>';
-                echo '<td>' . $rowStudent['name'] . '</td>';
-                echo '<td>' . $rowStudent['firstName'] . '</td>';
-                if($user=='formateur')
-                {
-                    echo '<td><a class="waves-effect waves-light btn">Modifier</a></td>';
-                    echo '<td><a class="waves-effect waves-light btn">Supprimer</a></td>';
-                }
+                echo '<td>' . $rowStudent['NAME'] . '</td>';
+                echo '<td>' . $rowStudent['FIRSTNAME'] . '</td>';
+                echo '<td><a class="waves-effect waves-light btn">Modifier</a></td>';
+                echo '<td><a class="waves-effect waves-light btn">Supprimer</a></td>';
                 echo '</tr>';
+            }
+
                 echo '<tr>';
-                echo '<td><label for="name"><b>nom</b></label><input type="text" placeholder="name" name="name" required></td>';
-                echo '<td><label for="firstName"><b>prenom</b></label><input type="text" placeholder="firstName" name="firstName" required></td>';
-                echo '<td>
-                <div class="input-field col s12">
-                    <select>
+                echo '<td>';
+                echo '<form method="POST" action="">';
+
+                echo '<label for="name"><b>nom</b></label><input type="text" placeholder="name" name="name" required>';
+                echo '<label for="firstName"><b>prenom</b></label><input type="text" placeholder="firstName" name="firstName" required>';
+
+                echo '
+                <div class="select" style="margin-right:1px; ">
+                    <select name="level">
                       <option value="" disabled selected>Niveau</option>
                       <option value="0">niveau 0</option>
                       <option value="1">niveau 1</option>
                       <option value="2">niveau 2</option>
                       <option value="3">niveau 3</option>
                     </select>
-                  </div>
-                </td>';
-                echo '<td><a class="waves-effect waves-light btn">Ajouter</a></td>';
-            } ?>
+                  </div>';
+                echo '<input class="btn waves-effect waves-light" type="submit" id="submit" name="submit" value="Mettre à jour"/>';
+                echo '</form>';
+                echo '</td>';
+                echo '</tr>';
+            ?>
             </tbody>
         </table>
     </div>
-    <?php
-}
+<?php
 get_footer();

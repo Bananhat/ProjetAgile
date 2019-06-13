@@ -8,12 +8,18 @@ class DbConnector
      */
     public function getConnection()
     {
-        $dsn = "mysql:host=" . DB_HOST. ";dbname=" . DB_NAME . ';charset=utf8';
+        $dsn = "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ';charset=utf8';
         try {
             $pdo = new \PDO($dsn, DB_USER, DB_PASSWORD);
         } catch (\PDOException $exception) {
             throw new \Exception("No connection to database");
         }
         return $pdo;
+    }
+
+    public function execStatement($statement) : array
+    {
+        $statement->execute();
+        return $statement->fetchAll(2); // FETCH_ASSOC
     }
 }
