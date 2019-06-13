@@ -8,7 +8,7 @@ $result = $Dbreader->readSummaryFromStudentId(3);
 
 $html = "";?>
 
-<table>
+<table border="1">
     <tr>
         <td></td>
         <?php
@@ -33,16 +33,32 @@ $html = "";?>
             }
         }?>
     </tr>
-    <?php /*
+
     <?php
     foreach($date as $dat)
     {
         echo '<tr>';
-        foreach($aptitude as $apt)
+        echo '<td>'.$dat.'</td>';
+        /*foreach($competence as $comp)
         {
-            echo '<td>'..'</td>';
-        }
+            $aptitude = $Dbreader->getSkillsFromCompetenceId($comp['id']);
+            foreach($aptitude as $apt)
+            {
+                if($trial["validated"] == 1)
+                {
+                    echo '<td>Acquis</td>';
+                }
+                else if($trial["validated"] == 2)
+                {
+                    echo '<td>En Cours</td>';
+                }
+                else
+                {
+                    echo '<td>...</td>';
+                }
+            }
+        }*/
         echo '</tr>';
-    }*/?>
+    }?>
 </table>
 
