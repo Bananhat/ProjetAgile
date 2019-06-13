@@ -19,7 +19,7 @@ $html = "";?>
         {
             $count = $Dbreader->getSkillCountFromCompetenceId($comp["id"]);
             var_dump($count);
-            echo "<td colspan=$count>".$comp['name'].$count.'</td>';
+            echo "<td colspan=".$count[0]["count(*)"].">".$comp['name'].'</td>';
         }?>
     </tr>
 <?php /*
