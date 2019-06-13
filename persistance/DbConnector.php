@@ -16,6 +16,7 @@ class DbConnector
         try {
             $pdo = new \PDO($dsn, DB_USER, DB_PASSWORD);
         } catch (\PDOException $exception) {
+            $this::outlog($exception);
             throw new \Exception("No connection to database");
         }
         $this::outlog("Connected to Database with connstring: $dsn");
@@ -27,9 +28,11 @@ class DbConnector
         $suc = $statement->execute();
         $this::outlog(preg_replace( "/\r|\n/", "", $statement->queryString )  ." Successfull: $suc");
 
-        $this::outlog($statement->errorInfo());
+        //$this::outlog($statement->errorInfo());
 
-        return $statement->fetchAll(2); // FETCH_ASSOC
+        $result = $statement->fetchAll(2);
+        $this::outlog($result);
+        return $result; // FETCH_ASSOC
     }
 
     static function outlog($e)
@@ -38,7 +41,8 @@ class DbConnector
         if ($GLOBALS["bEnableLogging"])
         {
             if (is_array($e)) {
-                $msg = implode(", ", $e);
+                $msg = json_encode($e);
+
                 $logmsg =  date('Y-m-d H:i:s') . " [$calling_func] . $msg";
             } else {
                 $logmsg =  date('Y-m-d H:i:s') . " [$calling_func] $e";
