@@ -47,3 +47,9 @@ footer
 	padding: 1rem;
 	z-index: 10;
 }
+#tableau
+{
+	border: 1px solid black;
+	border-collapse: collapse;
+	margin-top:10px;
+}
