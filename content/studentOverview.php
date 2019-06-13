@@ -13,10 +13,11 @@ $html = "";?>
         <td></td>
         <?php
         $studentid = $_GET['id'];
+        echo "hqllo";
         $competence = $Dbreader->getCompetencesFromStudentId($studentid);
         foreach($competence as $comp)
         {
-            $count = ;
+            $count = $Dbreader->getSkillCountFromCompetenceId($comp["id"]);
             echo "<td colspan=$count>".$comp['name'].$count.'</td>';
         }?>
     </tr>

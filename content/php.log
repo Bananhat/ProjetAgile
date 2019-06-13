@@ -151,3 +151,39 @@
 2019-06-13 13:49:27 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
 2019-06-13 13:49:27 [execStatement       ] SELECT * FROM competences WHERE niveau = (SELECT level FROM student WHERE id_student = :id) Successfull: 1
 2019-06-13 13:49:27 [execStatement       ] . 00000, , 
+2019-06-13 13:59:03 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:59:03 [execStatement       ] select * from student                                    left join studendtrials on studendtrials.student_id = student.id_student                                    left join skill on skill_id = studendtrials.skill_id                                    left join competences on competences.id = skill.competence_id                                    where student.id_student = :studid order by competences.id asc Successfull: 1
+2019-06-13 13:59:03 [execStatement       ] . 00000, , 
+2019-06-13 13:59:03 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:59:03 [execStatement       ] SELECT * FROM competences WHERE niveau =  Successfull: 
+2019-06-13 13:59:03 [execStatement       ] . 42000, 1064, Erreur de syntaxe près de '' à la ligne 1
+2019-06-13 13:59:53 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:59:53 [execStatement       ] select * from student                                    left join studendtrials on studendtrials.student_id = student.id_student                                    left join skill on skill_id = studendtrials.skill_id                                    left join competences on competences.id = skill.competence_id                                    where student.id_student = :studid order by competences.id asc Successfull: 1
+2019-06-13 13:59:53 [execStatement       ] . 00000, , 
+2019-06-13 13:59:53 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 13:59:53 [execStatement       ] SELECT * FROM competences WHERE niveau =  Successfull: 
+2019-06-13 13:59:53 [execStatement       ] . 42000, 1064, Erreur de syntaxe près de '' à la ligne 1
+2019-06-13 14:00:10 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 14:00:10 [execStatement       ] select * from student                                    left join studendtrials on studendtrials.student_id = student.id_student                                    left join skill on skill_id = studendtrials.skill_id                                    left join competences on competences.id = skill.competence_id                                    where student.id_student = :studid order by competences.id asc Successfull: 1
+2019-06-13 14:00:10 [execStatement       ] . 00000, , 
+2019-06-13 14:00:10 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 14:00:10 [execStatement       ] SELECT * FROM competences WHERE niveau =  Successfull: 
+2019-06-13 14:00:10 [execStatement       ] . 42000, 1064, Erreur de syntaxe près de '' à la ligne 1
+2019-06-13 14:00:11 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 14:00:11 [execStatement       ] select * from student                                    left join studendtrials on studendtrials.student_id = student.id_student                                    left join skill on skill_id = studendtrials.skill_id                                    left join competences on competences.id = skill.competence_id                                    where student.id_student = :studid order by competences.id asc Successfull: 1
+2019-06-13 14:00:11 [execStatement       ] . 00000, , 
+2019-06-13 14:00:11 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 14:00:11 [execStatement       ] SELECT * FROM competences WHERE niveau =  Successfull: 
+2019-06-13 14:00:11 [execStatement       ] . 42000, 1064, Erreur de syntaxe près de '' à la ligne 1
+2019-06-13 14:00:36 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 14:00:36 [execStatement       ] select * from student                                    left join studendtrials on studendtrials.student_id = student.id_student                                    left join skill on skill_id = studendtrials.skill_id                                    left join competences on competences.id = skill.competence_id                                    where student.id_student = :studid order by competences.id asc Successfull: 1
+2019-06-13 14:00:36 [execStatement       ] . 00000, , 
+2019-06-13 14:00:36 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 14:00:36 [execStatement       ] SELECT * FROM competences WHERE niveau =  Successfull: 
+2019-06-13 14:00:36 [execStatement       ] . 42000, 1064, Erreur de syntaxe près de '' à la ligne 1
+2019-06-13 14:00:55 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 14:00:55 [execStatement       ] select * from student                                    left join studendtrials on studendtrials.student_id = student.id_student                                    left join skill on skill_id = studendtrials.skill_id                                    left join competences on competences.id = skill.competence_id                                    where student.id_student = :studid order by competences.id asc Successfull: 1
+2019-06-13 14:00:55 [execStatement       ] . 00000, , 
+2019-06-13 14:00:55 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 14:00:55 [execStatement       ] SELECT * FROM competences WHERE niveau =  Successfull: 
+2019-06-13 14:00:55 [execStatement       ] . 42000, 1064, Erreur de syntaxe près de '' à la ligne 1
