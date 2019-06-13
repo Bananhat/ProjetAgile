@@ -47,6 +47,20 @@ class DbSummaryReader
         return $this->dbConnector->execStatement($statement);
     }
 
+    public function getDates($studentId)
+    {
+        try {
+            $pdo = $this->dbConnector->getConnection();
+        } catch (Exception $e) {
+            $this->dbConnector::outlog($e);
+            return false;
+        }
+
+        $statement = $pdo->prepare("SELECT date FROM studendtrials WHERE student_id = :id ");
+        $statement->bindParam(':id', $id);
+        return $this->dbConnector->execStatement($statement);
+    }
+
     #SELECT competence_id, count(*) FROM `skill` group by competence_id having competence_id = :id;
 
     public function getCompetencesFromStudentId($studentId)
