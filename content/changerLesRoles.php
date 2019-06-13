@@ -9,6 +9,26 @@ try {
     return false;
 }
 if($user) {
+
+    if($_POST['submit']){
+    $nouveauRole = $_POST['role'];
+    $userID = $_POST['user'];
+    echo $nouveauRole;
+    echo $userID;
+    $userUpdate = new DbUserUpdater(new DbConnector());
+    $suc = $userUpdate->updateUserRole($userID, $nouveauRole);
+    var_dump($suc);
+
+    if($suc){
+        echo 'Mise a jour réussie !';
+    }
+    else {
+        echo 'Echec de la mise a jour';
+    }
+
+    }
+
+
     $reqUser=$db->query("SELECT * FROM USER WHERE role = 'initiateur'");
     ?>
     <h1 class="title has-text-dark has-text-weight-bold" style="text-align:center; margin-bottom:2%;margin-top:2%;">
