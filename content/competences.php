@@ -25,18 +25,13 @@ if ($user){
         <tbody>
         <?php
 
-<<<<<<< HEAD
-<?php
-=======
         foreach ($reqCompetences as $rowCompetences) {
             echo '<tr>';
             echo '<td>' . $rowCompetences['Description'] . '</td>';
             echo '<td>' . $rowCompetences['id_skill'] . '</td>';
-            if($user=='formateur')
-            {
-                echo '<td><a class="waves-effect waves-light btn">Ajouter competence</a></td>'
+            if ($user == 'formateur') {
+                echo '<td><a class="waves-effect waves-light btn">Ajouter competence</a></td>';
             }
-
->>>>>>> 3619f19cb5d6e843e88ccd300f4d076c693119ef
+        }
 
 get_footer();
