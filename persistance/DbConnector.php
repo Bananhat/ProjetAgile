@@ -20,6 +20,6 @@ class DbConnector
     public function execStatement($statement) : array
     {
         $statement->execute();
-        return $statement->fetchAll(FETCH_ASSOC);
+        return $statement->fetchAll(2); // FETCH_ASSOC
     }
 }
