@@ -4,19 +4,23 @@
 
 class DbUserUpdater
 {
-    private $pdo;
+    private $dbConnector;
 
     public function __construct(DbConnector $dbConnector)
     {
-        $this->pdo = $dbConnector;
+        $this->dbConnector = $dbConnector;
     }
 
 
     public function updateUserRole($userid, $newUserRole) : bool
     {
         try {
+<<<<<<< HEAD
             $pdo = $this->pdo->getConnection();
 
+=======
+            $pdo = $this->dbConnector->getConnection();
+>>>>>>> 37c94e1cd19b1a3eb4bf88e36874a09c39132325
         } catch (Exception $e) {
             return false;
         }
@@ -32,7 +36,7 @@ class DbUserUpdater
     {
         try
         {
-            $pdo = $this->pdo->getConnection();
+            $pdo = $this->dbConnector->getConnection();
         }
         catch(Exception $e)
         {
@@ -51,7 +55,7 @@ class DbUserUpdater
     {
         try
         {
-            $pdo = $this->pdo->getConnection();
+            $pdo = $this->dbConnector->getConnection();
         }
         catch(Exception $e)
         {
