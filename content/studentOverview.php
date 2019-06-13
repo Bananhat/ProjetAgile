@@ -18,6 +18,7 @@ $html = "";?>
         foreach($competence as $comp)
         {
             $count = $Dbreader->getSkillCountFromCompetenceId($comp["id"]);
+            var_dump($count);
             echo "<td colspan=$count>".$comp['name'].$count.'</td>';
         }?>
     </tr>

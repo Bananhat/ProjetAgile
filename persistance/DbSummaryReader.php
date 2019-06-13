@@ -26,12 +26,11 @@ class DbSummaryReader
             $pdo = $this->dbConnector->getConnection();
         } catch (Exception $e) {
             $this->dbConnector::outlog($e);
-
             return false;
         }
-
-        $statement = $pdo->prepare("SELECT competence_id, count(*) FROM `skill` group by competence_id having competence_id = :id");
+        $statement = $pdo->prepare("SELECT count(*) FROM `skill` where competence_id = :id");
         $statement->bindParam(':id', $id);
+
         return $this->dbConnector->execStatement($statement);
     }
 
