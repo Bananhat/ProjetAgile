@@ -67,3 +67,9 @@
 2019-06-13 11:39:25 [updateStudentName   ] UPDATE student set firstname = :firstname, name = :username where id_student = :userid Successfull: 1
 2019-06-13 11:40:00 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
 2019-06-13 11:40:00 [updateUserRole      ] UPDATE user set role = :userrole where id = :userid Successfull: 1
+2019-06-13 12:00:35 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 12:00:35 [execStatement       ] select * from studendtrials inner join skill on studendtrials.skill_id = skill.id							inner join competences on skill.competence_id = competences.id where studendtrials.id = :studid Successfull: 
+2019-06-13 12:00:35 [execStatement       ] . 42S02, 1146, La table 'agile1_bd.studendtrials' n'existe pas
+2019-06-13 12:00:35 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 12:00:35 [execStatement       ] select * from studendtrials inner join skill on studendtrials.skill_id = skill.id							inner join competences on skill.competence_id = competences.id where studendtrials.id = :studid Successfull: 
+2019-06-13 12:00:35 [execStatement       ] . 42S02, 1146, La table 'agile1_bd.studendtrials' n'existe pas
