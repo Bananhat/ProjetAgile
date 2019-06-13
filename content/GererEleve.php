@@ -38,12 +38,16 @@ if($user)
                 echo '</tr>';
 
             } ?>
+
             <div class="formulaire" style="margin-top: 10%; margin-left: 30%; width: 25%;">
                 <label for="name"><b>nom</b></label>
                 <input type="text" placeholder="name" name="name" required>
 
                 <label for="firstName"><b>prenom</b></label>
                 <input type="text" placeholder="firstName" name="firstName" required>
+
+                <label for="level"><b>level</b></label>
+                <input type="text" placeholder="level" name="level" required>
             </div>
             </tbody>
         </table>
