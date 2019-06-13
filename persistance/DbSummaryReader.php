@@ -41,7 +41,7 @@ class DbSummaryReader
     {
         $pdo = $this->dbConnector->getConnection();
 
-        $statement = $pdo->prepare("SELECT * FROM competences WHERE niveau = ");
+        $statement = $pdo->prepare("SELECT * FROM competences WHERE niveau = (SELECT level FROM student WHERE id_student = :id)");
         $statement->bindParam(':id', $studentId);
 
         return $this->dbConnector->execStatement($statement);
