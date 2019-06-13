@@ -3,7 +3,10 @@
 
 class DbStudentWriter
 {
+<<<<<<< HEAD
+=======
 
+>>>>>>> 684dc74a316342a4c2c92446f5b9c009fbb65ac7
     private $dbConnector;
 
     public function __construct(DbConnector $dbConnector)
@@ -29,5 +32,26 @@ class DbStudentWriter
 
         $suc = $statement->execute();
         return $suc;
+    }
+
+    public function updateStudentName($userid, $newfirstname, $newname) : bool
+    {
+        try
+        {
+            $pdo = $this->dbConnector->getConnection();
+
+        }
+        catch(Exception $e)
+        {
+            return false;
+        }
+
+        $statement = $pdo->prepare('UPDATE student set firstName = :firstname, name = :username where id = :userid');
+
+        $statement->bindParam(':firstname', $newfirstname);
+        $statement->bindParam(':userid', $userid);
+        $statement->bindParam(':username', $newname);
+
+        return $statement->execute();
     }
 }
