@@ -4,7 +4,7 @@ require_once("../settings.php");
 require_once("DbConnector.php");
 
 $db = new DbSummaryReader(new DbConnector());
-var_dump($db->readSummaryFromStudentId(4));
+var_dump($db->getStudentsWithAptitude());
 */
 
 class DbSummaryReader
@@ -101,4 +101,24 @@ class DbSummaryReader
 
         return $this->dbConnector->execStatement($statement);
     }
+
+    public function getStudentsInAptitude() : array
+    {
+        try {
+            $pdo = $this->dbConnector->getConnection();
+        } catch (Exception $e) {
+            $this->dbConnector::outlog($e);
+
+            return false;
+        }
+
+        $statement = $pdo->prepare('select * from studend
+                                    inner join studendtrials on student.id_student = studendtrials.student_id
+                                    where studendtrials.validated = false');
+
+
+        return $this->dbConnector->execStatement($statement);
+    }
+
+
 }
