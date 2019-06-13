@@ -35,6 +35,8 @@ $html = "";?>
     </tr>
 
     <?php
+    $date = $Dbreader->getDates($studentid);
+    var_dump($date);
     foreach($date as $dat)
     {
         echo '<tr>';
