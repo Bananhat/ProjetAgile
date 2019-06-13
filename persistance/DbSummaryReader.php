@@ -156,6 +156,22 @@ class DbSummaryReader
         return $this->dbConnector->execStatement($statement);
     }
 
+    public function updateStudentComment(int $studentid, string $comment) : bool
+    {
+        try {
+            $pdo = $this->dbConnector->getConnection();
+        } catch (Exception $e) {
+            $this->dbConnector::outlog($e);
+            return false;
+        }
+
+        $statement = $pdo->prepare('UPDATE student set comment = :comment where id = :id');
+        $statement->bindParam(':comment', $comment);
+        $statement->bindParam(':id', $studentid);
+        $suc = $statement->execute();
+        return $suc;
+    }
+
     public function getCommentFromStudent($studid) : array
     {
         try {
