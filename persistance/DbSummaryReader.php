@@ -1,11 +1,11 @@
 <?php declare(strict_types=1);
-
+/*
 require_once("../settings.php");
 require_once("DbConnector.php");
 
 $db = new DbSummaryReader(new DbConnector());
 var_dump($db->readSummaryFromStudentId(3));
-
+*/
 
 class DbSummaryReader
 {
