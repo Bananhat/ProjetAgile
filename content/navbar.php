@@ -23,6 +23,7 @@
                 if(is_admin($user->get('id'))){
                     echo ' <a class="wave-effect waves-light btn" href="changerLesRoles.php">Listes des initiateurs</a>';
                     echo ' <a class="wave-effect waves-light btn" href="GererEleve.php">Liste des élèves</a>';
+                    echo ' <a class="wave-effect waves-light btn" href="competences.php">Gerer les competences</a>';
                 }
             }
             ?>

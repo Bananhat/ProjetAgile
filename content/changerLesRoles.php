@@ -1,5 +1,7 @@
 <?php
 include('../includes/utils_page.php');
+include('../persistance/DbConnector.php');
+include('../persistance/DbUserUpdater.php');
 get_header();
 $user = get_logged_user();
 try {
@@ -13,8 +15,8 @@ if($user) {
     if($_POST['submit']){
     $nouveauRole = $_POST['role'];
     $userID = $_POST['user'];
-
     $userUpdate = new DbUserUpdater(new DbConnector());
+
     $suc = $userUpdate->updateUserRole($userID, $nouveauRole);
 
     if($suc){
