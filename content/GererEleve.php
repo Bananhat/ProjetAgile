@@ -72,7 +72,7 @@ if ($user) {
             foreach ($reqStudent as $rowStudent) {
                 echo '<tr>';
                 echo '<td>' . $rowStudent['name'] . '</td>';
-                echo '<td>' . $rowStudent['firstname'] . '</td>';
+                echo '<td>' . $rowStudent['firstName'] . '</td>';
                 echo '<td>' . $rowStudent['level'] . '</td>';
 
                 echo '<td><a class="waves-effect waves-light btn" href="fiche_eleve.php?id='.$rowStudent['id_student'] .'">Modifier</a></td>';

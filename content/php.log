@@ -94,3 +94,17 @@
 2019-06-13 12:00:35 [execStatement       ] select * from studendtrials inner join skill on studendtrials.skill_id = skill.id							inner join competences on skill.competence_id = competences.id where studendtrials.id = :studid Successfull: 
 2019-06-13 12:00:35 [execStatement       ] . 42S02, 1146, La table 'agile1_bd.studendtrials' n'existe pas
 >>>>>>> f7aed7e2aa93e85a9fa82d9876831be6ef670824
+2019-06-13 12:26:44 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 12:26:46 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 12:26:46 [deleteStudent       ] delete from student where id_student = :userid Successfull: 1
+2019-06-13 12:26:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 12:26:52 [updateStudentName   ] UPDATE student set firstName = :firstname, name = :username where id_student = :userid Successfull: 1
+2019-06-13 12:26:54 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 12:26:54 [deleteStudent       ] delete from student where id_student = :userid Successfull: 1
+2019-06-13 12:28:59 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 12:28:59 [writeNewUser        ] INSERT INTO `user`(`firstName`, `name`, `email`, `password`, `role`)            VALUES (:firstname, :name, :email, :password, :role) Successfull: 1
+2019-06-13 12:32:21 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 12:33:13 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 12:33:13 [updateUserRole      ] UPDATE user set role = :userrole where id = :userid Successfull: 1
+2019-06-13 12:33:22 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 12:33:22 [updateUserRole      ] UPDATE user set role = :userrole where id = :userid Successfull: 1
