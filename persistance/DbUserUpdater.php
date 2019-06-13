@@ -17,6 +17,7 @@ class DbUserUpdater
         try {
             $pdo = $this->dbConnector->getConnection();
         } catch (Exception $e) {
+            $this->dbConnector::outlog($e);
             return false;
         }
 
@@ -24,7 +25,9 @@ class DbUserUpdater
 
         $statement->bindParam(':userrole', $newUserRole);
         $statement->bindParam(':userid', $userid);
-        return $statement->execute();
+        $suc = $statement->execute();
+        $this->dbConnector::outlog(preg_replace( "/\r|\n/", "", $statement->queryString )  ." Successfull: $suc");
+        return $suc;
     }
 
     public function updateUserName($userid, $newfirstname, $newname) : bool
@@ -35,6 +38,7 @@ class DbUserUpdater
         }
         catch(Exception $e)
         {
+            $this->dbConnector::outlog($e);
             return false;
         }
 
@@ -43,7 +47,9 @@ class DbUserUpdater
         $statement->bindParam(':firstname', $newfirstname);
         $statement->bindParam(':userid', $userid);
         $statement->bindParam(':username', $newname);
-        return $statement->execute();
+        $suc = $statement->execute();
+        $this->dbConnector::outlog(preg_replace( "/\r|\n/", "", $statement->queryString )  ." Successfull: $suc");
+        return $suc;
     }
 
     public function deleteUser($userid) : bool
@@ -54,12 +60,15 @@ class DbUserUpdater
         }
         catch(Exception $e)
         {
+            $this->dbConnector::outlog($e);
             return false;
         }
 
         $statement = $pdo->prepare('delete from user where id = :userid');
 
         $statement->bindParam(':userid', $userid);
-        return $statement->execute();
+        $suc = $statement->execute();
+        $this->dbConnector::outlog(preg_replace( "/\r|\n/", "", $statement->queryString )  ." Successfull: $suc");
+        return $suc;
     }
 }

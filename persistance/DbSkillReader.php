@@ -15,6 +15,8 @@ class DbSkillReader
     {
         $pdo = $this->dbConnector->getConnection();
         $statement = $pdo->prepare('SELECT * from skill');
+        $this->dbConnector::outlog(preg_replace( "/\r|\n/", "", $statement->queryString ));
+
         $result = $this->dbConnector->execStatement($statement);
         return $result;
     }
@@ -24,6 +26,7 @@ class DbSkillReader
         $pdo = $this->dbConnector->getConnection();
         $statement = $pdo->prepare('SELECT * from skill where id = :id');
         $statement->bindParam(':id', $id);
+        $this->dbConnector::outlog(preg_replace( "/\r|\n/", "", $statement->queryString ));
         $result = $this->dbConnector->execStatement($statement);
         return $result;
     }

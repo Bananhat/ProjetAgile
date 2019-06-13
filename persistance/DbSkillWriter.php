@@ -18,8 +18,10 @@ class DbSkillWriter
 
         $statement->bindParam(':skill', $name);
         $statement->bindParam(':competence_id', $competence_id);
-        $success =  $statement->execute();
-        return $success;
+        $suc =  $statement->execute();
+        $this->dbConnector::outlog(preg_replace( "/\r|\n/", "", $statement->queryString )  ." Successfull: $suc");
+
+        return $suc;
     }
 
 }
