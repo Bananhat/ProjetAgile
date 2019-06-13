@@ -69,11 +69,21 @@ if ($user) {
                     echo '<td><a class="waves-effect waves-light btn">Modifier</a></td>';
                     echo '<td><a class="waves-effect waves-light btn">Supprimer</a></td>';
                 }
-                echo '<tr>';
                 echo '</tr>';
+                echo '<tr>';
                 echo '<td><label for="name"><b>nom</b></label><input type="text" placeholder="name" name="name" required></td>';
                 echo '<td><label for="firstName"><b>prenom</b></label><input type="text" placeholder="firstName" name="firstName" required></td>';
-                echo '<td><label for="level"><b>level</b></label><input type="text" placeholder="level" name="level" required></td>';
+                echo '<td>
+                <div class="input-field col s12">
+                    <select>
+                      <option value="" disabled selected>Niveau</option>
+                      <option value="0">niveau 0</option>
+                      <option value="1">niveau 1</option>
+                      <option value="2">niveau 2</option>
+                      <option value="3">niveau 3</option>
+                    </select>
+                  </div>
+                </td>';
             } ?>
             </tbody>
         </table>
