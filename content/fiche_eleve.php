@@ -45,8 +45,8 @@ if($user) {
     foreach ($reqStudent as $rowStudent)
     {
         echo '<form method="POST" action="fiche_eleve.php?id='.$_GET['id'] .'"> 
-        <input type="text" placeholder="' . $rowStudent['firstName'] . '" name="firstName" />
-        <input type="text" placeholder="' . $rowStudent['name'] . '" name="name" />
+        <input type="text" value="' . $rowStudent['firstName'] . '" name="firstName" />
+        <input type="text" value="' . $rowStudent['name'] . '" name="name" />
         <input class="btn waves-effect waves-light" type="submit" id="submit" name="submit" value="Modifier" />
         </form>
         ';
