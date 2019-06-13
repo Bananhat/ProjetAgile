@@ -35,15 +35,22 @@ $html = "";?>
     </tr>
 
     <?php
+    $date = $Dbreader->getDates($studentid);
+    var_dump($date);
+    $olddat = 0;
     foreach($date as $dat)
     {
-        echo '<tr>';
-        echo '<td>'.$dat.'</td>';
-        /*foreach($competence as $comp)
+        if($dat != $olddat) {
+            echo '<tr>';
+            echo '<td>' . $dat['date'] . '</td>';
+        }
+        $olddat = $dat;
+        foreach($competence as $comp)
         {
             $aptitude = $Dbreader->getSkillsFromCompetenceId($comp['id']);
             foreach($aptitude as $apt)
             {
+                $trial = $Dbreader->($apt['id'], $dat['dat']);
                 if($trial["validated"] == 1)
                 {
                     echo '<td>Acquis</td>';
@@ -54,10 +61,10 @@ $html = "";?>
                 }
                 else
                 {
-                    echo '<td>...</td>';
+                    echo '<td> </td>';
                 }
             }
-        }*/
+        }
         echo '</tr>';
     }?>
 </table>

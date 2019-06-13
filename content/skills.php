@@ -24,7 +24,9 @@ if ($user) {
         $suc = $skillUp->deleteSkill($userID);
         header('Location: skills.php?competence_id='.$_GET['comp']);
     }
-    if (isset($_POST['submit'])) {
+
+    if (isset($_POST['submit']) || isset($_GET['cid'])) {
+        echo 'sub';
         $non_remplis = array();
 
         foreach ($_POST as $key => $value) {
@@ -39,16 +41,16 @@ if ($user) {
                 echo $non_rempli . '<br />';
             }
         } else {
-            echo 'ezij';
             $name = $_POST['name'];
             $skillUp = new DbSkillWriter(new DbConnector());
-            $suc = $skillUp->addSkill($name, $_GET['id']);
+            $suc = $skillUp->addSkill($name, $_GET['cid']);
             if($suc){
                 echo'bon';
             }
             else{
                 echo 'pasbon';
             }
+            header('Location: skills.php?competence_id='.$_GET['cid']);
         }
     }
 
@@ -76,15 +78,15 @@ if ($user) {
                 echo '<tr>';
                 echo '<td>' . $row['skill'] . '</td>';
 
-                echo '<td><a class="waves-effect waves-light btn" href="skills.php?id='.$row['id'] .'">Modifier</a></td>';
+                echo '<td><a class="waves-effect waves-light btn" href="fiche_skills.php?competence_id='.$_GET['competence_id'].'&id='.$row['id'] .'">Modifier</a></td>';
                 echo '<td><a class="waves-effect waves-light btn" href="skills.php?supp=del&comp='.$_GET['competence_id'].'&id='.$row['id'].'">Supprimer</a></td>';
                 echo '</tr>';
             }
 
             echo '<tr>
                 
-                   <form method="POST" action="skills.php?id='.$_GET['competence_id'].'">
-       <td> <label for="name"><b>Aptitude</b></label><input type="text" placeholder="name" name="name" required></td>
+        <form method="POST" action="skills.php?cid='.$_GET['competence_id'].'">
+       <td> <label for="name"><b>Aptitude</b></label><input type="text" placeholder="name" name="name" required /></td>
              
             <td>      
         <input class="btn waves-effect waves-light" type="submit" id="submit" name="submit" value="Ajouter"/>
