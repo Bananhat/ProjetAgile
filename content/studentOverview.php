@@ -9,7 +9,7 @@ $Dbreader = new DbSummaryReader(new DbConnector());
 $result = $Dbreader->readSummaryFromStudentId(3);
 
 $html = "";?>
-
+<h3 class="title has-text-dark has-text-weight-bold" style="text-align:center;margin-bottom : 5%;"> Tableau de l'élève </h3>
 <table class="striped centered" id="tableau">
     <tr>
         <td id="tableau"></td>
