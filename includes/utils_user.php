@@ -18,8 +18,11 @@ function authenticate_user_by_username($username, $password){
     $user = new User();
 
    if($user->init_by_username($username, $password)){
-       $_SESSION['user'] = $user;
-       return true;
+       if($user->get('role') != 'student'){
+           $_SESSION['user'] = $user;
+           return true;
+       }
+
    }
 
    return false;

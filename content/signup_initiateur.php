@@ -32,10 +32,11 @@ get_header();
             $newUserEmail = $_POST['email'];
             $newUserPassword= $_POST['password'];
             $confirmPassword = $_POST['confirm'];
+            $userRole = $_POST['role'];
 
     if($confirmPassword == $newUserPassword) {
         $userWriter = new DbUserWriter(new DbConnector());
-        $userWriter->writeNewUser($newUserFirstName, $newUserName, $newUserEmail, $newUserPassword, 'initiateur');
+        $userWriter->writeNewUser($newUserFirstName, $newUserName, $newUserEmail, $newUserPassword, $userRole);
         echo "okay";
     }
     else {
@@ -66,6 +67,13 @@ get_header();
 
         <label for="confirm"><b>Confirmer le mot de passe</b></label>
         <input type="password" placeholder="Confirmer le mot de passe" name="confirm" required>
+
+        <select name="role" size="4">
+            <option selected>Initiateur</option>
+            <option>Responsable</option>
+            <option>Directeur technique</option>
+            <option>Elève</option>
+        </select>
 
         <input class="btn waves-effect waves-light" type="submit" name="submit" />
         </button>
