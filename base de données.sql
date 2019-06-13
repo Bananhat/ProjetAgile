@@ -9,7 +9,7 @@ create table if not exists user
 
 (
 
-id char(32) not null ,
+id int not null ,
 
 name char(32) not null ,
 
@@ -39,7 +39,7 @@ create table if not exists aptitude
 
 (
 
-id_aptitude char(32) not null ,
+id_aptitude int not null ,
 
 label char(32) not null ,
 
@@ -63,9 +63,9 @@ create table if not exists skill
 
 (
 
-id_skill char(32) not null ,
+id_skill int not null ,
 
-id_is_made_of char(32) not null ,
+id_is_made_of int not null ,
 
 label char(32) not null ,
 
@@ -89,13 +89,13 @@ create table if not exists formation
 
 (
 
-id_formation char(32) not null ,
+id_formation int not null ,
 
-id_is_validating char(32) not null ,
+id_is_validating int not null ,
 
 description text not null ,
 
-level char(32) not null
+level int not null
 
 , primary key (id_formation)
 
@@ -115,13 +115,13 @@ create table if not exists student
 
 (
 
-id_student char(32) not null ,
+id_student int not null ,
 
 name char(32) not null ,
 
 firstname char(32) not null ,
 
-level smallint not null
+level int not null
 
 , primary key (id_student)
 
@@ -141,9 +141,9 @@ create table if not exists completion
 
 (
 
-id_completion_1 char(32) not null ,
+id_completion_1 int not null ,
 
-id_completion_2 char(32) not null ,
+id_completion_2 int not null ,
 
 completed bool not null ,
 
@@ -167,9 +167,9 @@ create table if not exists validation
 
 (
 
-id_valide_1 char(32) not null ,
+id_valide_1 int not null ,
 
-id_valide_2 char(32) not null ,
+id_valide_2 int not null ,
 
 validated bool not null
 
@@ -191,9 +191,9 @@ create table if not exists is_attending
 
 (
 
-id_attend_1 char(32) not null ,
+id_attend_1 int not null ,
 
-id_attend_2 char(32) not null
+id_attend_2 int not null
 
 , primary key (id_attend_1,id_attend_2)
 
@@ -213,9 +213,9 @@ create table if not exists is_assessing
 
 (
 
-id char(32) not null ,
+id int not null ,
 
-id_1 char(32) not null
+id_1 int not null
 
 , primary key (id,id_1)
 
@@ -235,9 +235,9 @@ create table if not exists is_managing
 
 (
 
-id char(32) not null ,
+id int not null ,
 
-id_1 char(32) not null
+id_1 int) not null
 
 , primary key (id,id_1)
 
