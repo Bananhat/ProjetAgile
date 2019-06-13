@@ -14,8 +14,8 @@ try {
 if($user)
 {
     $reqAjjStudent=$db->prepare("INSERT INTO `user`(`firstName`, `name`,'role') VALUES (:firstName,:name,'student')");
-    $reqStudent=$db->query("SELECT * FROM USER WHERE role = 'student'");
-}?>
+    $reqStudent=$db->query("SELECT * FROM USER WHERE role = 'student'");?>
+
     <h1 class="title has-text-dark has-text-weight-bold" style="text-align:center; margin-bottom:2%;margin-top:2%;">
     Visualiser les élèves</h1>
 
@@ -27,6 +27,9 @@ if($user)
             </thead>
 
             <tbody>
+            </tbody>
+        </table>
     </div>
 <?php
+}
 get_footer();
