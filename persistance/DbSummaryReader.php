@@ -122,7 +122,7 @@ class DbSummaryReader
             return false;
         }
 
-        $statement = $pdo->prepare('select * from studend
+        $statement = $pdo->prepare('select * from student
                                     inner join studendtrials on student.id_student = studendtrials.student_id
                                     where studendtrials.validated = false');
 
