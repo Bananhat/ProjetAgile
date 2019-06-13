@@ -26,10 +26,11 @@ class DbSummaryReader
             return false;
         }
 
-        $statement = $pdo->prepare('select * from studendtrials left join skill on studendtrials.skill_id = skill.id
-							left join competences on skill.competence_id = competences.id 
-							left join student on student.id_student = studendtrials.student_id 
-							where student.id_student = :studid');
+        $statement = $pdo->prepare('select * from student
+                                    left join studendtrials on studendtrials.student_id = student.id_student
+                                    left join skill on skill_id = studendtrials.skill_id
+                                    left join competences on competences.id = skill.competence_id
+                                    where student.id_student = :studid');
 
         $statement->bindParam(':studid', $studentId);
         //$statement->execute();
