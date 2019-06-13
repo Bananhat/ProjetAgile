@@ -36,8 +36,13 @@ get_header();
 
     if($confirmPassword == $newUserPassword) {
         $userWriter = new DbUserWriter(new DbConnector());
-        $userWriter->writeNewUser($newUserFirstName, $newUserName, $newUserEmail, $newUserPassword, $userRole);
-        echo "okay";
+        $suc = $userWriter->writeNewUser($newUserFirstName, $newUserName, $newUserEmail, $newUserPassword, $userRole);
+        if($suc) {
+            echo "okay";
+        }
+        else{
+            echo'pas bon';
+        }
     }
     else {
         echo 'Les mots de passe doivent correspondre!';
