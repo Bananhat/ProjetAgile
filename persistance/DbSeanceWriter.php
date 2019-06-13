@@ -39,9 +39,9 @@ class DbSeanceWriter
             $this->dbConnector::outlog($exception);
         }
 
-        $statement = $pdo->prepare('SELECT * FROM `seance` where id_seance = :id');
+        $statement = $pdo->prepare('SELECT * FROM seance where id_seance = :id');
         $statement->bindParam(':id', $id);
-        $attribut = $this->dbConnector->execStatement($statement);
+        $attribut = $statement->execute();
 
         var_dump($attribut);
 
@@ -67,6 +67,8 @@ class DbSeanceWriter
         $statement->bindParam(':id_skill1', $id_skill1);
         $statement->bindParam(':id_skill2', $id_skill2);
         $statement->bindParam(':id_skill3', $id_skill3);
+        $statement->bindParam(':id', $id);
+
         $success = $statement->execute();
         $this->dbConnector::outlog($statement->errorInfo());
         return $success;
