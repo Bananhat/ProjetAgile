@@ -16,6 +16,10 @@ class DbUserUpdater
     {
         try {
             $pdo = $this->dbConnector->getConnection();
+<<<<<<< HEAD
+=======
+
+>>>>>>> e38a4d9c86ac2dc011c68d820db32115110ed306
         } catch (Exception $e) {
             return false;
         }
