@@ -7,14 +7,11 @@ $user = get_logged_user();
 try {
     $db = getInstanceOfDb();
 } catch (Exception $e) {
-
     return false;
 }
 
 if ($user) {
-    $reqStudent = $db->query("SELECT * FROM student");
-
-    if (isset($_POST['submit'])) {
+   if (isset($_POST['submit'])) {
         $non_remplis = array();
 
         foreach ($_POST as $key => $value) {
@@ -34,10 +31,13 @@ if ($user) {
             $level = $_POST['level'];
 
             $studentWriter = new DbStudentWriter(new DbConnector());
-            $studentWriter->writeNewStudent($firstName,$name,$level);
+            $studentWriter->writeNewStudent($firstName, $name, $level);
         }
+    }
 
-    } ?>
+    $reqStudent = $db->query("SELECT * FROM student");
+
+} ?>
 
     <h1 class="title has-text-dark has-text-weight-bold" style="text-align:center; margin-bottom:2%;margin-top:2%;">
         Visualiser les élèves</h1>
@@ -54,12 +54,10 @@ if ($user) {
 
             foreach ($reqStudent as $rowStudent) {
                 echo '<tr>';
-                echo '<td>' . $rowStudent['name'] . '</td>';
-                echo '<td>' . $rowStudent['firstName'] . '</td>';
-                if ($user == 'formateur') {
-                    echo '<td><a class="waves-effect waves-light btn">Modifier</a></td>';
-                    echo '<td><a class="waves-effect waves-light btn">Supprimer</a></td>';
-                }
+                echo '<td>' . $rowStudent['NAME'] . '</td>';
+                echo '<td>' . $rowStudent['FIRSTNAME'] . '</td>';
+                echo '<td><a class="waves-effect waves-light btn">Modifier</a></td>';
+                echo '<td><a class="waves-effect waves-light btn">Supprimer</a></td>';
                 echo '</tr>';
             }
 
@@ -80,7 +78,7 @@ if ($user) {
                       <option value="3">niveau 3</option>
                     </select>
                   </div>';
-                echo '<input class="btn waves-effect waves-light" type="submit" id="submit" name="submit" value="Mettre à jour" />';
+                echo '<input class="btn waves-effect waves-light" type="submit" id="submit" name="submit" value="Mettre à jour"/>';
                 echo '</form>';
                 echo '</td>';
                 echo '</tr>';
@@ -88,6 +86,5 @@ if ($user) {
             </tbody>
         </table>
     </div>
-    <?php
-}
+<?php
 get_footer();
