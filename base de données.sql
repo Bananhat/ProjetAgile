@@ -1,4 +1,4 @@
-create table if not exists user
+create or replace table user
 (
 	id int not null,
 	name char(32) not null,
@@ -10,7 +10,7 @@ create table if not exists user
 )
 
 
-create table if not exists aptitude
+create or replace table aptitude
 (
 	id_aptitude int not null,
 	label char(32) not null,
@@ -18,7 +18,7 @@ create table if not exists aptitude
 	primary key (id_aptitude)
 )
 
-create table if not exists skill
+create or replace table skill
 (
 	id_skill int not null,
 	id_is_made_of int not null,
@@ -27,7 +27,7 @@ create table if not exists skill
 	primary key (id_skill)
 )
 
-create table if not exists formation
+create or replace table formation
 (
 	id_formation int not null,
 	id_is_validating int not null,
@@ -36,7 +36,7 @@ create table if not exists formation
 	primary key (id_formation)
 )
 
-create table if not exists student
+create or replace table student
 (
 	id_student int not null,
 	name char(32) not null,
@@ -45,7 +45,7 @@ create table if not exists student
 	primary key (id_student)
 )
 
-create table if not exists completion
+create or replace table completion
 (
 	id_completion_1 int not null,
 	id_completion_2 int not null,
@@ -54,7 +54,7 @@ create table if not exists completion
 	primary key (id_completion_1,id_completion_2)
 )
 
-create table if not exists validation
+create or replace table validation
 (
 	id_valide_1 int not null,
 	id_valide_2 int not null,
@@ -62,21 +62,21 @@ create table if not exists validation
 	primary key (id_valide_1,id_valide_2)
 )
 
-create table if not exists is_attending
+create or replace table is_attending
 (
 	id_attend_1 int not null,
 	id_attend_2 int not null, 
 	primary key (id_attend_1,id_attend_2)
 )
 
-create table if not exists is_assessing
+create or replace table is_assessing
 (
 	id int not null,
 	id_1 int not null,
 	primary key (id,id_1)
 )
 
-create table if not exists is_managing
+create or replace table is_managing
 (
 	id int not null,
 	id_1 int) not null, 
