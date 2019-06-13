@@ -1,7 +1,9 @@
 <?php
 include_once('../includes/utils_page.php');
-include_once('../persistance/DbStudentWriter.php');
-include('../persistance/DbConnector.php');
+include_once('../persistance/DbSkillUpdater.php');
+include_once('../persistance/DbSkillWriter.php');
+include_once('../persistance/DbConnector.php');
+
 get_header();
 
 $user = get_logged_user();
@@ -17,8 +19,10 @@ if ($user) {
     if($_GET['supp'] == 'del')
     {
         $userID = $_GET['id'];
-        $studentWriter = new DbStudentWriter(new DbConnector());
-        $suc = $studentWriter->deleteStudent($userID);
+        $skillUp = new DbSkillUpdater(new DbConnector());
+
+        $suc = $skillUp->deleteSkill($userID);
+        header('Location: competences.php?competence_id='.$_GET['comp']);
     }
     if (isset($_POST['submit'])) {
         $non_remplis = array();
@@ -35,15 +39,12 @@ if ($user) {
                 echo $non_rempli . '<br />';
             }
         } else {
-            $firstName = $_POST['firstName'];
-            $name = $_POST['name'];
-            $level = $_POST['level'];
 
-            $studentWriter = new DbStudentWriter(new DbConnector());
-            $suc = $studentWriter->writeNewStudent($firstName, $name, $level);
+            $name = $_POST['name'];
+            $skillUp = new DbSkillWriter(new DbConnector());
+            $suc = $skillUp->addSkill($name, $_GET['id']);
             if($suc){
                 echo'bon';
-
             }
             else{
                 echo 'pasbon';
@@ -51,60 +52,49 @@ if ($user) {
         }
     }
 
-    $reqSkillsAttitude = $db->query("SELECT name, skill FROM skill join competence using(competence_id)");
+    $reqSkills = $db->prepare('SELECT id,skill FROM skill where competence_id = :id');
+    $reqSkills->execute(array(
+            ':id' => $_GET['competence_id']
+    ));
+
 } ?>
 
-    <h1 class="title has-text-dark has-text-weight-bold" style="text-align:center; margin-bottom:2%;margin-top:2%;">
-        Visualiser les élèves</h1>
+    <h3 class="title has-text-dark has-text-weight-bold" style="text-align:center; margin-bottom:2%;margin-top:2%;">
+        Gerer aptitude</h3>
 
     <div>
         <table class="table striped" style="margin:auto; width : 50%;">
             <thead>
-            <th>Nom</th>
-            <th>Prenom</th>
-            <th>Level</th>
+            <th>Aptitude</th>
             </thead>
 
             <tbody>
+
             <?php
 
-            foreach ($reqSkillsAttitude as $rowStudent) {
+            foreach ($reqSkills as $row) {
                 echo '<tr>';
-                echo '<td>' . $rowStudent['name'] . '</td>';
-                echo '<td>' . $rowStudent['firstName'] . '</td>';
-                echo '<td>' . $rowStudent['level'] . '</td>';
+                echo '<td>' . $row['skill'] . '</td>';
 
-                echo '<td><a class="waves-effect waves-light btn" href="fiche_eleve.php?id='.$rowStudent['id_student'] .'">Modifier</a></td>';
-                echo '<td><a class="waves-effect waves-light btn" href="GererEleve.php?supp=del&id='.$rowStudent['id_student'].'">Supprimer</a></td>';
+                echo '<td><a class="waves-effect waves-light btn" href="fiche_eleve.php?id='.$row['id'] .'">Modifier</a></td>';
+                echo '<td><a class="waves-effect waves-light btn" href="competences.php?supp=del&comp='.$_GET['competence_id'].'&id='.$row['id'].'">Supprimer</a></td>';
                 echo '</tr>';
             }
 
-
-
-
+            echo '<tr>
+                
+                   <form method="POST" action="competences.php?id='.$_GET['competence_id'].'">
+       <td> <label for="name"><b>Aptitude</b></label><input type="text" placeholder="name" name="name" required></td>
+             
+            <td>      
+        <input class="btn waves-effect waves-light" type="submit" id="submit" name="submit" value="Ajouter"/>
+          </td>
+        </form>
+            </td>
+            </tr>';
             ?>
             </tbody>
         </table>
-        <?php
-        echo '<h4 style="margin-left:2%;"> Ajouter un eleve </h4>';
-        echo '<form method="POST" action="" style="width: 25%; margin-left: 2%;">';
-
-        echo '<label for="name"><b>nom</b></label><input type="text" placeholder="name" name="name" required>';
-        echo '<label for="firstName"><b>prenom</b></label><input type="text" placeholder="firstName" name="firstName" required>';
-
-        echo '
-                <div class="select" style="margin-right:1px; ">
-                    <select name="level">
-                      <option value="" disabled selected>Niveau</option>
-                      <option value="1">niveau 1</option>
-                      <option value="2">niveau 2</option>
-                      <option value="3">niveau 3</option>
-                    </select>
-                  </div>';
-        echo '<input class="btn waves-effect waves-light" type="submit" id="submit" name="submit" value="Mettre à jour"/>';
-        echo '</form>';
-
-        ?>
     </div>
 <?php
 get_footer();

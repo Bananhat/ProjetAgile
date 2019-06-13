@@ -17,6 +17,7 @@
         <?php
             $user = get_logged_user();
             if(!$user){
+                echo '<a class="waves-effect waves-light btn" href = "index.php">Acceuil</a> ';
                 echo '<a class="waves-effect waves-light btn" href="signin.php">Connexion</a>';
             }
             ?>
