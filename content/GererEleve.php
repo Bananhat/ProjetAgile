@@ -51,7 +51,11 @@ if ($user) {
         }
     }
 
-    $reqStudent = $db->query("SELECT * FROM student");
+   $reqAdmin = $db->query("SELECT * FROM student");
+    $reqStudent = $db->prepare("SELECT * FROM student where level = :level");
+   $reqStudent->execute(array(
+        ':level' => $user->get('levelFormation')
+   ));
 
 } ?>
 
@@ -68,8 +72,22 @@ if ($user) {
 
             <tbody>
             <?php
+            if($user->get('role') != 'admin'){
+                foreach ($reqStudent as $rowStudent) {
 
-            foreach ($reqStudent as $rowStudent) {
+                    echo '<tr>';
+                    echo '<td>' . $rowStudent['name'] . '</td>';
+                    echo '<td>' . $rowStudent['firstName'] . '</td>';
+                    echo '<td>' . $rowStudent['level'] . '</td>';
+                    if ($user->get('role') == 'responsable' || $user->get('role') == 'admin') {
+                        echo '<td><a class="waves-effect waves-light btn" href="fiche_eleve.php?id=' . $rowStudent['id_student'] . '">Modifier</a></td>';
+                        echo '<td><a class="waves-effect waves-light btn" href="GererEleve.php?supp=del&id=' . $rowStudent['id_student'] . '">Supprimer</a></td>';
+                    }
+                    echo '<td><a class="waves-effect waves-light btn" href="studentOverview.php?id=' . $rowStudent['id_student'] . '">Competences</a></td>';
+                    echo '</tr>';
+                }
+            }else{
+                    foreach ($reqAdmin as $rowStudent){
                 echo '<tr>';
                 echo '<td>' . $rowStudent['name'] . '</td>';
                 echo '<td>' . $rowStudent['firstName'] . '</td>';
@@ -82,6 +100,8 @@ if ($user) {
                 echo '<td><a class="waves-effect waves-light btn" href="afficherSeance.php?id='.$rowStudent['id_student'].'">Séance</a></td>';
                 echo '</tr>';
             }
+                }
+
 
 
 

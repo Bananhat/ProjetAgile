@@ -18,7 +18,7 @@ class DbUserWriter
         $this->dbConnector = $dbConnector;
     }
 
-    public function writeNewUser($firstName, $name, $email, $password, $role) : bool
+    public function writeNewUser($firstName, $name, $email, $password, $role, $formation) : bool
     {
 
         try {
@@ -28,14 +28,15 @@ class DbUserWriter
             return false;
         }
 
-        $statement = $pdo->prepare('INSERT INTO `user`(`firstName`, `name`, `email`, `password`, `role`)
-            VALUES (:firstname, :name, :email, :password, :role)');
+        $statement = $pdo->prepare('INSERT INTO `user`(`firstName`, `name`, `email`, `password`, `role`,`levelFormation` )
+            VALUES (:firstname, :name, :email, :password, :role, :form)');
 
         $statement->bindParam(':firstname', $firstName);
         $statement->bindParam(':name', $name);
         $statement->bindParam(':email', $email);
         $statement->bindParam(':password', $password);
         $statement->bindParam(':role', $role);
+        $statement->bindParam(':form', $formation);
 
         $suc = $statement->execute();
         $this->dbConnector::outlog(preg_replace( "/\r|\n/", "", $statement->queryString )  ." Successfull: $suc");
