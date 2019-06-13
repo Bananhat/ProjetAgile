@@ -1,14 +1,23 @@
-<?php include('header.php') ?>
 <?php
-    mysql_select_db('agile1_bd',$db);
-    $sql = 'SELECT name, firstname, level FROM student WHERE id=1'; 
-    $req = mysql_query($sql);
-    $data = mysql_fetch_assoc($req);
-    if(!$req.is_null()){
-        echo "<tr><td>$data.name</td><td>$data.firstname</td><td>$data.level</td></tr>";
+include('../includes/utils_page.php');
+include('../settings.php');
+
+    echo "test";
+    try {
+        $db = getInstanceOfDb();
+    } catch (Exception $e) {
+        echo "Pas d'instance de BDD";
+        return false;
     }
-    else{
-        echo 'Elève inexistant.';
+    echo "test2";
+    $req = 'SELECT * FROM student WHERE id=:id'; 
+
+    $reqStudent=$db->prepare($req);
+    $reqStudent=$db->execute(array('id' => $_GET['id']));
+  
+    foreach($reqStudent as $key=>$value)
+    {
+        
     }
 ?>
 <?php include('footer.php') ?>
