@@ -42,7 +42,7 @@ class User
         }
 
 
-        $prep=$db->prepare('SELECT * FROM USER WHERE id = :id');
+        $prep=$db->prepare('SELECT * FROM user WHERE id = :id');
 
         $prep->bindParam(':id', $user_id);
 
@@ -81,7 +81,7 @@ class User
             return false;
         }
 
-        $prep=$db->prepare('SELECT * FROM USER WHERE email = :email AND password = :pass');
+        $prep=$db->prepare('SELECT * FROM user WHERE email = :email AND password = :pass');
         $prep->bindParam(':email', $username);
         $prep->bindParam(':pass', $password);
         $suc = $prep->execute();

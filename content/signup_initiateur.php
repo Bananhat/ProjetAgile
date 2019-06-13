@@ -68,11 +68,11 @@ get_header();
         <label for="confirm"><b>Confirmer le mot de passe</b></label>
         <input type="password" placeholder="Confirmer le mot de passe" name="confirm" required>
 
-        <select name="role" size="4">
-            <option selected>Initiateur</option>
-            <option>Responsable</option>
-            <option>Directeur technique</option>
-            <option>Elève</option>
+        <select name="role" id="role" size="4">
+            <option selected value="init">Initiateur</option>
+            <option value="reponsable">Responsable</option>
+            <option value="director">Directeur technique</option>
+            <option value="student">Elève</option>
         </select>
 
         <input class="btn waves-effect waves-light" type="submit" name="submit" />
