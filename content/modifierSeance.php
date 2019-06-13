@@ -14,10 +14,9 @@ try {
 
 if ($user) {
 
-    if (isset($_POST['submit'])) {
+    if ($_GET['id']) {
 
-        $seanceID = $_GET['id'];
-
+        $seanceID = $_GET['id']
         $non_remplis = array();
 
         foreach ($_POST as $key => $value) {
@@ -34,7 +33,7 @@ if ($user) {
         } else {
 
             $addSeance = new DbSeanceWriter(new DbConnector());
-
+            echo $seanceID;
             $res = $addSeance->updateSeanceName($seanceID,$date, null, null, null);
 
             if (!$res) {

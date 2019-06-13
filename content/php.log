@@ -9490,6 +9490,18 @@
 =======
 >>>>>>> bce7e652c8f717c67fdb87b8567350c426dbdc53
 >>>>>>> f87bdd4857eb726b925217034861df548adc7196
+<<<<<<< HEAD
+2019-06-13 19:17:23 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:17:23 [updateSeanceName    ] . ["42S22",1054,"Champ 'competence_id' inconnu dans where clause"]
+2019-06-13 19:18:38 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:18:38 [updateSeanceName    ] . ["42S22",1054,"Champ 'competence_id' inconnu dans where clause"]
+2019-06-13 19:19:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:19:45 [updateSeanceName    ] . ["42S22",1054,"Champ 'competence_id' inconnu dans where clause"]
+2019-06-13 19:20:03 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:03 [updateSeanceName    ] . ["42S22",1054,"Champ 'competence_id' inconnu dans where clause"]
+2019-06-13 19:20:13 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:13 [updateSeanceName    ] . ["42S22",1054,"Champ 'competence_id' inconnu dans where clause"]
+=======
 2019-06-13 19:18:23 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
 2019-06-13 19:18:23 [updateStudentName   ] UPDATE student set firstName = :firstname, name = :username where id_student = :userid Successfull: 1
 2019-06-13 19:18:30 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
@@ -9825,6 +9837,7 @@
 2019-06-13 19:20:28 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
 2019-06-13 19:20:28 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
 2019-06-13 19:20:28 [execStatement       ] . []
+<<<<<<< HEAD
 2019-06-13 19:20:42 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
 2019-06-13 19:20:42 [execStatement       ] select * from student                                    left join studendtrials on studendtrials.student_id = student.id_student                                    left join skill on skill_id = studendtrials.skill_id                                    left join competences on competences.id = skill.competence_id                                    where student.id_student = :studid order by competences.id asc Successfull: 
 2019-06-13 19:20:42 [execStatement       ] . []
@@ -10446,3 +10459,6 @@
 2019-06-13 19:42:44 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
 2019-06-13 19:42:44 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
 2019-06-13 19:42:44 [execStatement       ] . []
+=======
+>>>>>>> 1eed80b3b01f4cd83f3effcd44f3e481d4cf0ee9
+>>>>>>> 49039402e25c9eb2a3062d9a665e40d5ccfd24a7
