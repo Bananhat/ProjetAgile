@@ -22,16 +22,20 @@ $html = "";?>
             echo "<td colspan=".$count[0]["count(*)"].">".$comp['name'].'</td>';
         }?>
     </tr>
-<?php /*
+
     <tr>
         <td></td>
         <?php
-        foreach($aptitude as $apt)
+        foreach($competence as $comp)
         {
-            echo '<td>'.$apt.'</td>';
+            $aptitude = $Dbreader->
+            foreach($aptitude as $apt)
+            {
+                echo '<td>'.$apt.'</td>';
+            }
         }?>
     </tr>
-
+    <?php /*
     <?php
     foreach($date as $dat)
     {
