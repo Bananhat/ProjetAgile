@@ -33,8 +33,8 @@ if($user)
             foreach ($reqStudent as $rowStudent)
             {
                 echo '<tr>';
-                echo '<td>' . $rowStudent['NAME'] . '</td>';
-                echo '<td>' . $rowStudent['FIRSTNAME'] . '</td>';
+                echo '<td>' . $rowStudent['name'] . '</td>';
+                echo '<td>' . $rowStudent['firstName'] . '</td>';
                 if($user=='formateur')
                 {
                     echo '<td><a class="waves-effect waves-light btn">Modifier</a></td>';
