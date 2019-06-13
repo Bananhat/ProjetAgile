@@ -60,7 +60,7 @@ class DbSummaryReader
             return false;
         }
 
-        $statement = $pdo->prepare("SELECT date FROM studendtrials WHERE student_id=:id");
+        $statement = $pdo->prepare("SELECT date FROM studendtrials WHERE student_id=:id order by date");
         $statement->bindParam(':id', $studentId);
         return $this->dbConnector->execStatement($statement);
     }
