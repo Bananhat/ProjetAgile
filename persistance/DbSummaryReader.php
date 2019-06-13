@@ -4,7 +4,7 @@ require_once("../settings.php");
 require_once("DbConnector.php");
 
 $db = new DbSummaryReader(new DbConnector());
-var_dump($db->readSummaryFromStudentId(3));
+var_dump($db->getCommentFromStudent(4));
 */
 
 class DbSummaryReader
@@ -32,6 +32,69 @@ class DbSummaryReader
 							where student.id_student = :studid');
 
         $statement->bindParam(':studid', $studentId);
+
+        return $this->dbConnector->execStatement($statement);
+    }
+
+    public function getStudentNames() : array
+    {
+        try {
+            $pdo = $this->dbConnector->getConnection();
+        } catch (Exception $e) {
+            $this->dbConnector::outlog($e);
+
+            return false;
+        }
+
+        $statement = $pdo->prepare('select name, firstName from student');
+
+        return $this->dbConnector->execStatement($statement);
+    }
+
+    public function getCompetences() : array
+    {
+        try {
+            $pdo = $this->dbConnector->getConnection();
+        } catch (Exception $e) {
+            $this->dbConnector::outlog($e);
+
+            return false;
+        }
+
+        $statement = $pdo->prepare('select name, niveau from competences');
+
+        return $this->dbConnector->execStatement($statement);
+    }
+
+    public function getAptitudes() : array
+    {
+        try {
+            $pdo = $this->dbConnector->getConnection();
+        } catch (Exception $e) {
+            $this->dbConnector::outlog($e);
+
+            return false;
+        }
+
+        $statement = $pdo->prepare('select aptitude, validated from aptitude');
+
+        return $this->dbConnector->execStatement($statement);
+    }
+
+    public function getCommentFromStudent($studid) : array
+    {
+        try {
+            $pdo = $this->dbConnector->getConnection();
+        } catch (Exception $e) {
+            $this->dbConnector::outlog($e);
+
+            return false;
+        }
+
+        $statement = $pdo->prepare('select comment from student where student.id_student = :studid');
+
+        $statement->bindParam(':studid', $studid);
+
 
         return $this->dbConnector->execStatement($statement);
     }
