@@ -11,9 +11,6 @@ var_dump($db->getSkillCountFromId(3));
 >>>>>>> Stashed changes
 */
 
-$test = new DbSummaryReader(new DbConnector());
-var_dump($test->getDates(3));
-
 
 class DbSummaryReader
 {
@@ -62,6 +59,20 @@ class DbSummaryReader
 
         $statement = $pdo->prepare("SELECT date FROM studendtrials WHERE student_id=:id order by date");
         $statement->bindParam(':id', $studentId);
+        return $this->dbConnector->execStatement($statement);
+    }
+
+    public function getTrialsFromDate($date, $skillId)
+    {
+        try {
+            $pdo = $this->dbConnector->getConnection();
+        } catch (Exception $e) {
+            $this->dbConnector::outlog($e);
+            return false;
+        }
+        $statement = $pdo->prepare('SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date');
+        $statement->bindParam(':skill', $skillId);
+        $statement->bindParam(':date', $date);
         return $this->dbConnector->execStatement($statement);
     }
 
