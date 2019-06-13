@@ -5,7 +5,7 @@ require_once("../settings.php");
 require_once("DbConnector.php");
 
 $db = new DbAptitudeWriter(new DbConnector());
-var_dump($db->validateAptitude(1, 0));
+var_dump($db->deleteAptitude(1));
 */
 
 class DbAptitudeWriter
@@ -49,6 +49,23 @@ class DbAptitudeWriter
 
         $statement->bindParam(':aptid', $aptitudeId);
         $statement->bindParam(':validated', $validated);
+
+        $suc = $statement->execute();
+        return $suc;
+    }
+
+    public function deleteAptitude($aptitudeId) : bool
+    {
+        try {
+            $pdo = $this->dbConnector->getConnection();
+        } catch (Exception $e) {
+
+            return false;
+        }
+
+        $statement = $pdo->prepare('delete from `aptitude` where id_apt = :aptid');
+
+        $statement->bindParam(':aptid', $aptitudeId);
 
         $suc = $statement->execute();
         return $suc;
