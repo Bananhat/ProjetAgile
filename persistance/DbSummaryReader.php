@@ -4,7 +4,7 @@ require_once("../settings.php");
 require_once("DbConnector.php");
 
 $db = new DbSummaryReader(new DbConnector());
-var_dump($db->getCommentFromStudent(4));
+var_dump($db->readSummaryFromStudentId(4));
 */
 
 class DbSummaryReader
@@ -26,13 +26,15 @@ class DbSummaryReader
             return false;
         }
 
-        $statement = $pdo->prepare('select * from studendtrials inner join skill on studendtrials.skill_id = skill.id
-							inner join competences on skill.competence_id = competences.id 
-							inner join student on student.id_student = studendtrials.student_id 
+        $statement = $pdo->prepare('select * from studendtrials left join skill on studendtrials.skill_id = skill.id
+							left join competences on skill.competence_id = competences.id 
+							left join student on student.id_student = studendtrials.student_id 
 							where student.id_student = :studid');
 
         $statement->bindParam(':studid', $studentId);
-
+        //$statement->execute();
+        //$statement->fetchAll(2);
+        //var_dump($statement);
         return $this->dbConnector->execStatement($statement);
     }
 
