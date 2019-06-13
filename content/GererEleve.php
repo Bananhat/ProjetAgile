@@ -59,7 +59,7 @@ if ($user) {
         Visualiser les élèves</h1>
 
     <div>
-        <table class="table is-bordered is-striped is-narrow">
+        <table class="table striped" style="margin:auto; width : 50%;">
             <thead>
             <th>Nom</th>
             <th>Prenom</th>
@@ -72,7 +72,7 @@ if ($user) {
             foreach ($reqStudent as $rowStudent) {
                 echo '<tr>';
                 echo '<td>' . $rowStudent['name'] . '</td>';
-                echo '<td>' . $rowStudent['firstName'] . '</td>';
+                echo '<td>' . $rowStudent['firstname'] . '</td>';
                 echo '<td>' . $rowStudent['level'] . '</td>';
 
                 echo '<td><a class="waves-effect waves-light btn" href="fiche_eleve.php?id='.$rowStudent['id_student'] .'">Modifier</a></td>';
@@ -80,31 +80,32 @@ if ($user) {
                 echo '</tr>';
             }
 
-                echo '<tr>';
-                echo '<td>';
-                echo '<h4> Ajouter un eleve </h4>';
-                echo '<form method="POST" action="">';
 
-                echo '<label for="name"><b>nom</b></label><input type="text" placeholder="name" name="name" required>';
-                echo '<label for="firstName"><b>prenom</b></label><input type="text" placeholder="firstName" name="firstName" required>';
 
-                echo '
+
+            ?>
+            </tbody>
+        </table>
+        <?php
+        echo '<h4 style="margin-left:2%;"> Ajouter un eleve </h4>';
+        echo '<form method="POST" action="" style="width: 25%; margin-left: 2%;">';
+
+        echo '<label for="name"><b>nom</b></label><input type="text" placeholder="name" name="name" required>';
+        echo '<label for="firstName"><b>prenom</b></label><input type="text" placeholder="firstName" name="firstName" required>';
+
+        echo '
                 <div class="select" style="margin-right:1px; ">
                     <select name="level">
                       <option value="" disabled selected>Niveau</option>
-                      <option value="0">niveau 0</option>
                       <option value="1">niveau 1</option>
                       <option value="2">niveau 2</option>
                       <option value="3">niveau 3</option>
                     </select>
                   </div>';
-                echo '<input class="btn waves-effect waves-light" type="submit" id="submit" name="submit" value="Mettre à jour"/>';
-                echo '</form>';
-                echo '</td>';
-                echo '</tr>';
-            ?>
-            </tbody>
-        </table>
+        echo '<input class="btn waves-effect waves-light" type="submit" id="submit" name="submit" value="Mettre à jour"/>';
+        echo '</form>';
+
+        ?>
     </div>
 <?php
 get_footer();
