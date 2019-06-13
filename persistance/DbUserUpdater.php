@@ -20,7 +20,7 @@ class DbUserUpdater
             return false;
         }
 
-        $statement = $pdo->prepare('UPDATE USER set Role = :userrole where id = :userid');
+        $statement = $pdo->prepare('UPDATE USER set role = :userrole where id = :userid');
 
         $statement->bindParam(':userrole', $newUserRole);
         $statement->bindParam(':userid', $userid);
@@ -46,7 +46,7 @@ class DbUserUpdater
         return $statement->execute();
     }
 
-    public function deleteUserName($userid) : bool
+    public function deleteUser($userid) : bool
     {
         try
         {
