@@ -16,7 +16,7 @@ $html = "";?>
         $competence = $Dbreader->getCompetencesFromStudentId($studentid);
         foreach($competence as $comp)
         {
-            $count = count($aptitude);
+            $count = ;
             echo "<td colspan=$count>".$comp['name'].$count.'</td>';
         }?>
     </tr>
