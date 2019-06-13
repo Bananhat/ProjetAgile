@@ -69,7 +69,7 @@ get_header();
         <input type="password" placeholder="Confirmer le mot de passe" name="confirm" required>
 
         <select name="role" id="role" size="4">
-            <option selected value="init">Initiateur</option>
+            <option selected value="initiateur">Initiateur</option>
             <option value="reponsable">Responsable</option>
             <option value="admin">Directeur technique</option>
         </select>

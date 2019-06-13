@@ -67,9 +67,30 @@
 2019-06-13 11:39:25 [updateStudentName   ] UPDATE student set firstname = :firstname, name = :username where id_student = :userid Successfull: 1
 2019-06-13 11:40:00 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
 2019-06-13 11:40:00 [updateUserRole      ] UPDATE user set role = :userrole where id = :userid Successfull: 1
+<<<<<<< HEAD
+2019-06-13 11:51:40 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 11:51:40 [updateStudentName   ] UPDATE student set firstname = :firstname, name = :username where id_student = :userid Successfull: 1
+2019-06-13 11:52:12 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 11:52:12 [updateStudentName   ] UPDATE student set firstname = :firstname, name = :username where id_student = :userid Successfull: 1
+2019-06-13 11:52:14 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 11:52:14 [deleteStudent       ] delete from student where id_student = :userid Successfull: 1
+2019-06-13 11:52:20 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 11:52:20 [deleteStudent       ] delete from student where id_student = :userid Successfull: 1
+2019-06-13 11:52:20 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 11:52:33 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 11:52:33 [deleteStudent       ] delete from student where id_student = :userid Successfull: 1
+2019-06-13 11:52:33 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 11:52:35 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 11:52:35 [deleteStudent       ] delete from student where id_student = :userid Successfull: 1
+2019-06-13 12:18:49 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 12:18:49 [updateUserRole      ] UPDATE user set role = :userrole where id = :userid Successfull: 1
+2019-06-13 12:19:01 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 12:19:01 [updateStudentName   ] UPDATE student set firstname = :firstname, name = :username where id_student = :userid Successfull: 1
+=======
 2019-06-13 12:00:35 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
 2019-06-13 12:00:35 [execStatement       ] select * from studendtrials inner join skill on studendtrials.skill_id = skill.id							inner join competences on skill.competence_id = competences.id where studendtrials.id = :studid Successfull: 
 2019-06-13 12:00:35 [execStatement       ] . 42S02, 1146, La table 'agile1_bd.studendtrials' n'existe pas
 2019-06-13 12:00:35 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
 2019-06-13 12:00:35 [execStatement       ] select * from studendtrials inner join skill on studendtrials.skill_id = skill.id							inner join competences on skill.competence_id = competences.id where studendtrials.id = :studid Successfull: 
 2019-06-13 12:00:35 [execStatement       ] . 42S02, 1146, La table 'agile1_bd.studendtrials' n'existe pas
+>>>>>>> f7aed7e2aa93e85a9fa82d9876831be6ef670824

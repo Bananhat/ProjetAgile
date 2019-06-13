@@ -35,7 +35,7 @@ if($user) {
         Visualiser les initiateurs</h1>
 
 <div>
-    <table class="table is-bordered is-striped is-narrow">
+    <table class="table striped">
         <thead>
         <th>Noms</th>
         <th>Role</th>
@@ -59,9 +59,9 @@ if($user) {
 
 
             echo '<div class="select" style="margin-right:1px; "><select name="role" id="role">';
-            echo '<option selected="selected"  value="init">Initiateur</option>';
-            echo '<option value="form">Form</option>';
-            echo '<option value="dir">Dir</option>';
+            echo '<option selected="selected"  value="initiateur">Initiateur</option>';
+            echo '<option value="responsable">Responsable</option>';
+            echo '<option value="admin">Directeur Technique</option>';
             echo '</select> </div>';
 
             echo '<input class="btn waves-effect waves-light" type="submit" id="submit" name="submit" value="Mettre à jour" />';
