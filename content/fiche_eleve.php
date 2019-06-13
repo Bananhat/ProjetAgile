@@ -19,8 +19,9 @@ if($user) {
     {
 
         $userId = $_GET['id'];
-         $nom = $_POST['name'];
-         $prenom = $_POST['prenom'];
+        $prenom = $_POST['prenom'];
+        $nom = $_POST['name'];
+
 
         $userUpdate = new DbStudentWriter(new DbConnector());
         $suc = $userUpdate->updateStudentName($userId, $prenom, $nom);
@@ -35,7 +36,12 @@ if($user) {
     $req = 'SELECT * FROM student WHERE id=:id';
     $reqStudent = $db->prepare($req);
     $reqStudent->execute(array('id' => $_GET['id']));
+?>
 
+    <h4 class="title has-text-dark has-text-weight-bold" style="text-align:center; margin-bottom:2%;margin-top:2%;">
+        Modifier les eleves</h4>
+
+    <?php
 
     foreach ($reqStudent as $rowStudent)
     {

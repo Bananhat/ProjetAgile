@@ -72,7 +72,6 @@ get_header();
             <option selected value="init">Initiateur</option>
             <option value="reponsable">Responsable</option>
             <option value="director">Directeur technique</option>
-            <option value="student">Elève</option>
         </select>
 
         <input class="btn waves-effect waves-light" type="submit" name="submit" />

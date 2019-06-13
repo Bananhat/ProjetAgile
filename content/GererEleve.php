@@ -1,6 +1,7 @@
 <?php
 include_once('../includes/utils_page.php');
 include_once('../persistance/DbStudentWriter.php');
+include('../persistance/DbConnector.php');
 get_header();
 
 $user = get_logged_user();
@@ -32,7 +33,14 @@ if ($user) {
             $level = $_POST['level'];
 
             $studentWriter = new DbStudentWriter(new DbConnector());
-            $studentWriter->writeNewStudent($firstName, $name, $level);
+            $suc = $studentWriter->writeNewStudent($firstName, $name, $level);
+            if($suc){
+                echo'bon';
+
+            }
+            else{
+                echo 'pasbon';
+            }
         }
     }
 
@@ -48,6 +56,7 @@ if ($user) {
             <thead>
             <th>Nom</th>
             <th>Prenom</th>
+            <th>Level</th>
             </thead>
 
             <tbody>
@@ -55,15 +64,18 @@ if ($user) {
 
             foreach ($reqStudent as $rowStudent) {
                 echo '<tr>';
-                echo '<td>' . $rowStudent['NAME'] . '</td>';
-                echo '<td>' . $rowStudent['FIRSTNAME'] . '</td>';
-                echo '<td><a class="waves-effect waves-light btn">Modifier</a></td>';
+                echo '<td>' . $rowStudent['name'] . '</td>';
+                echo '<td>' . $rowStudent['firstName'] . '</td>';
+                echo '<td>' . $rowStudent['level'] . '</td>';
+
+                echo '<td><a class="waves-effect waves-light btn" href="fiche_eleve.php?id='.$rowStudent['id'] .'">Modifier</a></td>';
                 echo '<td><a class="waves-effect waves-light btn">Supprimer</a></td>';
                 echo '</tr>';
             }
 
                 echo '<tr>';
                 echo '<td>';
+                echo '<h4> Ajouter un eleve </h4>';
                 echo '<form method="POST" action="">';
 
                 echo '<label for="name"><b>nom</b></label><input type="text" placeholder="name" name="name" required>';
