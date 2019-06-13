@@ -29,6 +29,7 @@
                     echo '<li><a href = "index.php">Accueil</a></li>';
                     echo '<li><a href = "changerLesRoles.php">Liste des initiateurs</a></li>';
                     echo '<li><a href = "GererEleve.php">Liste des élèves</a></li>';
+                    echo '<li><a href = "afficherSeance.php">Liste des séances à venir</a></li>';
                     echo '<li><a href = "competences.php">Gerer les compétences</a></li>';
                     echo '<li><a href = "signup_initiateur.php">Inscrire initiateur</a></li>';
                     echo '</ul>';
