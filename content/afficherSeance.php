@@ -33,7 +33,7 @@ if ($user) {
     ?>
 
     <h3 class="title has-text-dark has-text-weight-bold" style="text-align:center; margin-bottom:2%;margin-top:2%;">
-        Seance de <?php echo $res['name'];?></h3>
+        Séance de <?php echo $res['name'];?></h3>
 
     <div>
         <table class="table striped">
