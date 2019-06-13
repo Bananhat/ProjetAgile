@@ -22,6 +22,7 @@
                 echo '<a class="waves-effect waves-light btn right" style="margin-top: 1%;" href="signin.php?disconnect">Déconnexion</a>';
                 if(is_admin($user->get('id'))){
                     echo ' <a class="wave-effect waves-light btn" href="changerLesRoles.php">Listes des initiateurs</a>';
+                    echo ' <a class="wave-effect waves-light btn" href="GererEleve.php">Listes des élèves</a>';
                 }
             }
             ?>
@@ -30,6 +31,7 @@
             if($user) {
                 if (is_admin($user->get('id'))) {
                     echo '<a class="waves-effect waves-light btn" href="signup_initiateur.php">Inscrire initiateur</a>';
+                    echo ' <a class="wave-effect waves-light btn" href="GererEleve.php">Listes des élèves</a>';
                 }
             }
             ?>
