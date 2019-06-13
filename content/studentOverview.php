@@ -9,8 +9,10 @@ $Dbreader = new DbSummaryReader(new DbConnector());
 $result = $Dbreader->readSummaryFromStudentId(3);
 
 $html = "";?>
-<h3 class="title has-text-dark has-text-weight-bold" style="text-align:center; margin-bottom:2%;margin-top:2%;">
+<h3 class="" style="text-align:center; margin-top:2%;">
     Competence de l'eleve</h3>
+<h5 class="" style="font-size: 1.2em; color: grey; text-align:center; margin-bottom:2%">
+    Cliquez sur la case d'une aptitude pour l'evaluer..</h5>
 <table class="striped centered" id="tableau">
     <tr>
         <td id="tableau"></td>
@@ -63,27 +65,28 @@ $html = "";?>
                 {
                     if(!$trial[0]["commentaire"])
                     {
-                        echo '<td id="tableau" style="background-color: green">Acquis</td>';
+                        echo '<td id="tableau" style="background-color: green"><a href="evalSeance.php?date='.$dat['date'].'&idskill='.$apt['id'].'&idstud='.$_GET['id'].'" >Acquis</a></td>';
                     }
                     else
                     {
-                        echo '<td id="tableau" class="lienSurvol" style="background-color: green">Acquis<span id="tableau" class="popup">'.$trial[0]['commentaire'].'</span></td>';
+                        echo '<td id="tableau" class="lienSurvol" style="background-color: green"><a href="evalSeance.php?date='.$dat['date'].'&idskill='.$apt['id'].'&idstud='.$_GET['id'].'" >Acquis</a><span id="tableau" class="popup">'.$trial[0]['commentaire'].'</span></td>';
                     }
                 }
                 else if($trial[0]["validated"] == 2)
                 {
                     if(!$trial[0]["commentaire"])
                     {
-                        echo '<td id="tableau" style="background-color: orange">En Cours</td>';
+                        echo '<td id="tableau" style="background-color: orange"><a href="evalSeance.php?date='.$dat['date'].'&idskill='.$apt['id'].'&idstud='.$_GET['id'].'" >En Cours</a></td>';
                     }
                     else
                     {
-                        echo '<td id="tableau" class="lienSurvol" style="background-color: orange">En Cours<span id="tableau" class="popup">'.$trial[0]['commentaire'].'</span></td>';
+                        echo '<td id="tableau" class="lienSurvol" style="background-color: orange"><a href="evalSeance.php?date='.$dat['date'].'&idskill='.$apt['id'].'&idstud='.$_GET['id'].'" >En Cours</a><span id="tableau" class="popup">'.$trial[0]['commentaire'].'</span></td>';
                     }
                 }
                 else
                 {
-                    echo '<td id="tableau"> </td>';
+                    echo '<td  id="tableau" ><a href="evalSeance.php?date='.$dat['date'].'&idskill='.$apt['id'].'&idstud='.$_GET['id'].'" style="display: block; height: 100%; width: 100%;">&nbsp;</a></td>
+';
                 }
             }
         }
