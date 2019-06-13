@@ -9,7 +9,8 @@ $Dbreader = new DbSummaryReader(new DbConnector());
 $result = $Dbreader->readSummaryFromStudentId(3);
 
 $html = "";?>
-
+<h3 class="title has-text-dark has-text-weight-bold" style="text-align:center; margin-bottom:2%;margin-top:2%;">
+    Competence de l'eleve</h3>
 <table class="striped centered" id="tableau">
     <tr>
         <td id="tableau"></td>
@@ -18,7 +19,7 @@ $html = "";?>
         $competence = $Dbreader->getCompetencesFromStudentId($studentid);
         foreach($competence as $comp)
         {
-            $count = $Dbreader->getSkillCountFromCompetenceId($comp["id"]);
+            $count = $Dbreader->getSkillCountFromCompetenceId($comp["competence_id"]);
             echo "<td id='tableau' colspan=".$count[0]["count(*)"].">".$comp['name'].'</td>';
         }?>
     </tr>
@@ -28,7 +29,7 @@ $html = "";?>
         <?php
         foreach($competence as $comp)
         {
-            $aptitude = $Dbreader->getSkillsFromCompetenceId($comp['id']);
+            $aptitude = $Dbreader->getSkillsFromCompetenceId($comp['competence_id']);
             foreach($aptitude as $apt)
             {
                 echo '<td id="tableau">'.$apt['skill'].'</td>';
@@ -48,7 +49,7 @@ $html = "";?>
 
         foreach($competence as $comp)
         {
-            $aptitude = $Dbreader->getSkillsFromCompetenceId($comp['id']);
+            $aptitude = $Dbreader->getSkillsFromCompetenceId($comp['competence_id']);
             foreach($aptitude as $apt)
             {
                 $trial = $Dbreader->getTrialsFromDate($dat['date'],$apt['id']);
