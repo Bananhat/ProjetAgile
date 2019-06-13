@@ -173,7 +173,7 @@ class DbSummaryReader
         $statement->bindParam(':id', $studentid);
         $statement->bindParam(':idskill', $skill);
         $suc = $statement->execute();
-        $this->dbConnector::outlog(preg_replace( "/\r|\n/", "", $statement->queryString )  ." Successfull: $suc");
+
         return $suc;
     }
 
