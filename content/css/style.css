@@ -4,23 +4,6 @@
 	box-sizing: border-box;
 }
 
-.page
-{
-	display:flex;
-	flex-direction: column;
-	min-height: 100vh;
-}
-
-.site-content
-{
-	flex:1;
-}
-
-html
-{
-	height: 100%;
-}
-
 body
 {
 	height:100%;
@@ -33,10 +16,6 @@ footer
 	bottom:0;
 	left:0;
 	right:0;
-	margin-top: 2%;
 	background-color: lightblue;
 	position: relative;
-	bottom: 0;
-	left: 0;
-	right: 0;
 }

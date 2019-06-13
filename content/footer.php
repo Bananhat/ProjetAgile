@@ -10,7 +10,7 @@
           </div>
           <div class="copyright">
             <div class="container">
-            © 2014 TeamPoissonRouge
+            © 2019 TeamPoissonsRouges
             </div>
           </div>
         </footer>
