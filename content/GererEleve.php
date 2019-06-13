@@ -13,7 +13,7 @@ try {
 
 if($user)
 {
-    $reqAjjStudent=$db->query("INSERT INTO `user`(`firstName`, `name`,'role') VALUES (:firstName,:name,'student')");
+    $reqAjjStudent=$db->prepare("INSERT INTO `user`(`firstName`, `name`,'role') VALUES (:firstName,:name,'student')");
     $reqStudent=$db->query("SELECT * FROM USER WHERE role = 'student'");
 }?>
 
