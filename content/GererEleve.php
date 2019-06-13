@@ -63,7 +63,7 @@ if ($user) {
             <thead>
             <th>Nom</th>
             <th>Prenom</th>
-            <th>Level</th>
+            <th>Niveau</th>
             </thead>
 
             <tbody>
