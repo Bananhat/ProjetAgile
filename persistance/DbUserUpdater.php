@@ -15,12 +15,7 @@ class DbUserUpdater
     public function updateUserRole($userid, $newUserRole) : bool
     {
         try {
-<<<<<<< HEAD
-            $pdo = $this->pdo->getConnection();
-
-=======
             $pdo = $this->dbConnector->getConnection();
->>>>>>> 37c94e1cd19b1a3eb4bf88e36874a09c39132325
         } catch (Exception $e) {
             return false;
         }
