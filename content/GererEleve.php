@@ -11,13 +11,43 @@ try {
     return false;
 }
 
-if($user)
-{
-    $reqAjjStudent=$db->prepare("INSERT INTO student(firstName, name,level) VALUES (:firstName,:name,:level)");
-    $reqStudent=$db->query("SELECT * FROM student");?>
+if ($user) {
+    $reqAjjStudent = $db->prepare("INSERT INTO student(firstName, name,level) VALUES (:firstName,:name,:level)");
+    $reqStudent = $db->query("SELECT * FROM student");
+
+    if (isset($_POST['submit'])) {
+        $non_remplis = array();
+
+        foreach ($_POST as $key => $value) {
+            if (empty($value))
+                $non_remplis[] = $key;
+        }
+
+        if (count($non_remplis) > 0) {
+            echo 'Veuillez remplir ces champs : <br />';
+
+            foreach ($non_remplis as $non_rempli) {
+                echo $non_rempli . '<br />';
+            }
+        } else {
+            $firstName = $_POST['firstName'];
+            $name = $_POST['name'];
+            $name = $_POST['level'];
+
+
+            /*$auth = authenticate_user_by_username($username, $password); //modele
+
+            if (!$auth) {
+                echo 'Erreur';
+            } else {
+                header('Location:  changerLesRoles.php');
+            }*/
+        }
+
+    } ?>
 
     <h1 class="title has-text-dark has-text-weight-bold" style="text-align:center; margin-bottom:2%;margin-top:2%;">
-    Visualiser les élèves</h1>
+        Visualiser les élèves</h1>
 
     <div>
         <table class="table is-bordered is-striped is-narrow">
@@ -30,8 +60,7 @@ if($user)
             <?php
 
 
-            foreach ($reqStudent as $rowStudent)
-            {
+            foreach ($reqStudent as $rowStudent) {
                 echo '<tr>';
                 echo '<td>' . $rowStudent['NAME'] . '</td>';
                 echo '<td>' . $rowStudent['FIRSTNAME'] . '</td>';
@@ -49,6 +78,6 @@ if($user)
             </tbody>
         </table>
     </div>
-<?php
+    <?php
 }
 get_footer();
