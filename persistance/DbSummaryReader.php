@@ -1,7 +1,5 @@
 <?php declare(strict_types=1);
 
-require_once("../settings.php");
-require_once("DbConnector.php");
 /*
 $db = new DbSummaryReader(new DbConnector());
 <<<<<<< Updated upstream
@@ -11,8 +9,6 @@ var_dump($db->getSkillCountFromId(3));
 >>>>>>> Stashed changes
 */
 
-$reader = new DbSummaryReader(new DbConnector());
-var_dump($reader->updateStudentComment(3, "bla"));
 
 
 class DbSummaryReader
