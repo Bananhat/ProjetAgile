@@ -11,6 +11,9 @@ var_dump($db->getSkillCountFromId(3));
 >>>>>>> Stashed changes
 */
 
+$reader = new DbSummaryReader(new DbConnector());
+var_dump($reader->updateStudentComment(3, "bla"));
+
 
 class DbSummaryReader
 {
@@ -169,6 +172,7 @@ class DbSummaryReader
         $statement->bindParam(':comment', $comment);
         $statement->bindParam(':id', $studentid);
         $suc = $statement->execute();
+        $this->dbConnector::outlog(preg_replace( "/\r|\n/", "", $statement->queryString )  ." Successfull: $suc");
         return $suc;
     }
 
