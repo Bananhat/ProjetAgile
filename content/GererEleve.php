@@ -64,6 +64,11 @@ if ($user) {
                 echo '<tr>';
                 echo '<td>' . $rowStudent['NAME'] . '</td>';
                 echo '<td>' . $rowStudent['FIRSTNAME'] . '</td>';
+                if($user=='formateur')
+                {
+                    echo '<td><a class="waves-effect waves-light btn">Modifier</a></td>';
+                    echo '<td><a class="waves-effect waves-light btn">Supprimer</a></td>';
+                }
                 echo '</tr>';
 
             } ?>
@@ -74,6 +79,7 @@ if ($user) {
 
                 <label for="firstName"><b>prenom</b></label>
                 <input type="text" placeholder="firstName" name="firstName" required>
+            </div>-->
 
                 <label for="level"><b>level</b></label>
                 <input type="text" placeholder="level" name="level" required>
