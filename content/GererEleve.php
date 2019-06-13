@@ -33,7 +33,6 @@ if ($user) {
             $name = $_POST['name'];
             $level = $_POST['level'];
 
-            } else {
             $studentWriter = new DbStudentWriter(new DbConnector());
             $studentWriter->writeNewStudent($firstName,$name,$level);
         }
