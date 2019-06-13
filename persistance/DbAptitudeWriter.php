@@ -1,8 +1,4 @@
 <?php declare(strict_types=1);
-require_once ("../settings.php");
-require_once("DbConnector.php");
-$db = new DbAptitudeWriter(new DbConnector());
-var_dump($db->writeNewAptitude("aptname", "true"));
 
 
 class DbAptitudeWriter
