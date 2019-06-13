@@ -60,11 +60,11 @@ $html = "";?>
 
                 if($trial[0]["validated"] == 1)
                 {
-                    echo '<td id="tableau">Acquis</td>';
+                    echo '<td id="tableau" style="background-color: green">Acquis</td>';
                 }
                 else if($trial[0]["validated"] == 2)
                 {
-                    echo '<td id="tableau">En Cours</td>';
+                    echo '<td id="tableau" style="background-color: orange">En Cours</td>';
                 }
                 else
                 {
