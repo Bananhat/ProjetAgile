@@ -3,6 +3,14 @@
 
 class DbStudentWriter
 {
+
+    private $dbConnector;
+
+    public function __construct(DbConnector $dbConnector)
+    {
+        $this->dbConnector = $dbConnector;
+    }
+
     public function writeNewStudent($firstName,$name,$level) : bool
     {
 
