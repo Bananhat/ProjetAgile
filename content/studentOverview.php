@@ -10,14 +10,19 @@ var_dump($result);?>
 
 <table>
     <tr>
+        <td></td>
         <?php
+        $userid = $_GET['id'];
+        $competence = 
         foreach($competence as $comp)
         {
-            echo '<td colspan=count($aptitude);>'.$comp.'</td>';
+            $count = 1/*count($aptitude)*/;
+            echo "<td colspan=$count>".$comp.'</td>';
         }?>
     </tr>
-
+<?php /*
     <tr>
+        <td></td>
         <?php
         foreach($aptitude as $apt)
         {
@@ -31,8 +36,8 @@ var_dump($result);?>
         echo '<tr>';
         foreach($aptitude as $apt)
         {
-            echo '<td>'.$studentTrial.'</td>';
+            echo '<td>'..'</td>';
         }
         echo '</tr>';
-    }
+    }?>*/?>
 </table>
