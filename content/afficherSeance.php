@@ -21,11 +21,19 @@ if ($user) {
         header('Location: afficherSeance.php');
     }
 
-    $reqSeance = $db->query("SELECT * FROM seance;");
+    $reqSeance = $db->prepare("SELECT * FROM seance where student_id=:id");
+    $reqSeance->bindParam(':id',$_GET['id']);
+    $reqSeance->execute();
+
+    $pdo = (new DbConnector())->getConnection();
+    $statement = $pdo->prepare('select name from student where id_student=:id');
+    $statement->bindParam(':id',$_GET['id']);
+    $suc = $statement->execute();
+    $res = $statement->fetch();
     ?>
 
     <h3 class="title has-text-dark has-text-weight-bold" style="text-align:center; margin-bottom:2%;margin-top:2%;">
-        Modifier Seances</h3>
+        Seance de <?php echo $res['name'];?></h3>
 
     <div>
         <table class="table striped">

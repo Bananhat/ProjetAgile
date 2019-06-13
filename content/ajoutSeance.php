@@ -30,9 +30,10 @@ if(isset($_POST['submit']))
         $id1 = $_POST['id1'];
         $id2 = $_POST['id2'];
         $id3= $_POST['id3'];
+        $student_id= $_GET['id'];
 
         $userWriter = new DbSeanceWriter(new DbConnector());
-        $suc = $userWriter->writeNewSeance($date, $id1, $id2, $id3);
+        $suc = $userWriter->writeNewSeance($student_id, $date, $id1, $id2, $id3);
         if($suc) {
             echo "okay";
         }
@@ -45,7 +46,7 @@ if(isset($_POST['submit']))
     <h3 class="title has-text-dark has-text-weight-bold" style="text-align:center;margin-bottom : 5%;">
         Enregistrer un initiateur</h3>
 
-    <form method="POST" action="ajoutSeance.php">
+    <?php echo '<form method="POST" action="ajoutSeance.php?id='.$_GET['id'].'">';?>
         <div class="formulaire" style="margin-left: 30%; width: 25%;">
             <label for ="Date"><b>Date</b></label>
             <input type ="text" placeholder="Date" name="Date" required>
