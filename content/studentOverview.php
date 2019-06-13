@@ -50,7 +50,7 @@ $html = "";?>
             $aptitude = $Dbreader->getSkillsFromCompetenceId($comp['id']);
             foreach($aptitude as $apt)
             {
-                $trial = $Dbreader-> ($apt['id'], $dat['dat']);
+                $trial = $Dbreader->($apt['id'], $dat['dat']);
                 if($trial["validated"] == 1)
                 {
                     echo '<td>Acquis</td>';
