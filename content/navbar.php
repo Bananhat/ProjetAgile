@@ -36,7 +36,7 @@
                     echo '</ul>';
                   
                     echo '<a class = "btn dropdown-button" data-constrainWidth="false" href = "#" data-activates = "dropdown">Menu<i class = "mdi-navigation-arrow-drop-down"></i></a>';
-                
+
             }
             ?>
         </div>
