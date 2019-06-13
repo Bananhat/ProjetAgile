@@ -9837,7 +9837,631 @@
 2019-06-13 19:20:28 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
 2019-06-13 19:20:28 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
 2019-06-13 19:20:28 [execStatement       ] . []
+<<<<<<< HEAD
+2019-06-13 19:20:42 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:42 [execStatement       ] select * from student                                    left join studendtrials on studendtrials.student_id = student.id_student                                    left join skill on skill_id = studendtrials.skill_id                                    left join competences on competences.id = skill.competence_id                                    where student.id_student = :studid order by competences.id asc Successfull: 
+2019-06-13 19:20:42 [execStatement       ] . []
+2019-06-13 19:20:42 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:42 [execStatement       ] SELECT * FROM competences WHERE niveau = (SELECT level FROM student WHERE id_student = :id) Successfull: 1
+2019-06-13 19:20:42 [execStatement       ] . [{"competence_id":"1","name":"op","niveau":"3"},{"competence_id":"2","name":"comp","niveau":"3"},{"competence_id":"3","name":"voilavoila","niveau":"3"}]
+2019-06-13 19:20:42 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:42 [execStatement       ] SELECT *, count(*) FROM `skill` where competence_id = :id Successfull: 1
+2019-06-13 19:20:42 [execStatement       ] . [{"id":"3","skill":"A1","competence_id":"1","count(*)":"3"}]
+2019-06-13 19:20:42 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:42 [execStatement       ] SELECT *, count(*) FROM `skill` where competence_id = :id Successfull: 1
+2019-06-13 19:20:42 [execStatement       ] . [{"id":"4","skill":"A2","competence_id":"2","count(*)":"1"}]
+2019-06-13 19:20:42 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:42 [execStatement       ] SELECT *, count(*) FROM `skill` where competence_id = :id Successfull: 1
+2019-06-13 19:20:42 [execStatement       ] . [{"id":"1","skill":"a skill","competence_id":"3","count(*)":"2"}]
+2019-06-13 19:20:42 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:42 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:20:42 [execStatement       ] . [{"id":"3","skill":"A1","competence_id":"1"},{"id":"5","skill":"A11","competence_id":"1"},{"id":"6","skill":"A15","competence_id":"1"}]
+2019-06-13 19:20:42 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:42 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:20:42 [execStatement       ] . [{"id":"4","skill":"A2","competence_id":"2"}]
+2019-06-13 19:20:42 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:42 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:20:42 [execStatement       ] . [{"id":"1","skill":"a skill","competence_id":"3"},{"id":"2","skill":"some other skill","competence_id":"3"}]
+2019-06-13 19:20:42 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:42 [execStatement       ] SELECT date FROM studendtrials WHERE student_id=:id order by date Successfull: 1
+2019-06-13 19:20:42 [execStatement       ] . [{"date":"13\/06\/2019"},{"date":"13\/06\/2019"},{"date":"14\/06\/2019"}]
+2019-06-13 19:20:42 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:42 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:20:42 [execStatement       ] . [{"id":"3","skill":"A1","competence_id":"1"},{"id":"5","skill":"A11","competence_id":"1"},{"id":"6","skill":"A15","competence_id":"1"}]
+2019-06-13 19:20:42 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:42 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:20:42 [execStatement       ] . [{"id":"2","student_id":"0","skill_id":"3","validated":"1","date":"13\/06\/2019","commentaire":null}]
+2019-06-13 19:20:42 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:42 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:20:42 [execStatement       ] . []
+2019-06-13 19:20:42 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:42 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:20:42 [execStatement       ] . []
+2019-06-13 19:20:42 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:42 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:20:42 [execStatement       ] . [{"id":"4","skill":"A2","competence_id":"2"}]
+2019-06-13 19:20:42 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:42 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:20:42 [execStatement       ] . []
+2019-06-13 19:20:42 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:42 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:20:42 [execStatement       ] . [{"id":"1","skill":"a skill","competence_id":"3"},{"id":"2","skill":"some other skill","competence_id":"3"}]
+2019-06-13 19:20:42 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:42 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:20:42 [execStatement       ] . []
+2019-06-13 19:20:42 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:42 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:20:42 [execStatement       ] . [{"id":"3","student_id":"0","skill_id":"2","validated":"2","date":"13\/06\/2019","commentaire":"mauvais plongeur, c pas good"}]
+2019-06-13 19:20:42 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:42 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:20:42 [execStatement       ] . [{"id":"3","skill":"A1","competence_id":"1"},{"id":"5","skill":"A11","competence_id":"1"},{"id":"6","skill":"A15","competence_id":"1"}]
+2019-06-13 19:20:42 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:42 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:20:42 [execStatement       ] . []
+2019-06-13 19:20:42 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:42 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:20:42 [execStatement       ] . []
+2019-06-13 19:20:42 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:42 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:20:42 [execStatement       ] . []
+2019-06-13 19:20:42 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:42 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:20:42 [execStatement       ] . [{"id":"4","skill":"A2","competence_id":"2"}]
+2019-06-13 19:20:42 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:42 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:20:42 [execStatement       ] . [{"id":"4","student_id":"0","skill_id":"4","validated":"1","date":"14\/06\/2019","commentaire":"bon plongeur, c good"}]
+2019-06-13 19:20:42 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:42 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:20:42 [execStatement       ] . [{"id":"1","skill":"a skill","competence_id":"3"},{"id":"2","skill":"some other skill","competence_id":"3"}]
+2019-06-13 19:20:42 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:42 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:20:42 [execStatement       ] . []
+2019-06-13 19:20:42 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:42 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:20:42 [execStatement       ] . []
+2019-06-13 19:20:49 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:49 [execStatement       ] select * from student                                    left join studendtrials on studendtrials.student_id = student.id_student                                    left join skill on skill_id = studendtrials.skill_id                                    left join competences on competences.id = skill.competence_id                                    where student.id_student = :studid order by competences.id asc Successfull: 
+2019-06-13 19:20:49 [execStatement       ] . []
+2019-06-13 19:20:49 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:49 [execStatement       ] SELECT * FROM competences WHERE niveau = (SELECT level FROM student WHERE id_student = :id) Successfull: 1
+2019-06-13 19:20:49 [execStatement       ] . [{"competence_id":"1","name":"op","niveau":"3"},{"competence_id":"2","name":"comp","niveau":"3"},{"competence_id":"3","name":"voilavoila","niveau":"3"}]
+2019-06-13 19:20:49 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:49 [execStatement       ] SELECT *, count(*) FROM `skill` where competence_id = :id Successfull: 1
+2019-06-13 19:20:49 [execStatement       ] . [{"id":"3","skill":"A1","competence_id":"1","count(*)":"3"}]
+2019-06-13 19:20:49 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:49 [execStatement       ] SELECT *, count(*) FROM `skill` where competence_id = :id Successfull: 1
+2019-06-13 19:20:49 [execStatement       ] . [{"id":"4","skill":"A2","competence_id":"2","count(*)":"1"}]
+2019-06-13 19:20:49 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:49 [execStatement       ] SELECT *, count(*) FROM `skill` where competence_id = :id Successfull: 1
+2019-06-13 19:20:49 [execStatement       ] . [{"id":"1","skill":"a skill","competence_id":"3","count(*)":"2"}]
+2019-06-13 19:20:49 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:49 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:20:49 [execStatement       ] . [{"id":"3","skill":"A1","competence_id":"1"},{"id":"5","skill":"A11","competence_id":"1"},{"id":"6","skill":"A15","competence_id":"1"}]
+2019-06-13 19:20:49 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:49 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:20:49 [execStatement       ] . [{"id":"4","skill":"A2","competence_id":"2"}]
+2019-06-13 19:20:49 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:49 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:20:49 [execStatement       ] . [{"id":"1","skill":"a skill","competence_id":"3"},{"id":"2","skill":"some other skill","competence_id":"3"}]
+2019-06-13 19:20:49 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:49 [execStatement       ] SELECT date FROM studendtrials WHERE student_id=:id order by date Successfull: 1
+2019-06-13 19:20:49 [execStatement       ] . [{"date":"13\/06\/2019"},{"date":"13\/06\/2019"},{"date":"14\/06\/2019"}]
+2019-06-13 19:20:49 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:49 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:20:49 [execStatement       ] . [{"id":"3","skill":"A1","competence_id":"1"},{"id":"5","skill":"A11","competence_id":"1"},{"id":"6","skill":"A15","competence_id":"1"}]
+2019-06-13 19:20:49 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:49 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:20:49 [execStatement       ] . [{"id":"2","student_id":"0","skill_id":"3","validated":"1","date":"13\/06\/2019","commentaire":null}]
+2019-06-13 19:20:49 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:49 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:20:49 [execStatement       ] . []
+2019-06-13 19:20:49 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:49 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:20:49 [execStatement       ] . []
+2019-06-13 19:20:49 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:49 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:20:49 [execStatement       ] . [{"id":"4","skill":"A2","competence_id":"2"}]
+2019-06-13 19:20:49 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:49 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:20:49 [execStatement       ] . []
+2019-06-13 19:20:49 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:49 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:20:49 [execStatement       ] . [{"id":"1","skill":"a skill","competence_id":"3"},{"id":"2","skill":"some other skill","competence_id":"3"}]
+2019-06-13 19:20:49 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:49 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:20:49 [execStatement       ] . []
+2019-06-13 19:20:49 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:49 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:20:49 [execStatement       ] . [{"id":"3","student_id":"0","skill_id":"2","validated":"2","date":"13\/06\/2019","commentaire":"mauvais plongeur, c pas good"}]
+2019-06-13 19:20:49 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:49 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:20:49 [execStatement       ] . [{"id":"3","skill":"A1","competence_id":"1"},{"id":"5","skill":"A11","competence_id":"1"},{"id":"6","skill":"A15","competence_id":"1"}]
+2019-06-13 19:20:49 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:49 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:20:49 [execStatement       ] . []
+2019-06-13 19:20:49 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:49 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:20:49 [execStatement       ] . []
+2019-06-13 19:20:49 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:49 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:20:49 [execStatement       ] . []
+2019-06-13 19:20:49 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:49 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:20:49 [execStatement       ] . [{"id":"4","skill":"A2","competence_id":"2"}]
+2019-06-13 19:20:49 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:49 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:20:49 [execStatement       ] . [{"id":"4","student_id":"0","skill_id":"4","validated":"1","date":"14\/06\/2019","commentaire":"bon plongeur, c good"}]
+2019-06-13 19:20:49 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:49 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:20:49 [execStatement       ] . [{"id":"1","skill":"a skill","competence_id":"3"},{"id":"2","skill":"some other skill","competence_id":"3"}]
+2019-06-13 19:20:49 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:49 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:20:49 [execStatement       ] . []
+2019-06-13 19:20:49 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:20:49 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:20:49 [execStatement       ] . []
+2019-06-13 19:21:03 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:21:03 [execStatement       ] select * from student                                    left join studendtrials on studendtrials.student_id = student.id_student                                    left join skill on skill_id = studendtrials.skill_id                                    left join competences on competences.id = skill.competence_id                                    where student.id_student = :studid order by competences.id asc Successfull: 
+2019-06-13 19:21:03 [execStatement       ] . []
+2019-06-13 19:21:03 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:21:03 [execStatement       ] SELECT * FROM competences WHERE niveau = (SELECT level FROM student WHERE id_student = :id) Successfull: 1
+2019-06-13 19:21:03 [execStatement       ] . [{"competence_id":"1","name":"op","niveau":"3"},{"competence_id":"2","name":"comp","niveau":"3"},{"competence_id":"3","name":"voilavoila","niveau":"3"}]
+2019-06-13 19:21:03 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:21:03 [execStatement       ] SELECT *, count(*) FROM `skill` where competence_id = :id Successfull: 1
+2019-06-13 19:21:03 [execStatement       ] . [{"id":"3","skill":"A1","competence_id":"1","count(*)":"3"}]
+2019-06-13 19:21:03 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:21:03 [execStatement       ] SELECT *, count(*) FROM `skill` where competence_id = :id Successfull: 1
+2019-06-13 19:21:03 [execStatement       ] . [{"id":"4","skill":"A2","competence_id":"2","count(*)":"1"}]
+2019-06-13 19:21:03 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:21:03 [execStatement       ] SELECT *, count(*) FROM `skill` where competence_id = :id Successfull: 1
+2019-06-13 19:21:03 [execStatement       ] . [{"id":"1","skill":"a skill","competence_id":"3","count(*)":"2"}]
+2019-06-13 19:21:03 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:21:03 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:21:03 [execStatement       ] . [{"id":"3","skill":"A1","competence_id":"1"},{"id":"5","skill":"A11","competence_id":"1"},{"id":"6","skill":"A15","competence_id":"1"}]
+2019-06-13 19:21:03 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:21:03 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:21:03 [execStatement       ] . [{"id":"4","skill":"A2","competence_id":"2"}]
+2019-06-13 19:21:03 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:21:03 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:21:03 [execStatement       ] . [{"id":"1","skill":"a skill","competence_id":"3"},{"id":"2","skill":"some other skill","competence_id":"3"}]
+2019-06-13 19:21:03 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:21:03 [execStatement       ] SELECT date FROM studendtrials WHERE student_id=:id order by date Successfull: 1
+2019-06-13 19:21:03 [execStatement       ] . [{"date":"13\/06\/2019"},{"date":"13\/06\/2019"},{"date":"14\/06\/2019"}]
+2019-06-13 19:21:03 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:21:03 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:21:03 [execStatement       ] . [{"id":"3","skill":"A1","competence_id":"1"},{"id":"5","skill":"A11","competence_id":"1"},{"id":"6","skill":"A15","competence_id":"1"}]
+2019-06-13 19:21:03 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:21:03 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:21:03 [execStatement       ] . [{"id":"2","student_id":"0","skill_id":"3","validated":"1","date":"13\/06\/2019","commentaire":null}]
+2019-06-13 19:21:03 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:21:03 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:21:03 [execStatement       ] . []
+2019-06-13 19:21:03 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:21:03 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:21:03 [execStatement       ] . []
+2019-06-13 19:21:03 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:21:03 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:21:03 [execStatement       ] . [{"id":"4","skill":"A2","competence_id":"2"}]
+2019-06-13 19:21:03 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:21:03 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:21:03 [execStatement       ] . []
+2019-06-13 19:21:03 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:21:03 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:21:03 [execStatement       ] . [{"id":"1","skill":"a skill","competence_id":"3"},{"id":"2","skill":"some other skill","competence_id":"3"}]
+2019-06-13 19:21:03 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:21:03 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:21:03 [execStatement       ] . []
+2019-06-13 19:21:03 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:21:03 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:21:03 [execStatement       ] . [{"id":"3","student_id":"0","skill_id":"2","validated":"2","date":"13\/06\/2019","commentaire":"mauvais plongeur, c pas good"}]
+2019-06-13 19:21:03 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:21:03 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:21:03 [execStatement       ] . [{"id":"3","skill":"A1","competence_id":"1"},{"id":"5","skill":"A11","competence_id":"1"},{"id":"6","skill":"A15","competence_id":"1"}]
+2019-06-13 19:21:03 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:21:03 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:21:03 [execStatement       ] . []
+2019-06-13 19:21:03 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:21:03 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:21:03 [execStatement       ] . []
+2019-06-13 19:21:03 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:21:03 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:21:03 [execStatement       ] . []
+2019-06-13 19:21:03 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:21:03 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:21:03 [execStatement       ] . [{"id":"4","skill":"A2","competence_id":"2"}]
+2019-06-13 19:21:03 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:21:03 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:21:03 [execStatement       ] . [{"id":"4","student_id":"0","skill_id":"4","validated":"1","date":"14\/06\/2019","commentaire":"bon plongeur, c good"}]
+2019-06-13 19:21:03 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:21:03 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:21:03 [execStatement       ] . [{"id":"1","skill":"a skill","competence_id":"3"},{"id":"2","skill":"some other skill","competence_id":"3"}]
+2019-06-13 19:21:03 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:21:03 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:21:03 [execStatement       ] . []
+2019-06-13 19:21:03 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:21:03 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:21:03 [execStatement       ] . []
+2019-06-13 19:21:07 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:21:07 [deleteStudent       ] delete from student where id_student = :userid Successfull: 1
+2019-06-13 19:21:13 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:21:13 [deleteStudent       ] delete from student where id_student = :userid Successfull: 1
+2019-06-13 19:21:13 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:21:24 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:21:24 [deleteStudent       ] delete from student where id_student = :userid Successfull: 1
+2019-06-13 19:21:24 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:21:38 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:23:58 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:24:02 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:26:38 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:26:38 [writeNewStudent     ] INSERT INTO `student`(`firstName`, `name`,`level`) VALUES (:firstName,:name,:level) Successfull: 
+2019-06-13 19:26:44 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:26:44 [writeNewStudent     ] INSERT INTO `student`(`firstName`, `name`,`level`) VALUES (:firstName,:name,:level) Successfull: 
+2019-06-13 19:27:51 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:27:51 [writeNewStudent     ] INSERT INTO `student`(`name`, `firstName`,`level`) VALUES (:firstName,:name,:level) Successfull: 
+2019-06-13 19:28:12 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:28:12 [writeNewStudent     ] INSERT INTO `student`(`name`, `firstName`,`level`) VALUES (:firstName,:name,:level) Successfull: 
+2019-06-13 19:29:08 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:30:30 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:30:54 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:30:54 [execStatement       ] select * from student                                    left join studendtrials on studendtrials.student_id = student.id_student                                    left join skill on skill_id = studendtrials.skill_id                                    left join competences on competences.id = skill.competence_id                                    where student.id_student = :studid order by competences.id asc Successfull: 
+2019-06-13 19:30:54 [execStatement       ] . []
+2019-06-13 19:30:54 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:30:54 [execStatement       ] SELECT * FROM competences WHERE niveau = (SELECT level FROM student WHERE id_student = :id) Successfull: 1
+2019-06-13 19:30:54 [execStatement       ] . []
+2019-06-13 19:30:54 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:30:54 [execStatement       ] SELECT date FROM studendtrials WHERE student_id=:id order by date Successfull: 1
+2019-06-13 19:30:54 [execStatement       ] . []
+2019-06-13 19:30:57 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:30:57 [execStatement       ] select * from student                                    left join studendtrials on studendtrials.student_id = student.id_student                                    left join skill on skill_id = studendtrials.skill_id                                    left join competences on competences.id = skill.competence_id                                    where student.id_student = :studid order by competences.id asc Successfull: 
+2019-06-13 19:30:57 [execStatement       ] . []
+2019-06-13 19:30:57 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:30:57 [execStatement       ] SELECT * FROM competences WHERE niveau = (SELECT level FROM student WHERE id_student = :id) Successfull: 1
+2019-06-13 19:30:57 [execStatement       ] . []
+2019-06-13 19:30:57 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:30:57 [execStatement       ] SELECT date FROM studendtrials WHERE student_id=:id order by date Successfull: 1
+2019-06-13 19:30:57 [execStatement       ] . []
+2019-06-13 19:31:42 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:31:42 [execStatement       ] select * from student                                    left join studendtrials on studendtrials.student_id = student.id_student                                    left join skill on skill_id = studendtrials.skill_id                                    left join competences on competences.id = skill.competence_id                                    where student.id_student = :studid order by competences.id asc Successfull: 
+2019-06-13 19:31:42 [execStatement       ] . []
+2019-06-13 19:31:42 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:31:42 [execStatement       ] SELECT * FROM competences WHERE niveau = (SELECT level FROM student WHERE id_student = :id) Successfull: 1
+2019-06-13 19:31:42 [execStatement       ] . []
+2019-06-13 19:31:42 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:31:42 [execStatement       ] SELECT date FROM studendtrials WHERE student_id=:id order by date Successfull: 1
+2019-06-13 19:31:42 [execStatement       ] . [{"date":"13\/06\/2019"},{"date":"13\/06\/2019"},{"date":"14\/06\/2019"}]
+2019-06-13 19:31:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:31:43 [execStatement       ] select * from student                                    left join studendtrials on studendtrials.student_id = student.id_student                                    left join skill on skill_id = studendtrials.skill_id                                    left join competences on competences.id = skill.competence_id                                    where student.id_student = :studid order by competences.id asc Successfull: 
+2019-06-13 19:31:43 [execStatement       ] . []
+2019-06-13 19:31:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:31:43 [execStatement       ] SELECT * FROM competences WHERE niveau = (SELECT level FROM student WHERE id_student = :id) Successfull: 1
+2019-06-13 19:31:43 [execStatement       ] . []
+2019-06-13 19:31:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:31:43 [execStatement       ] SELECT date FROM studendtrials WHERE student_id=:id order by date Successfull: 1
+2019-06-13 19:31:43 [execStatement       ] . [{"date":"13\/06\/2019"},{"date":"13\/06\/2019"},{"date":"14\/06\/2019"}]
+2019-06-13 19:31:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:31:43 [execStatement       ] select * from student                                    left join studendtrials on studendtrials.student_id = student.id_student                                    left join skill on skill_id = studendtrials.skill_id                                    left join competences on competences.id = skill.competence_id                                    where student.id_student = :studid order by competences.id asc Successfull: 
+2019-06-13 19:31:43 [execStatement       ] . []
+2019-06-13 19:31:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:31:43 [execStatement       ] SELECT * FROM competences WHERE niveau = (SELECT level FROM student WHERE id_student = :id) Successfull: 1
+2019-06-13 19:31:43 [execStatement       ] . []
+2019-06-13 19:31:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:31:43 [execStatement       ] SELECT date FROM studendtrials WHERE student_id=:id order by date Successfull: 1
+2019-06-13 19:31:43 [execStatement       ] . [{"date":"13\/06\/2019"},{"date":"13\/06\/2019"},{"date":"14\/06\/2019"}]
+2019-06-13 19:31:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:31:43 [execStatement       ] select * from student                                    left join studendtrials on studendtrials.student_id = student.id_student                                    left join skill on skill_id = studendtrials.skill_id                                    left join competences on competences.id = skill.competence_id                                    where student.id_student = :studid order by competences.id asc Successfull: 
+2019-06-13 19:31:43 [execStatement       ] . []
+2019-06-13 19:31:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:31:43 [execStatement       ] SELECT * FROM competences WHERE niveau = (SELECT level FROM student WHERE id_student = :id) Successfull: 1
+2019-06-13 19:31:43 [execStatement       ] . []
+2019-06-13 19:31:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:31:43 [execStatement       ] SELECT date FROM studendtrials WHERE student_id=:id order by date Successfull: 1
+2019-06-13 19:31:43 [execStatement       ] . [{"date":"13\/06\/2019"},{"date":"13\/06\/2019"},{"date":"14\/06\/2019"}]
+2019-06-13 19:31:57 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:31:57 [updateSkillCompetence] . ["00000",null,null]
+2019-06-13 19:32:03 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:32:03 [updateSkillCompetence] . ["00000",null,null]
+2019-06-13 19:32:03 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:32:03 [updateCompetenceName] . ["00000",null,null]
+2019-06-13 19:32:17 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:32:17 [execStatement       ] select * from student                                    left join studendtrials on studendtrials.student_id = student.id_student                                    left join skill on skill_id = studendtrials.skill_id                                    left join competences on competences.id = skill.competence_id                                    where student.id_student = :studid order by competences.id asc Successfull: 
+2019-06-13 19:32:17 [execStatement       ] . []
+2019-06-13 19:32:17 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:32:17 [execStatement       ] SELECT * FROM competences WHERE niveau = (SELECT level FROM student WHERE id_student = :id) Successfull: 1
+2019-06-13 19:32:17 [execStatement       ] . []
+2019-06-13 19:32:17 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:32:17 [execStatement       ] SELECT date FROM studendtrials WHERE student_id=:id order by date Successfull: 1
+2019-06-13 19:32:17 [execStatement       ] . [{"date":"13\/06\/2019"},{"date":"13\/06\/2019"},{"date":"14\/06\/2019"}]
+2019-06-13 19:33:12 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:33:12 [execStatement       ] select * from student                                    left join studendtrials on studendtrials.student_id = student.id_student                                    left join skill on skill_id = studendtrials.skill_id                                    left join competences on competences.id = skill.competence_id                                    where student.id_student = :studid order by competences.id asc Successfull: 
+2019-06-13 19:33:12 [execStatement       ] . []
+2019-06-13 19:33:12 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:33:12 [execStatement       ] SELECT * FROM competences WHERE niveau = (SELECT level FROM student WHERE id_student = :id) Successfull: 1
+2019-06-13 19:33:12 [execStatement       ] . [{"competence_id":"1","name":"ope","niveau":"3"},{"competence_id":"2","name":"comp","niveau":"3"},{"competence_id":"3","name":"voilavoila","niveau":"3"}]
+2019-06-13 19:33:12 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:33:12 [execStatement       ] SELECT *, count(*) FROM `skill` where competence_id = :id Successfull: 1
+2019-06-13 19:33:12 [execStatement       ] . [{"id":"3","skill":"A1","competence_id":"1","count(*)":"3"}]
+2019-06-13 19:33:12 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:33:12 [execStatement       ] SELECT *, count(*) FROM `skill` where competence_id = :id Successfull: 1
+2019-06-13 19:33:12 [execStatement       ] . [{"id":"4","skill":"A2","competence_id":"2","count(*)":"1"}]
+2019-06-13 19:33:12 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:33:12 [execStatement       ] SELECT *, count(*) FROM `skill` where competence_id = :id Successfull: 1
+2019-06-13 19:33:12 [execStatement       ] . [{"id":"1","skill":"a skill","competence_id":"3","count(*)":"2"}]
+2019-06-13 19:33:12 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:33:12 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:33:12 [execStatement       ] . [{"id":"3","skill":"A1","competence_id":"1"},{"id":"5","skill":"A11","competence_id":"1"},{"id":"6","skill":"A15","competence_id":"1"}]
+2019-06-13 19:33:12 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:33:12 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:33:12 [execStatement       ] . [{"id":"4","skill":"A2","competence_id":"2"}]
+2019-06-13 19:33:12 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:33:12 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:33:12 [execStatement       ] . [{"id":"1","skill":"a skill","competence_id":"3"},{"id":"2","skill":"some other skill","competence_id":"3"}]
+2019-06-13 19:33:12 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:33:12 [execStatement       ] SELECT date FROM studendtrials WHERE student_id=:id order by date Successfull: 1
+2019-06-13 19:33:12 [execStatement       ] . [{"date":"13\/06\/2019"},{"date":"13\/06\/2019"},{"date":"14\/06\/2019"}]
+2019-06-13 19:33:12 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:33:12 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:33:12 [execStatement       ] . [{"id":"3","skill":"A1","competence_id":"1"},{"id":"5","skill":"A11","competence_id":"1"},{"id":"6","skill":"A15","competence_id":"1"}]
+2019-06-13 19:33:12 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:33:12 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:33:12 [execStatement       ] . [{"id":"2","student_id":"1","skill_id":"3","validated":"1","date":"13\/06\/2019","commentaire":null}]
+2019-06-13 19:33:12 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:33:12 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:33:12 [execStatement       ] . []
+2019-06-13 19:33:12 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:33:12 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:33:12 [execStatement       ] . []
+2019-06-13 19:33:12 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:33:12 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:33:12 [execStatement       ] . [{"id":"4","skill":"A2","competence_id":"2"}]
+2019-06-13 19:33:12 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:33:12 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:33:12 [execStatement       ] . []
+2019-06-13 19:33:12 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:33:12 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:33:12 [execStatement       ] . [{"id":"1","skill":"a skill","competence_id":"3"},{"id":"2","skill":"some other skill","competence_id":"3"}]
+2019-06-13 19:33:12 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:33:12 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:33:12 [execStatement       ] . []
+2019-06-13 19:33:12 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:33:12 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:33:12 [execStatement       ] . [{"id":"3","student_id":"1","skill_id":"2","validated":"2","date":"13\/06\/2019","commentaire":"mauvais plongeur, c pas good"}]
+2019-06-13 19:33:12 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:33:12 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:33:12 [execStatement       ] . [{"id":"3","skill":"A1","competence_id":"1"},{"id":"5","skill":"A11","competence_id":"1"},{"id":"6","skill":"A15","competence_id":"1"}]
+2019-06-13 19:33:12 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:33:12 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:33:12 [execStatement       ] . []
+2019-06-13 19:33:12 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:33:12 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:33:12 [execStatement       ] . []
+2019-06-13 19:33:12 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:33:12 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:33:12 [execStatement       ] . []
+2019-06-13 19:33:12 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:33:12 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:33:12 [execStatement       ] . [{"id":"4","skill":"A2","competence_id":"2"}]
+2019-06-13 19:33:12 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:33:12 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:33:12 [execStatement       ] . [{"id":"4","student_id":"1","skill_id":"4","validated":"1","date":"14\/06\/2019","commentaire":"bon plongeur, c good"}]
+2019-06-13 19:33:12 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:33:12 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:33:12 [execStatement       ] . [{"id":"1","skill":"a skill","competence_id":"3"},{"id":"2","skill":"some other skill","competence_id":"3"}]
+2019-06-13 19:33:12 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:33:12 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:33:12 [execStatement       ] . []
+2019-06-13 19:33:12 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:33:12 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:33:12 [execStatement       ] . []
+2019-06-13 19:33:25 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:33:28 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:33:28 [deleteStudent       ] delete from student where id_student = :userid Successfull: 1
+2019-06-13 19:33:32 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:33:32 [updateStudentName   ] UPDATE student set firstName = :firstname, name = :username where id_student = :userid Successfull: 1
+2019-06-13 19:33:39 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:39:28 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:39:28 [writeNewUser        ] INSERT INTO `user`(`firstName`, `name`, `email`, `password`, `role`)            VALUES (:firstname, :name, :email, :password, :role) Successfull: 
+2019-06-13 19:39:58 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:39:58 [writeNewUser        ] INSERT INTO `user`(`firstName`, `name`, `email`, `password`, `role`)            VALUES (:firstname, :name, :email, :password, :role) Successfull: 
+2019-06-13 19:40:24 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:40:24 [writeNewUser        ] INSERT INTO `user`(`firstName`, `name`, `email`, `password`, `role`)            VALUES (:firstname, :name, :email, :password, :role) Successfull: 
+2019-06-13 19:40:30 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:40:30 [writeNewUser        ] INSERT INTO `user`(`firstName`, `name`, `email`, `password`, `role`)            VALUES (:firstname, :name, :email, :password, :role) Successfull: 
+2019-06-13 19:40:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:40:45 [writeNewUser        ] INSERT INTO `user`(`firstName`, `name`, `email`, `password`, `role`)            VALUES (:firstname, :name, :email, :password, :role) Successfull: 
+2019-06-13 19:41:17 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:41:17 [writeNewUser        ] INSERT INTO `user`(`firstName`, `name`, `email`, `password`, `role`)            VALUES (:firstname, :name, :email, :password, :role) Successfull: 1
+2019-06-13 19:42:14 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:14 [execStatement       ] select * from student                                    left join studendtrials on studendtrials.student_id = student.id_student                                    left join skill on skill_id = studendtrials.skill_id                                    left join competences on competences.id = skill.competence_id                                    where student.id_student = :studid order by competences.id asc Successfull: 
+2019-06-13 19:42:14 [execStatement       ] . []
+2019-06-13 19:42:14 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:14 [execStatement       ] SELECT * FROM competences WHERE niveau = (SELECT level FROM student WHERE id_student = :id) Successfull: 1
+2019-06-13 19:42:14 [execStatement       ] . []
+2019-06-13 19:42:14 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:14 [execStatement       ] SELECT date FROM studendtrials WHERE student_id=:id order by date Successfull: 1
+2019-06-13 19:42:14 [execStatement       ] . []
+2019-06-13 19:42:29 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:29 [execStatement       ] select * from student                                    left join studendtrials on studendtrials.student_id = student.id_student                                    left join skill on skill_id = studendtrials.skill_id                                    left join competences on competences.id = skill.competence_id                                    where student.id_student = :studid order by competences.id asc Successfull: 
+2019-06-13 19:42:29 [execStatement       ] . []
+2019-06-13 19:42:29 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:29 [execStatement       ] SELECT * FROM competences WHERE niveau = (SELECT level FROM student WHERE id_student = :id) Successfull: 1
+2019-06-13 19:42:29 [execStatement       ] . []
+2019-06-13 19:42:29 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:29 [execStatement       ] SELECT date FROM studendtrials WHERE student_id=:id order by date Successfull: 1
+2019-06-13 19:42:29 [execStatement       ] . [{"date":"13\/06\/2019"},{"date":"13\/06\/2019"},{"date":"14\/06\/2019"}]
+2019-06-13 19:42:34 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:34 [execStatement       ] select * from student                                    left join studendtrials on studendtrials.student_id = student.id_student                                    left join skill on skill_id = studendtrials.skill_id                                    left join competences on competences.id = skill.competence_id                                    where student.id_student = :studid order by competences.id asc Successfull: 
+2019-06-13 19:42:34 [execStatement       ] . []
+2019-06-13 19:42:34 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:34 [execStatement       ] SELECT * FROM competences WHERE niveau = (SELECT level FROM student WHERE id_student = :id) Successfull: 1
+2019-06-13 19:42:34 [execStatement       ] . []
+2019-06-13 19:42:34 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:34 [execStatement       ] SELECT date FROM studendtrials WHERE student_id=:id order by date Successfull: 1
+2019-06-13 19:42:34 [execStatement       ] . [{"date":"13\/06\/2019"},{"date":"13\/06\/2019"},{"date":"14\/06\/2019"}]
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] select * from student                                    left join studendtrials on studendtrials.student_id = student.id_student                                    left join skill on skill_id = studendtrials.skill_id                                    left join competences on competences.id = skill.competence_id                                    where student.id_student = :studid order by competences.id asc Successfull: 
+2019-06-13 19:42:43 [execStatement       ] . []
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT * FROM competences WHERE niveau = (SELECT level FROM student WHERE id_student = :id) Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . [{"competence_id":"1","name":"ope","niveau":"3"},{"competence_id":"2","name":"comp","niveau":"3"},{"competence_id":"3","name":"voilavoila","niveau":"3"}]
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT *, count(*) FROM `skill` where competence_id = :id Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . [{"id":"3","skill":"A1","competence_id":"1","count(*)":"3"}]
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT *, count(*) FROM `skill` where competence_id = :id Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . [{"id":"4","skill":"A2","competence_id":"2","count(*)":"1"}]
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT *, count(*) FROM `skill` where competence_id = :id Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . [{"id":"1","skill":"a skill","competence_id":"3","count(*)":"2"}]
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . [{"id":"3","skill":"A1","competence_id":"1"},{"id":"5","skill":"A11","competence_id":"1"},{"id":"6","skill":"A15","competence_id":"1"}]
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . [{"id":"4","skill":"A2","competence_id":"2"}]
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . [{"id":"1","skill":"a skill","competence_id":"3"},{"id":"2","skill":"some other skill","competence_id":"3"}]
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT date FROM studendtrials WHERE student_id=:id order by date Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . [{"date":"13\/06\/2019"},{"date":"13\/06\/2019"},{"date":"14\/06\/2019"}]
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . [{"id":"3","skill":"A1","competence_id":"1"},{"id":"5","skill":"A11","competence_id":"1"},{"id":"6","skill":"A15","competence_id":"1"}]
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . [{"id":"2","student_id":"1","skill_id":"3","validated":"1","date":"13\/06\/2019","commentaire":null}]
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . []
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . []
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . [{"id":"4","skill":"A2","competence_id":"2"}]
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . []
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . [{"id":"1","skill":"a skill","competence_id":"3"},{"id":"2","skill":"some other skill","competence_id":"3"}]
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . []
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . [{"id":"3","student_id":"1","skill_id":"2","validated":"2","date":"13\/06\/2019","commentaire":"mauvais plongeur, c pas good"}]
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . [{"id":"3","skill":"A1","competence_id":"1"},{"id":"5","skill":"A11","competence_id":"1"},{"id":"6","skill":"A15","competence_id":"1"}]
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . []
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . []
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . []
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . [{"id":"4","skill":"A2","competence_id":"2"}]
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . [{"id":"4","student_id":"1","skill_id":"4","validated":"1","date":"14\/06\/2019","commentaire":"bon plongeur, c good"}]
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . [{"id":"1","skill":"a skill","competence_id":"3"},{"id":"2","skill":"some other skill","competence_id":"3"}]
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . []
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . []
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] select * from student                                    left join studendtrials on studendtrials.student_id = student.id_student                                    left join skill on skill_id = studendtrials.skill_id                                    left join competences on competences.id = skill.competence_id                                    where student.id_student = :studid order by competences.id asc Successfull: 
+2019-06-13 19:42:43 [execStatement       ] . []
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT * FROM competences WHERE niveau = (SELECT level FROM student WHERE id_student = :id) Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . [{"competence_id":"1","name":"ope","niveau":"3"},{"competence_id":"2","name":"comp","niveau":"3"},{"competence_id":"3","name":"voilavoila","niveau":"3"}]
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT *, count(*) FROM `skill` where competence_id = :id Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . [{"id":"3","skill":"A1","competence_id":"1","count(*)":"3"}]
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT *, count(*) FROM `skill` where competence_id = :id Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . [{"id":"4","skill":"A2","competence_id":"2","count(*)":"1"}]
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT *, count(*) FROM `skill` where competence_id = :id Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . [{"id":"1","skill":"a skill","competence_id":"3","count(*)":"2"}]
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . [{"id":"3","skill":"A1","competence_id":"1"},{"id":"5","skill":"A11","competence_id":"1"},{"id":"6","skill":"A15","competence_id":"1"}]
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . [{"id":"4","skill":"A2","competence_id":"2"}]
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . [{"id":"1","skill":"a skill","competence_id":"3"},{"id":"2","skill":"some other skill","competence_id":"3"}]
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT date FROM studendtrials WHERE student_id=:id order by date Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . [{"date":"13\/06\/2019"},{"date":"13\/06\/2019"},{"date":"14\/06\/2019"}]
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . [{"id":"3","skill":"A1","competence_id":"1"},{"id":"5","skill":"A11","competence_id":"1"},{"id":"6","skill":"A15","competence_id":"1"}]
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . [{"id":"2","student_id":"1","skill_id":"3","validated":"1","date":"13\/06\/2019","commentaire":null}]
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . []
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . []
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . [{"id":"4","skill":"A2","competence_id":"2"}]
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . []
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . [{"id":"1","skill":"a skill","competence_id":"3"},{"id":"2","skill":"some other skill","competence_id":"3"}]
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . []
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . [{"id":"3","student_id":"1","skill_id":"2","validated":"2","date":"13\/06\/2019","commentaire":"mauvais plongeur, c pas good"}]
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . [{"id":"3","skill":"A1","competence_id":"1"},{"id":"5","skill":"A11","competence_id":"1"},{"id":"6","skill":"A15","competence_id":"1"}]
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . []
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . []
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . []
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . [{"id":"4","skill":"A2","competence_id":"2"}]
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . [{"id":"4","student_id":"1","skill_id":"4","validated":"1","date":"14\/06\/2019","commentaire":"bon plongeur, c good"}]
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . [{"id":"1","skill":"a skill","competence_id":"3"},{"id":"2","skill":"some other skill","competence_id":"3"}]
+2019-06-13 19:42:43 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:43 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:42:43 [execStatement       ] . []
+2019-06-13 19:42:44 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:42:44 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-13 19:42:44 [execStatement       ] . []
+=======
 >>>>>>> 1eed80b3b01f4cd83f3effcd44f3e481d4cf0ee9
+<<<<<<< HEAD
 2019-06-13 19:23:09 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
 2019-06-13 19:23:09 [updateSeanceName    ] . ["42S22",1054,"Champ 'competence_id' inconnu dans where clause"]
 2019-06-13 19:32:12 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
@@ -9911,3 +10535,6 @@
 2019-06-13 19:59:25 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
 2019-06-13 19:59:48 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
 2019-06-13 19:59:48 [updateSeanceName    ] . ["42S22",1054,"Champ 'competence_id' inconnu dans where clause"]
+=======
+>>>>>>> 49039402e25c9eb2a3062d9a665e40d5ccfd24a7
+>>>>>>> d736280574bacb820f47920f53e5f81d5dceadc8

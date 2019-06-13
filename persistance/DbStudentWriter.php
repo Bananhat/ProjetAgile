@@ -22,15 +22,13 @@ class DbStudentWriter
             return false;
         }
 
-        $statement = $pdo->prepare('INSERT INTO `student`(`firstName`, `name`,`level`) VALUES (:firstName,:name,:level)');
+        $statement = $pdo->prepare('INSERT INTO `student`(`name`, `firstName`,`level`) VALUES (:firstName,:name,:level)');
 
         $statement->bindParam(':firstName', $firstName);
         $statement->bindParam(':name', $name);
         $statement->bindParam(':level', $level);
 
         $suc = $statement->execute();
-        //$this->dbConnector::outlog(preg_replace( "/\r|\n/", "", $statement->queryString )  ." Successfull: $suc");
-
         return $suc;
     }
 

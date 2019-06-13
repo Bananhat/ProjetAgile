@@ -27,13 +27,20 @@
                     echo '<a class="waves-effect waves-light btn right" style="margin-top: 1%;" href="signin.php?disconnect">Déconnexion</a>';
                     echo '<ul id = "dropdown" class = "dropdown-content">';
                     echo '<li><a href = "index.php">Accueil</a></li>';
-                    if(is_admin($user->get('id'))){
-                    echo '<li><a href = "changerLesRoles.php">Liste des initiateurs</a></li>';
-                    echo '<li><a href = "GererEleve.php">Liste des élèves</a></li>';
-                    echo '<li><a href = "afficherSeance.php">Liste des séances à venir</a></li>';
-                    echo '<li><a href = "competences.php">Gerer les compétences</a></li>';
-                    echo '<li><a href = "signup_initiateur.php">Inscrire initiateur</a></li>';
+                    if(is_admin($user->get('id'))) {
+                        echo '<li><a href = "changerLesRoles.php">Liste des initiateurs</a></li>';  }
+                        if (is_admin($user->get('id')) || $user->get('role') == 'responsable' ||  $user->get('role') == 'initiateur') {
+                            echo '<li><a href = "GererEleve.php">Liste des élèves</a></li>';
+                            echo '<li><a href = "afficherSeance.php">Liste des séances à venir</a></li>';
+                        }
+                    if($user->get('role') == 'responsable'){
+                        echo '<li><a href = "competences.php">Gerer les compétences</a></li>';
                     }
+
+        if(is_admin($user->get('id'))) {
+            echo '<li><a href = "signup_initiateur.php">Inscrire initiateur</a></li>';
+        }
+
                     echo '</ul>';
                   
                     echo '<a class = "btn dropdown-button" data-constrainWidth="false" href = "#" data-activates = "dropdown">Menu<i class = "mdi-navigation-arrow-drop-down"></i></a>';
