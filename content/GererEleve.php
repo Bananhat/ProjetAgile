@@ -36,16 +36,15 @@ if($user)
                 echo '<td>' . $rowStudent['NAME'] . '</td>';
                 echo '<td>' . $rowStudent['FIRSTNAME'] . '</td>';
                 echo '</tr>';
-                /*<div class="formulaire" style="margin-top: 10%; margin-left: 30%; width: 25%;">
-                    <label for="name"><b>nom</b></label>
-                    <input type="text" placeholder="name" name="name" required>
 
-                    <label for="firstName"><b>prenom</b></label>
-                    <input type="text" placeholder="firstName" name="firstName" required>
-                </div>*/
-                }
+            } ?>
+            <div class="formulaire" style="margin-top: 10%; margin-left: 30%; width: 25%;">
+                <label for="name"><b>nom</b></label>
+                <input type="text" placeholder="name" name="name" required>
 
-            ?>
+                <label for="firstName"><b>prenom</b></label>
+                <input type="text" placeholder="firstName" name="firstName" required>
+            </div>
             </tbody>
         </table>
     </div>
