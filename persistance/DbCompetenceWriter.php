@@ -21,6 +21,7 @@ class DbCompetenceWriter
         try {
             $pdo = $this->dbConnector->getConnection();
         } catch (Exception $e) {
+            $this->dbConnector::outlog($e);
 
             return false;
         }
@@ -32,6 +33,8 @@ class DbCompetenceWriter
         $statement->bindParam(':niveau', $niveau);
 
         $suc = $statement->execute();
+        $this->dbConnector::outlog(preg_replace( "/\r|\n/", "", $statement->queryString )  ." Successfull: $suc");
+
         return $suc;
     }
 }

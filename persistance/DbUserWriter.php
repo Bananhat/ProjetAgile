@@ -24,7 +24,7 @@ class DbUserWriter
         try {
             $pdo = $this->dbConnector->getConnection();
         } catch (Exception $e) {
-
+            $this->dbConnector::outlog($e);
             return false;
         }
 
@@ -38,6 +38,8 @@ class DbUserWriter
         $statement->bindParam(':role', $role);
 
         $suc = $statement->execute();
+        $this->dbConnector::outlog(preg_replace( "/\r|\n/", "", $statement->queryString )  ." Successfull: $suc");
+
         return $suc;
     }
 }

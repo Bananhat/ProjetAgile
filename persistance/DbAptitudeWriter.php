@@ -5,7 +5,7 @@ require_once("../settings.php");
 require_once("DbConnector.php");
 
 $db = new DbAptitudeWriter(new DbConnector());
-var_dump($db->validateAptitude(1, 0));
+var_dump($db->writeNewAptitude("aptName", "1"));
 */
 
 class DbAptitudeWriter
@@ -22,7 +22,7 @@ class DbAptitudeWriter
         try {
             $pdo = $this->dbConnector->getConnection();
         } catch (Exception $e) {
-
+            $this->dbConnector::outlog($e);
             return false;
         }
 
@@ -31,8 +31,9 @@ class DbAptitudeWriter
 
         $statement->bindParam(':aptitude', $aptitudeName);
         $statement->bindParam(':validated', $validated);
-
         $suc = $statement->execute();
+        $this->dbConnector::outlog(preg_replace( "/\r|\n/", "", $statement->queryString )  ." Successfull: $suc");
+
         return $suc;
     }
 
@@ -49,8 +50,29 @@ class DbAptitudeWriter
 
         $statement->bindParam(':aptid', $aptitudeId);
         $statement->bindParam(':validated', $validated);
-
+        $this->dbConnector::outlog("Executing: " . $statement);
         $suc = $statement->execute();
+        $this->dbConnector::outlog(preg_replace( "/\r|\n/", "", $statement->queryString )  ." Successfull: $suc");
+
+        return $suc;
+    }
+
+    public function deleteAptitude($aptitudeId) : bool
+    {
+        try {
+            $pdo = $this->dbConnector->getConnection();
+        } catch (Exception $e) {
+
+            return false;
+        }
+
+        $statement = $pdo->prepare('delete from `aptitude` where id_apt = :aptid');
+
+        $statement->bindParam(':aptid', $aptitudeId);
+        $this->dbConnector::outlog("Executing: " . $statement);
+        $suc = $statement->execute();
+        $this->dbConnector::outlog(preg_replace( "/\r|\n/", "", $statement->queryString )  ." Successfull: $suc");
+
         return $suc;
     }
 }
