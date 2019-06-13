@@ -43,7 +43,7 @@ class DbSummaryReader
             return false;
         }
         $statement = $pdo->prepare("SELECT * FROM skill where competence_id = :id");
-
+        $statement->bindParam(':id', $id);
         return $this->dbConnector->execStatement($statement);
     }
 
