@@ -42,29 +42,25 @@ $html = "";?>
         if($dat != $olddat) {
             echo '<tr>';
             echo '<td>' . $dat['date'] . '</td>';
-        }
-        $olddat = $dat;
+
+
         foreach($competence as $comp)
         {
             $aptitude = $Dbreader->getSkillsFromCompetenceId($comp['id']);
             foreach($aptitude as $apt)
             {
                 $trial = $Dbreader->getTrialsFromDate($dat['date'],$apt['id']);
+
                 if(!$trial[0]["validated"])
                 {
-                    $trial[0]["validated"] = 2;
+                    $trial[0]["validated"] = 0;
                 }
-                echo $dat['date'];
-                echo '  ';
-                echo $apt['id'];
-                echo '  ';
-                echo $trial[0]["validated"];
-                echo '<br />';
+
                 if($trial[0]["validated"] == 1)
                 {
                     echo '<td>Acquis</td>';
                 }
-                else if($trial[0]["validated"] == 0)
+                else if($trial[0]["validated"] == 2)
                 {
                     echo '<td>En Cours</td>';
                 }
@@ -75,6 +71,8 @@ $html = "";?>
             }
         }
         echo '</tr>';
+        }
+        $olddat = $dat;
     }?>
 </table>
 
