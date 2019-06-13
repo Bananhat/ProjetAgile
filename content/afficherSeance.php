@@ -32,6 +32,7 @@ if ($user) {
             <thead>
             <th>date</th>
             <th>skill à travailler</th>
+            <?php echo '<td><a class="waves-effect waves-light btn" href="ajoutSeance.php">Ajouter Séance</a></td>'?>
             </thead>
 
             <tbody>

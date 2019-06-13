@@ -19,14 +19,23 @@ class DbSeanceWriter
             return false;
         }
 
-        $statement = $pdo->prepare('INSERT INTO `competences`(`name`,	`niveau` )
-            VALUES (:name, :niveau)');
+        echo ' preparation ';
+        $statement = $pdo->prepare('INSERT INTO `seance`(`date`, `id_skill1`, `id_skill2`, `id_skill3`)
+            VALUES (:date, :id1, :id2, :id3)');
 
-        $statement->bindParam(':name', $competenceName);
-        $statement->bindParam(':niveau', $niveau);
+        echo ' parametrage ';
+        echo $Date;
+        echo $id_skill1;
+        echo $id_skill2;
+        echo $id_skill3;
+        $statement->bindParam(':date', $Date);
+        $statement->bindParam(':id1', $id_skill1);
+        $statement->bindParam(':id2', $id_skill2);
+        $statement->bindParam(':id3', $id_skill3);
+
+        echo ' lancementRequête ';
 
         $suc = $statement->execute();
-        $this->dbConnector::outlog(preg_replace( "/\r|\n/", "", $statement->queryString )  ." Successfull: $suc");
 
         return $suc;
     }
