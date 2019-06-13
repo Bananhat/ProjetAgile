@@ -33,7 +33,7 @@
                             echo '<li><a href = "GererEleve.php">Liste des élèves</a></li>';
                             echo '<li><a href = "afficherSeance.php">Liste des séances à venir</a></li>';
                         }
-                    if($user->get('role') == 'responsable'){
+                    if($user->get('role') == 'responsable' ||$user->get('role') == 'admin'  ){
                         echo '<li><a href = "competences.php">Gerer les compétences</a></li>';
                     }
 

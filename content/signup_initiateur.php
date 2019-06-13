@@ -33,10 +33,11 @@ get_header();
             $newUserPassword= $_POST['password'];
             $confirmPassword = $_POST['confirm'];
             $userRole = $_POST['role'];
+            $formation = $_POST['formation'];
 
     if($confirmPassword == $newUserPassword) {
         $userWriter = new DbUserWriter(new DbConnector());
-        $suc = $userWriter->writeNewUser($newUserFirstName, $newUserName, $newUserEmail, $newUserPassword, $userRole);
+        $suc = $userWriter->writeNewUser($newUserFirstName, $newUserName, $newUserEmail, $newUserPassword, $userRole, $formation);
         if($suc) {
             echo "okay";
         }
@@ -72,12 +73,23 @@ get_header();
 
         <label for="confirm"><b>Confirmer le mot de passe</b></label>
         <input type="password" placeholder="Confirmer le mot de passe" name="confirm" required>
-
-        <select name="role" id="role" size="4">
+<div>
+        <label for="role"><b>Role</b></label>
+        <select name="role" id="role" size="3">
             <option selected value="initiateur">Initiateur</option>
             <option value="reponsable">Responsable</option>
             <option value="admin">Directeur technique</option>
         </select>
+</div>
+<div>
+        <label for="formation"><b>Formation</b></label>
+        <select name="formation" id="formation" size="3">
+            <option selected value="1">Niveau 1</option>
+            <option value="2">Niveau 2</option>
+            <option value="3">Niveau 3</option>
+        </select>
+</div>
+
 
         <input class="btn waves-effect waves-light" type="submit" name="submit" />
         </button>
