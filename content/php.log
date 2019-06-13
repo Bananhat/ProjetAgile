@@ -9838,3 +9838,76 @@
 2019-06-13 19:20:28 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
 2019-06-13 19:20:28 [execStatement       ] . []
 >>>>>>> 1eed80b3b01f4cd83f3effcd44f3e481d4cf0ee9
+2019-06-13 19:23:09 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:23:09 [updateSeanceName    ] . ["42S22",1054,"Champ 'competence_id' inconnu dans where clause"]
+2019-06-13 19:32:12 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:32:12 [updateSkillCompetence] . ["00000",null,null]
+2019-06-13 19:32:12 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:32:12 [updateCompetenceName] . ["00000",null,null]
+2019-06-13 19:44:16 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:44:16 [updateSeanceName    ] . ["42S22",1054,"Champ 'competence_id' inconnu dans where clause"]
+2019-06-13 19:45:04 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:45:04 [updateSeanceName    ] . ["42S22",1054,"Champ 'competence_id' inconnu dans where clause"]
+2019-06-13 19:45:26 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:45:26 [updateSeanceName    ] . ["42S22",1054,"Champ 'competence_id' inconnu dans where clause"]
+2019-06-13 19:45:35 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:45:35 [updateSeanceName    ] . ["42S22",1054,"Champ 'competence_id' inconnu dans where clause"]
+2019-06-13 19:45:59 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:45:59 [updateSeanceName    ] . ["42S22",1054,"Champ 'competence_id' inconnu dans where clause"]
+2019-06-13 19:46:12 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:46:12 [updateSeanceName    ] . ["42S22",1054,"Champ 'competence_id' inconnu dans where clause"]
+2019-06-13 19:46:31 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:46:31 [updateSeanceName    ] . ["42S22",1054,"Champ 'competence_id' inconnu dans where clause"]
+2019-06-13 19:47:39 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:47:39 [execStatement       ] SELECT * FROM seance where id_seance = :id Successfull: 1
+2019-06-13 19:47:39 [execStatement       ] . [{"id_seance":"2","date":"11\/06\/2019","id_skill1":"1","id_skill2":null,"id_skill3":null}]
+2019-06-13 19:47:39 [updateSeanceName    ] . ["42S22",1054,"Champ 'competence_id' inconnu dans where clause"]
+2019-06-13 19:47:50 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:47:50 [execStatement       ] SELECT * FROM seance where id_seance = :id Successfull: 1
+2019-06-13 19:47:50 [execStatement       ] . [{"id_seance":"2","date":"11\/06\/2019","id_skill1":"1","id_skill2":null,"id_skill3":null}]
+2019-06-13 19:47:50 [updateSeanceName    ] . ["42S22",1054,"Champ 'competence_id' inconnu dans where clause"]
+2019-06-13 19:47:57 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:47:57 [execStatement       ] SELECT * FROM seance where id_seance = :id Successfull: 1
+2019-06-13 19:47:57 [execStatement       ] . [{"id_seance":"2","date":"11\/06\/2019","id_skill1":"1","id_skill2":null,"id_skill3":null}]
+2019-06-13 19:47:57 [updateSeanceName    ] . ["42S22",1054,"Champ 'competence_id' inconnu dans where clause"]
+2019-06-13 19:49:11 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:49:11 [execStatement       ] SELECT * FROM seance where id_seance = :id Successfull: 1
+2019-06-13 19:49:11 [execStatement       ] . [{"id_seance":"2","date":"11\/06\/2019","id_skill1":"1","id_skill2":null,"id_skill3":null}]
+2019-06-13 19:49:11 [updateSeanceName    ] . ["42S22",1054,"Champ 'competence_id' inconnu dans where clause"]
+2019-06-13 19:49:48 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:49:48 [updateSeanceName    ] . ["42S22",1054,"Champ 'competence_id' inconnu dans where clause"]
+2019-06-13 19:50:11 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:50:11 [updateSeanceName    ] . ["42S22",1054,"Champ 'competence_id' inconnu dans where clause"]
+2019-06-13 19:50:36 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:50:36 [execStatement       ] SELECT * FROM seance where id_seance = :id Successfull: 1
+2019-06-13 19:50:36 [execStatement       ] . [{"id_seance":"2","date":"11\/06\/2019","id_skill1":"1","id_skill2":null,"id_skill3":null}]
+2019-06-13 19:50:36 [updateSeanceName    ] . ["42S22",1054,"Champ 'competence_id' inconnu dans where clause"]
+2019-06-13 19:51:03 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:51:03 [execStatement       ] SELECT * FROM seance where id_seance = :id Successfull: 1
+2019-06-13 19:51:03 [execStatement       ] . [{"id_seance":"2","date":"11\/06\/2019","id_skill1":"1","id_skill2":null,"id_skill3":null}]
+2019-06-13 19:51:03 [updateSeanceName    ] . ["42S22",1054,"Champ 'competence_id' inconnu dans where clause"]
+2019-06-13 19:52:05 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:52:05 [updateSeanceName    ] . ["42S22",1054,"Champ 'competence_id' inconnu dans where clause"]
+2019-06-13 19:52:18 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:52:18 [updateSeanceName    ] . ["42S22",1054,"Champ 'competence_id' inconnu dans where clause"]
+2019-06-13 19:52:50 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:52:50 [updateSeanceName    ] . ["42S22",1054,"Champ 'competence_id' inconnu dans where clause"]
+2019-06-13 19:53:34 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:53:34 [updateSeanceName    ] . ["42S22",1054,"Champ 'competence_id' inconnu dans where clause"]
+2019-06-13 19:54:46 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:55:03 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:55:29 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:55:29 [updateSeanceName    ] . ["42S22",1054,"Champ 'competence_id' inconnu dans where clause"]
+2019-06-13 19:55:56 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:55:56 [execStatement       ] SELECT * FROM seance where id_seance = :id Successfull: 1
+2019-06-13 19:55:56 [execStatement       ] . [{"id_seance":"2","date":"11\/06\/2019","id_skill1":"1","id_skill2":null,"id_skill3":null}]
+2019-06-13 19:55:56 [updateSeanceName    ] . ["42S22",1054,"Champ 'competence_id' inconnu dans where clause"]
+2019-06-13 19:56:11 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:56:11 [updateSeanceName    ] . ["42S22",1054,"Champ 'competence_id' inconnu dans where clause"]
+2019-06-13 19:58:05 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:58:14 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:58:14 [updateSeanceName    ] . ["42S22",1054,"Champ 'competence_id' inconnu dans where clause"]
+2019-06-13 19:59:18 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:59:25 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:59:48 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-13 19:59:48 [updateSeanceName    ] . ["42S22",1054,"Champ 'competence_id' inconnu dans where clause"]

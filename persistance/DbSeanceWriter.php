@@ -39,11 +39,15 @@ class DbSeanceWriter
             $this->dbConnector::outlog($exception);
         }
 
-        var_dump($id);
+        echo 'id:';
+        echo $id;
+
         $statement = $pdo->prepare('SELECT * FROM seance where id_seance = :id');
         $statement->bindParam(':id', $id);
         $attribut = $statement->execute();
 
+        echo '<br />'.'attribut:';
+        echo $attribut;
         var_dump($attribut);
 
         if($id_skill1 == null)
@@ -59,9 +63,12 @@ class DbSeanceWriter
             $id_skill3 = $attribut['id_skill3'];
         }
 
-        var_dump($id_skill1);
-        var_dump($id_skill1);
-        var_dump($id_skill1);
+        echo '<br />'.'skill1:';
+        echo $id_skill1;
+        echo '<br />'.'skill2:';
+        echo $id_skill2;
+        echo '<br />'.'skill3:'.'<br />';
+        echo $id_skill3;
 
         $statement = $pdo->prepare('UPDATE seance set date = :date, id_skill1 = :id_skill1,id_skill2 = :id_skill2 ,id_skill3 = :id_skill3 where competence_id = :id');
         $statement->bindParam(':date', $date);
