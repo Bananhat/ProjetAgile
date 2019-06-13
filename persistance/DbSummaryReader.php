@@ -16,6 +16,16 @@ class DbSummaryReader
         $this->dbConnector = $dbConnector;
     }
 
+    public function getCompetencesFromStudentId($studentId)
+    {
+        $pdo = $this->dbConnector->getConnection();
+
+        $statement = $pdo->prepare("SELECT * FROM competences WHERE niveau = (SELECT level FROM student WHERE id_student = :id)");
+        $statement->bindParam(':id', $studentId);
+
+        return $this->dbConnector->execStatement($statement);
+    }
+
     public function readSummaryFromStudentId($studentId) : array
     {
         try {
