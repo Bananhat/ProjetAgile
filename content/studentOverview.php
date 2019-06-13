@@ -48,7 +48,7 @@ $html = "";?>
 
         foreach($competence as $comp)
         {
-            $aptitude = $Dbreader->getSkillsFromCompetenceId($comp['id']);
+            $aptitude = $Dbreader->getSkillsFromCompetenceId($comp['competence_id']);
             foreach($aptitude as $apt)
             {
                 $trial = $Dbreader->getTrialsFromDate($dat['date'],$apt['id']);
