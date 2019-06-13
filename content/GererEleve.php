@@ -1,5 +1,6 @@
 <?php
 include_once('../includes/utils_page.php');
+include_once('../persistance/DbStudentWriter.php');
 get_header();
 
 $user = get_logged_user();
