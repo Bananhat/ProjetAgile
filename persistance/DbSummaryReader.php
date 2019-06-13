@@ -1,11 +1,11 @@
 <?php declare(strict_types=1);
-
+/*
 require_once("../settings.php");
 require_once("DbConnector.php");
 
 $db = new DbSummaryReader(new DbConnector());
 var_dump($db->readSummaryFromStudentId(4));
-
+*/
 
 class DbSummaryReader
 {
@@ -32,9 +32,9 @@ class DbSummaryReader
 							where student.id_student = :studid');
 
         $statement->bindParam(':studid', $studentId);
-        $statement->execute();
-        $statement->fetchAll(2);
-        var_dump($statement);
+        //$statement->execute();
+        //$statement->fetchAll(2);
+        //var_dump($statement);
         return $this->dbConnector->execStatement($statement);
     }
 
