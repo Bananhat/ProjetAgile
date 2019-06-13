@@ -24,8 +24,8 @@ if ($user) {
     $reqSeance = $db->query("SELECT * FROM seance;");
     ?>
 
-    <h1 class="title has-text-dark has-text-weight-bold" style="text-align:center; margin-bottom:2%;margin-top:2%;">
-        Visualiser les initiateurs</h1>
+    <h3 class="title has-text-dark has-text-weight-bold" style="text-align:center; margin-bottom:2%;margin-top:2%;">
+        Modifier Seances</h3>
 
     <div>
         <table class="table striped">
