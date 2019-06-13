@@ -97,6 +97,7 @@ if ($user) {
             ?>
             </tbody>
         </table>
+        <a class="waves-effect waves-light btn" href="competences.php">Liste Competences</a>
     </div>
 <?php
 get_footer();

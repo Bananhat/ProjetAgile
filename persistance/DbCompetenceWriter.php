@@ -37,4 +37,31 @@ class DbCompetenceWriter
 
         return $suc;
     }
+
+    public function updateCompetenceName($id, $name) : bool
+    {
+        try {
+            $pdo = $this->dbConnector->getConnection();
+        } catch (\Exception $exception) {
+            $this->dbConnector::outlog($exception);
+        }
+
+        $statement = $pdo->prepare('UPDATE competences set name = :name where competence_id = :id');
+        $statement->bindParam(':name', $name);
+        $statement->bindParam(':id', $id);
+        $success = $statement->execute();
+        $this->dbConnector::outlog($statement->errorInfo());
+        return $success;
+    }
+    public function deleteCompetence(int $id) : bool
+    {
+        try {
+            $pdo = $this->dbConnector->getConnection();
+        } catch (\Exception $exception) {
+            $this->dbConnector::outlog($exception);
+        }
+        $statement = $pdo->prepare('DELETE from competences where competence_id = :id');
+        $statement->bindParam(':id', $id);
+        return $statement->execute();
+    }
 }
