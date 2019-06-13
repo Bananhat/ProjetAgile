@@ -4,10 +4,14 @@ include '../persistance/DbSummaryReader.php';
 include_once '../settings.php';
 
 $Dbreader = new DbSummaryReader(new DbConnector());
-$result = $Dbreader->readSummaryFromStudentId(1);
+$result = $Dbreader->readSummaryFromStudentId(3);
 
-var_dump($result);?>
+var_dump($result);
 
+$html = "
+
+";
+/*
 <table>
     <tr>
         <td></td>
@@ -39,5 +43,6 @@ var_dump($result);?>
             echo '<td>'..'</td>';
         }
         echo '</tr>';
-    }?>*/?>
+    }
 </table>
+*/
