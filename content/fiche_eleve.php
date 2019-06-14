@@ -47,7 +47,8 @@ if($user) {
         echo '<form method="POST" action="fiche_eleve.php?id='.$_GET['id'] .'"> 
         <input type="text" value="' . $rowStudent['firstName'] . '" name="firstName" />
         <input type="text" value="' . $rowStudent['name'] . '" name="name" />
-        <input class="btn waves-effect waves-light" type="submit" id="submit" name="submit" value="Modifier" />
+        <table><tr><td><input class="btn waves-effect waves-light" type="submit" id="submit" name="submit" value="Modifier" </td>
+        <?php <td><a class="waves-effect waves-light btn" href="GererEleve.php">Page précédente</a></td></tr></table>
         </form>
         ';
     }
