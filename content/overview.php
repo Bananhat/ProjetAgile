@@ -3,18 +3,20 @@
 include '../persistance/DbConnector.php';
 include '../persistance/DbSummaryReader.php';
 include_once '../settings.php';
-# include_once('../includes/utils_page.php');
-# get_header();
+include_once('../includes/utils_page.php');
+get_header();
 
+echo '<h3 class="" style="text-align:center; margin-top:2%;">
+    Résumer des éleve</h3>';
 
 $template = '
-<table border="1">
+<table class="striped centered" id="tableau">
     <tr>
-        <td> Student / Competences </td>
+        <td id="tableau"> Student / Competences </td>
         <!--competences-->
     </tr>
     <tr>
-        <td></td>
+        <td id="tableau"></td>
         <!--skills-->
     </tr>
     <!--a-->
@@ -35,15 +37,15 @@ foreach ($competences as $competence) {
     # var_dump($skills);
 
     foreach ($skills as $skill) {
-        $skillHtml = $skillHtml . "<td>" . $skill['skill'] . "</td>";
+        $skillHtml = $skillHtml . "<td id='tableau'>" . $skill['skill'] . "</td>";
         $allSkills[] = $skill['id'];
     }
 
-    var_dump($skillHtml);
+    # var_dump($skillHtml);
 
     # var_dump($students);
     $competence['name'];
-    $htmlString = $htmlString . "<td colspan='" . $skillCount . "'>" . $competence['name'] . "</td>";
+    $htmlString = $htmlString . "<td id='tableau' colspan='" . $skillCount . "'>" . $competence['name'] . "</td>";
 }
 
 
@@ -63,14 +65,14 @@ $stHtml = "";
 foreach ($students as $student) {
 
     $stHtml =  $stHtml . "<tr>";
-    $stHtml = $stHtml . "<td>" .  $student['name'] . "</td>";
+    $stHtml = $stHtml . "<td id='tableau'>" .  $student['name'] . "</td>";
 
     foreach ($allSkills as $skill) {
         $trials = $dbReader->getStudentTrialsFromIdAndSkillId($student['id_student'], $skill['id']);
         if (count($trials) < 3) {
-            $status = "En Cours";
+            $status = "style='background-color: orange'> En Cours";
         } else {
-            $status = "En Cours";
+            $status = "style='background-color: orange'> En Cours";
             uasort($trials, 'date_compare');
             $valInRow = 0;
             $success = false;
@@ -83,12 +85,12 @@ foreach ($students as $student) {
                 }
                 if ($valInRow > 2) {
                     $success = true;
-                    $status = "Acquis";
+                    $status = "style='background-color: green'> Acquis";
                     break;
                 }
             }
         }
-        $stHtml = $stHtml .  "<td> $status </td>";
+        $stHtml = $stHtml .  "<td id='tableau' $status </td>";
     }
 
     $stHtml = $stHtml . "</tr>";
@@ -100,4 +102,5 @@ $html = str_replace('<!--skills-->', $skillHtml, $html);
 $html = str_replace('<!--a-->', $stHtml, $html);
 
 echo $html;
+get_footer();
 
