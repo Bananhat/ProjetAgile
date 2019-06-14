@@ -52,31 +52,10 @@ if(isset($_POST['submit']))
             $date = '0'.$date;
         }
         if($verif) {
-            $skill1 = $_POST['id1'];
-            $skill2 = $_POST['id2'];
-            $skill3 = $_POST['id3'];
+            $id1 = $_POST['id1'];
+            $id2 = $_POST['id2'];
+            $id3 = $_POST['id3'];
             $student_id = $_GET['id'];
-
-            $pdo = (new DbConnector())->getConnection();
-            $idskill = $pdo->prepare('select * from skill where skill=:skill');
-            $idskill->bindParam(':skill', $skill1);
-            $suc = $idskill->execute();
-            $resultat = $idskill->fetch()['id'];
-            $id1 = $resultat['id'];
-
-            $pdo = (new DbConnector())->getConnection();
-            $idskill = $pdo->prepare('select * from skill where skill=:skill');
-            $idskill->bindParam(':skill', $skill2);
-            $suc = $idskill->execute();
-            $resultat = $idskill->fetch()['id'];
-            $id2 = $resultat['id'];
-
-            $pdo = (new DbConnector())->getConnection();
-            $idskill = $pdo->prepare('select * from skill where skill=:skill');
-            $idskill->bindParam(':skill', $skill3);
-            $suc = $idskill->execute();
-            $resultat = $idskill->fetch()['id'];
-            $id3 = $resultat['id'];
 
             $userWriter = new DbSeanceWriter(new DbConnector());
             $suc = $userWriter->writeNewSeance($student_id, $date, $id1, $id2, $id3);
@@ -151,7 +130,7 @@ $competence = $Dbreader->getCompetencesFromStudentId($studentid);
                         $skill = $Dbreader->getSkillsFromCompetenceId($comp['competence_id']);
                         foreach ($skill as $sk)
                         {
-                            echo '<option selected="selected" value="'.$sk['skill'].'">'.$sk['skill'].'</option>';
+                            echo '<option selected="selected" value="'.$sk['id'].'">'.$sk['skill'].'</option>';
                         }
                     }
                     echo '</select> </div>';?>
@@ -164,7 +143,7 @@ $competence = $Dbreader->getCompetencesFromStudentId($studentid);
                 $skill = $Dbreader->getSkillsFromCompetenceId($comp['competence_id']);
                 foreach ($skill as $sk)
                 {
-                    echo '<option selected="selected" value="'.$sk['skill'].'">'.$sk['skill'].'</option>';
+                    echo '<option selected="selected" value="'.$sk['id'].'">'.$sk['skill'].'</option>';
                 }
             }
             echo '</select> </div>';?>
@@ -177,7 +156,7 @@ $competence = $Dbreader->getCompetencesFromStudentId($studentid);
                 $skill = $Dbreader->getSkillsFromCompetenceId($comp['competence_id']);
                 foreach ($skill as $sk)
                 {
-                    echo '<option selected="selected" value="'.$sk['skill'].'">'.$sk['skill'].'</option>';
+                    echo '<option selected="selected" value="'.$sk['id'].'">'.$sk['skill'].'</option>';
                 }
             }
             echo '</select> </div>';?>
