@@ -20,7 +20,7 @@ if ($user) {
         $seanceID = $_GET['id'];
         $skillUp = new DbSeanceWriter(new DbConnector());
         $suc = $skillUp->deleteSeance($seanceID);
-        header('Location: afficherSeance.php');
+        header('Location: afficherSeance.php?id='.$_GET['idstud']);
     }
 
     $reqSeance = $db->prepare("SELECT * FROM seance where student_id=:id");
@@ -59,7 +59,7 @@ if ($user) {
         echo '<td><table><tr><td id="nospace">' . $skill1[0]['skill'].'</td></tr><tr><td id="nospace">'. $skill2[0]['skill'] .'</td></tr><tr><td id="nospace">'. $skill3[0]['skill'] . '</td></tr></table></td>';
 
         echo '<td>';
-        echo '<td><a class="waves-effect waves-light btn" href="afficherSeance.php?supp=del&id='.$rowSeance['id_seance'].'">Supprimer</a></td>';
+        echo '<td><a class="waves-effect waves-light btn" href="afficherSeance.php?supp=del&id='.$rowSeance['id_seance'].'&idstud='.$_GET['id'].'">Supprimer</a></td>';
         echo '</td>';
 
         echo '</tr>';
