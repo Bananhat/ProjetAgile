@@ -28467,3 +28467,27 @@
 2019-06-14 07:04:38 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
 2019-06-14 07:04:38 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
 2019-06-14 07:04:38 [execStatement       ] . []
+2019-06-14 07:25:19 [getConnection       ] PDOException: SQLSTATE[HY000] [2002] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu.
+ in C:\wamp64\www\projetagile\ProjetAgile\persistance\DbConnector.php:17
+Stack trace:
+#0 C:\wamp64\www\projetagile\ProjetAgile\persistance\DbConnector.php(17): PDO->__construct('mysql:host=172....', 'root', '123456')
+#1 C:\wamp64\www\projetagile\ProjetAgile\persistance\DbSummaryReader.php(131): DbConnector->getConnection()
+#2 C:\wamp64\www\projetagile\ProjetAgile\content\overview.php(27): DbSummaryReader->getCompetences()
+#3 {main}
+2019-06-14 07:25:19 [getCompetences      ] Exception: No connection to database in C:\wamp64\www\projetagile\ProjetAgile\persistance\DbConnector.php:20
+Stack trace:
+#0 C:\wamp64\www\projetagile\ProjetAgile\persistance\DbSummaryReader.php(131): DbConnector->getConnection()
+#1 C:\wamp64\www\projetagile\ProjetAgile\content\overview.php(27): DbSummaryReader->getCompetences()
+#2 {main}
+2019-06-14 07:26:43 [getConnection       ] PDOException: SQLSTATE[HY000] [2002] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu.
+ in C:\wamp64\www\projetagile\ProjetAgile\persistance\DbConnector.php:17
+Stack trace:
+#0 C:\wamp64\www\projetagile\ProjetAgile\persistance\DbConnector.php(17): PDO->__construct('mysql:host=172....', 'root', '123456')
+#1 C:\wamp64\www\projetagile\ProjetAgile\persistance\DbSummaryReader.php(131): DbConnector->getConnection()
+#2 C:\wamp64\www\projetagile\ProjetAgile\content\overview.php(27): DbSummaryReader->getCompetences()
+#3 {main}
+2019-06-14 07:26:43 [getCompetences      ] Exception: No connection to database in C:\wamp64\www\projetagile\ProjetAgile\persistance\DbConnector.php:20
+Stack trace:
+#0 C:\wamp64\www\projetagile\ProjetAgile\persistance\DbSummaryReader.php(131): DbConnector->getConnection()
+#1 C:\wamp64\www\projetagile\ProjetAgile\content\overview.php(27): DbSummaryReader->getCompetences()
+#2 {main}
