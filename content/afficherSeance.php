@@ -56,7 +56,7 @@ if ($user) {
         $skill1 = $Dbreader->getSkillFromId($rowSeance['id_skill1']);
         $skill2 = $Dbreader->getSkillFromId($rowSeance['id_skill2']);
         $skill3 = $Dbreader->getSkillFromId($rowSeance['id_skill3']);
-        echo '<td><table><tr><td id="nospace">' . $skill1[0]['skill'].'</td></tr><tr><td id="nospace">'. $skill1[0]['skill'] .'</td></tr><tr><td id="nospace">'. $skill1[0]['skill'] . '</td></tr></table></td>';
+        echo '<td><table><tr><td id="nospace">' . $skill1[0]['skill'].'</td></tr><tr><td id="nospace">'. $skill2[0]['skill'] .'</td></tr><tr><td id="nospace">'. $skill3[0]['skill'] . '</td></tr></table></td>';
 
         echo '<td>';
         echo '<td><a class="waves-effect waves-light btn" href="afficherSeance.php?supp=del&id='.$rowSeance['id_seance'].'">Supprimer</a></td>';
