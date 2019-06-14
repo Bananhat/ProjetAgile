@@ -21,16 +21,6 @@
 	flex: 1;
 }
 
-header
-{
-	position: fixed;
-}
-
-html
-{
-	height: 100%;
-}
-
 body
 {
 	height :100%;
@@ -44,13 +34,13 @@ body
 
 footer
 {
+	margin-top: 2%;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	margin-top: 2%;
 	background-color: lightblue;
 	padding: 1rem;
-	z-index: 10;
+	text-align: center;
 }
 #tableau
 {
