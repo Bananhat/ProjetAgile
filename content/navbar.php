@@ -1,9 +1,7 @@
-
+﻿
 <!--
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-<link rel = "stylesheet"
-    href = "https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel = "stylesheet"
     href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
 <script type = "text/javascript"
@@ -11,8 +9,9 @@
 <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
 </script>-->
 
+
 <nav>
-    <div class="nav-wrapper">
+    <div class="nav-wrapper" >
         <div class="#1e88e5 blue darken-1">
         <?php
             $user = get_logged_user();

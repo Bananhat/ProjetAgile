@@ -62,7 +62,7 @@ if ($user) {
 } ?>
 
     <h3 class="title has-text-dark has-text-weight-bold" style="text-align:center; margin-bottom:2%;margin-top:2%;">
-        Gerer aptitude</h3>
+        Gérer aptitudes</h3>
 
     <div>
         <table class="table striped" style="margin:auto; width : 50%;">
@@ -86,7 +86,7 @@ if ($user) {
             echo '<tr>
                 
         <form method="POST" action="skills.php?cid='.$_GET['competence_id'].'">
-       <td> <label for="name"><b>Aptitude</b></label><input type="text" placeholder="name" name="name" required /></td>
+       <td> <label for="name"><b>Aptitude</b></label><input type="text" placeholder="Intitulé" name="name" required /></td>
              
             <td>      
         <input class="btn waves-effect waves-light" type="submit" id="submit" name="submit" value="Ajouter"/>
