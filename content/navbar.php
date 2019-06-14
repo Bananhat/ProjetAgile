@@ -28,9 +28,12 @@
                     echo '<ul id = "dropdown" class = "dropdown-content">';
                     echo '<li><a href = "index.php">Accueil</a></li>';
                     if(is_admin($user->get('id'))) {
-                        echo '<li><a href = "changerLesRoles.php">Liste des initiateurs</a></li>';  }
+                        echo '<li><a href = "changerLesRoles.php">Liste des initiateurs</a></li>';
+
+                    }
                         if (is_admin($user->get('id')) || $user->get('role') == 'responsable' ||  $user->get('role') == 'initiateur') {
                             echo '<li><a href = "GererEleve.php">Liste des élèves</a></li>';
+                            echo '<li><a href = "overview.php">Resumer des éleves</a></li>';
                         }
                     if($user->get('role') == 'responsable' ||$user->get('role') == 'admin'  ){
                         echo '<li><a href = "competences.php">Gerer les compétences</a></li>';

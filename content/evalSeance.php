@@ -9,27 +9,53 @@ get_header();
 
 if(isset($_POST['submit'])){
 
-    //validation
-    $upSkill = new DbAptitudeWriter(new DbConnector());
-    $stat1= $upSkill->validateAptitude($_GET['idstud'], $_GET['idskill'], $_POST['state']);
-    if($stat1){
-        echo 'bon1';
-    }else{
-        echo 'pas bon1';
+    $db = new DbConnector();
+    try
+    {
+        $pdo = $db->getConnection();
+
+    }
+    catch(Exception $e)
+    {
+        return false;
     }
 
-    //commentaire
-    $upComment = new DbSummaryReader(new DbConnector());
-    $stat2=$upComment->updateStudentComment($_GET['idstud'], $_POST['commentaire'], $_GET['idskill']);
-    if($stat2){
-        echo 'bon2';
+    $req = $pdo->prepare('SELECT COUNT(*) as nb from studendtrials where id_student = :idstud and skill_id = :idskill');
+    $req->execute(array (
+       ':idstud' => $_GET['idstud'],
+        ':idskill' => $_GET['idskill']
+    ));
+
+    $result = $req->fetch();
+    echo $result['nb'];
+    if($result['nb'] != 0){
+        //validation
+        $upSkill = new DbAptitudeWriter(new DbConnector());
+        $stat1= $upSkill->validateAptitude($_GET['idstud'], $_GET['idskill'], $_POST['state']);
+        if($stat1){
+            echo 'bon1';
+        }else{
+            echo 'pas bon1';
+        }
+
+        //commentaire
+        $upComment = new DbSummaryReader(new DbConnector());
+        $stat2=$upComment->updateStudentComment($_GET['idstud'], $_POST['commentaire'], $_GET['idskill']);
+        if($stat2){
+            echo 'bon2';
+        }
+        else{
+            echo 'pas bon2';
+        }
+        if($stat1 && $stat2){
+            header('Location: studentOverview.php?id='.$_GET['idstud']);
+        }
+
     }
-    else{
-        echo 'pas bon2';
-    }
-    if($stat1 && $stat2){
-        header('Location: studentOverview.php?id='.$_GET['idstud']);
-    }
+else{
+
+}
+
 
 }
 ?>
