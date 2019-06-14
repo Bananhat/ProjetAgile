@@ -8509,3 +8509,610 @@
 2019-06-14 07:53:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
 2019-06-14 07:53:45 [execStatement       ] SELECT * FROM studendtrials where student_id=:id and skill_id=:skillid Successfull: 1
 2019-06-14 07:53:45 [execStatement       ] . []
+2019-06-14 07:54:10 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:10 [execStatement       ] select * from competences Successfull: 1
+2019-06-14 07:54:10 [execStatement       ] . [{"competence_id":"5","name":"S\"\u00e9quiper et se d\u00e9s\u00e9quiper","niveau":"1"},{"competence_id":"6","name":"Se mettre \u00e0 l\"eau et en sortir","niveau":"1"},{"competence_id":"7","name":"Evoluer dans l\"eau  s\"immerger","niveau":"1"},{"competence_id":"8","name":"Evoluer dans l\"eau  se propulser","niveau":"1"},{"competence_id":"9","name":"Evoluer dans l\"eau  se ventiler","niveau":"1"},{"competence_id":"10","name":"\u00c9voluer dans l\"eau  s\"\u00e9quilibrer","niveau":"1"},{"competence_id":"11","name":"Communiquer","niveau":"1"},{"competence_id":"12","name":"Appliquer les conduites de s\u00e9curit\u00e9","niveau":"1"},{"competence_id":"13","name":"Respecter le milieu et l\"environnement","niveau":"1"},{"competence_id":"14","name":"Retourner en surface","niveau":"1"}]
+2019-06-14 07:54:10 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:10 [execStatement       ] SELECT * FROM student Successfull: 1
+2019-06-14 07:54:10 [execStatement       ] . [{"id_student":"6","name":"Audabram","firstName":"Luc","level":"1","comment":null}]
+2019-06-14 07:54:10 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:10 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:54:10 [execStatement       ] . [{"id":"11","skill":"Saut droit Bascule arri\u00e8re ","competence_id":"5"},{"id":"12","skill":"D\u00e9part plage Sortir de l\u2019eau ","competence_id":"5"}]
+2019-06-14 07:54:10 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:10 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:54:10 [execStatement       ] . [{"id":"13","skill":"Canard ","competence_id":"6"},{"id":"14","skill":"Phoque ","competence_id":"6"}]
+2019-06-14 07:54:10 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:10 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:54:10 [execStatement       ] . [{"id":"15","skill":" Palmage ventral en surface ","competence_id":"7"},{"id":"16","skill":"Palmage dorsal ","competence_id":"7"},{"id":"17","skill":"Palmage de sustentation ","competence_id":"7"},{"id":"18","skill":"Palmage en immersion ","competence_id":"7"},{"id":"19","skill":"Nage en capel\u00e9 ","competence_id":"7"}]
+2019-06-14 07:54:10 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:10 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:54:10 [execStatement       ] . [{"id":"20","skill":"Ventilation en immersion ","competence_id":"8"},{"id":"21","skill":"Ventilation sur tuba et vidage du tuba ","competence_id":"8"},{"id":"22","skill":"Vidage du masque L\u00e2cher et reprise d\u2019embout","competence_id":"8"}]
+2019-06-14 07:54:10 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:10 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:54:10 [execStatement       ] . [{"id":"23","skill":"Gestion du gilet de stabilisation","competence_id":"9"},{"id":"24","skill":" Poumon ballast","competence_id":"9"}]
+2019-06-14 07:54:10 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:10 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:54:10 [execStatement       ] . [{"id":"25","skill":"Ex\u00e9cution des signes conventionnels","competence_id":"10"}]
+2019-06-14 07:54:10 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:10 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:54:10 [execStatement       ] . [{"id":"26","skill":"Application des proc\u00e9dures mises e \u0153uvre par le GP","competence_id":"11"},{"id":"27","skill":" Intervention en relai ","competence_id":"11"}]
+2019-06-14 07:54:10 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:10 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:54:10 [execStatement       ] . [{"id":"28","skill":"Aisance aquatique","competence_id":"12"}]
+2019-06-14 07:54:10 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:10 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:54:10 [execStatement       ] . [{"id":"29","skill":"Ma\u00eetrise de la vitesse de remont\u00e9e","competence_id":"13"},{"id":"30","skill":" Tenue d\u2019un palier ","competence_id":"13"},{"id":"31","skill":"Tour d\u2019horizon ","competence_id":"13"},{"id":"32","skill":"Gonflage du gilet en surface ","competence_id":"13"},{"id":"33","skill":"Remont\u00e9e en expiration contr\u00f4l\u00e9e ","competence_id":"13"}]
+2019-06-14 07:54:10 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:10 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:54:10 [execStatement       ] . []
+2019-06-14 07:54:10 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:10 [execStatement       ] SELECT * FROM studendtrials where student_id=:id and skill_id=:skillid Successfull: 1
+2019-06-14 07:54:10 [execStatement       ] . []
+2019-06-14 07:54:10 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:10 [execStatement       ] SELECT * FROM studendtrials where student_id=:id and skill_id=:skillid Successfull: 1
+2019-06-14 07:54:10 [execStatement       ] . []
+2019-06-14 07:54:10 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:10 [execStatement       ] SELECT * FROM studendtrials where student_id=:id and skill_id=:skillid Successfull: 1
+2019-06-14 07:54:10 [execStatement       ] . []
+2019-06-14 07:54:10 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:10 [execStatement       ] SELECT * FROM studendtrials where student_id=:id and skill_id=:skillid Successfull: 1
+2019-06-14 07:54:10 [execStatement       ] . []
+2019-06-14 07:54:10 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:10 [execStatement       ] SELECT * FROM studendtrials where student_id=:id and skill_id=:skillid Successfull: 1
+2019-06-14 07:54:10 [execStatement       ] . []
+2019-06-14 07:54:10 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:10 [execStatement       ] SELECT * FROM studendtrials where student_id=:id and skill_id=:skillid Successfull: 1
+2019-06-14 07:54:10 [execStatement       ] . []
+2019-06-14 07:54:10 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:10 [execStatement       ] SELECT * FROM studendtrials where student_id=:id and skill_id=:skillid Successfull: 1
+2019-06-14 07:54:10 [execStatement       ] . []
+2019-06-14 07:54:10 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:10 [execStatement       ] SELECT * FROM studendtrials where student_id=:id and skill_id=:skillid Successfull: 1
+2019-06-14 07:54:10 [execStatement       ] . []
+2019-06-14 07:54:10 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:10 [execStatement       ] SELECT * FROM studendtrials where student_id=:id and skill_id=:skillid Successfull: 1
+2019-06-14 07:54:10 [execStatement       ] . []
+2019-06-14 07:54:10 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:10 [execStatement       ] SELECT * FROM studendtrials where student_id=:id and skill_id=:skillid Successfull: 1
+2019-06-14 07:54:10 [execStatement       ] . []
+2019-06-14 07:54:10 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:10 [execStatement       ] SELECT * FROM studendtrials where student_id=:id and skill_id=:skillid Successfull: 1
+2019-06-14 07:54:10 [execStatement       ] . []
+2019-06-14 07:54:10 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:10 [execStatement       ] SELECT * FROM studendtrials where student_id=:id and skill_id=:skillid Successfull: 1
+2019-06-14 07:54:10 [execStatement       ] . []
+2019-06-14 07:54:10 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:10 [execStatement       ] SELECT * FROM studendtrials where student_id=:id and skill_id=:skillid Successfull: 1
+2019-06-14 07:54:10 [execStatement       ] . []
+2019-06-14 07:54:10 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:10 [execStatement       ] SELECT * FROM studendtrials where student_id=:id and skill_id=:skillid Successfull: 1
+2019-06-14 07:54:10 [execStatement       ] . []
+2019-06-14 07:54:10 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:10 [execStatement       ] SELECT * FROM studendtrials where student_id=:id and skill_id=:skillid Successfull: 1
+2019-06-14 07:54:10 [execStatement       ] . []
+2019-06-14 07:54:10 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:10 [execStatement       ] SELECT * FROM studendtrials where student_id=:id and skill_id=:skillid Successfull: 1
+2019-06-14 07:54:10 [execStatement       ] . []
+2019-06-14 07:54:10 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:10 [execStatement       ] SELECT * FROM studendtrials where student_id=:id and skill_id=:skillid Successfull: 1
+2019-06-14 07:54:10 [execStatement       ] . []
+2019-06-14 07:54:10 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:10 [execStatement       ] SELECT * FROM studendtrials where student_id=:id and skill_id=:skillid Successfull: 1
+2019-06-14 07:54:10 [execStatement       ] . []
+2019-06-14 07:54:10 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:10 [execStatement       ] SELECT * FROM studendtrials where student_id=:id and skill_id=:skillid Successfull: 1
+2019-06-14 07:54:10 [execStatement       ] . []
+2019-06-14 07:54:10 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:10 [execStatement       ] SELECT * FROM studendtrials where student_id=:id and skill_id=:skillid Successfull: 1
+2019-06-14 07:54:10 [execStatement       ] . []
+2019-06-14 07:54:10 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:10 [execStatement       ] SELECT * FROM studendtrials where student_id=:id and skill_id=:skillid Successfull: 1
+2019-06-14 07:54:10 [execStatement       ] . []
+2019-06-14 07:54:10 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:10 [execStatement       ] SELECT * FROM studendtrials where student_id=:id and skill_id=:skillid Successfull: 1
+2019-06-14 07:54:10 [execStatement       ] . []
+2019-06-14 07:54:10 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:10 [execStatement       ] SELECT * FROM studendtrials where student_id=:id and skill_id=:skillid Successfull: 1
+2019-06-14 07:54:10 [execStatement       ] . []
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] select * from student left join studendtrials on studendtrials.student_id = student.id_student left join skill on skill_id = studendtrials.skill_id left join competences on competences.id = skill.competence_id where student.id_student = :studid order by competences.id asc Successfull: 
+2019-06-14 07:54:52 [execStatement       ] . []
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM competences WHERE niveau = (SELECT level FROM student WHERE id_student = :id) Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . [{"competence_id":"5","name":"S\"\u00e9quiper et se d\u00e9s\u00e9quiper","niveau":"1"},{"competence_id":"6","name":"Se mettre \u00e0 l\"eau et en sortir","niveau":"1"},{"competence_id":"7","name":"Evoluer dans l\"eau  s\"immerger","niveau":"1"},{"competence_id":"8","name":"Evoluer dans l\"eau  se propulser","niveau":"1"},{"competence_id":"9","name":"Evoluer dans l\"eau  se ventiler","niveau":"1"},{"competence_id":"10","name":"\u00c9voluer dans l\"eau  s\"\u00e9quilibrer","niveau":"1"},{"competence_id":"11","name":"Communiquer","niveau":"1"},{"competence_id":"12","name":"Appliquer les conduites de s\u00e9curit\u00e9","niveau":"1"},{"competence_id":"13","name":"Respecter le milieu et l\"environnement","niveau":"1"},{"competence_id":"14","name":"Retourner en surface","niveau":"1"}]
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT *, count(*) FROM `skill` where competence_id = :id Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . [{"id":"11","skill":"Saut droit Bascule arri\u00e8re ","competence_id":"5","count(*)":"2"}]
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT *, count(*) FROM `skill` where competence_id = :id Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . [{"id":"13","skill":"Canard ","competence_id":"6","count(*)":"2"}]
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT *, count(*) FROM `skill` where competence_id = :id Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . [{"id":"15","skill":" Palmage ventral en surface ","competence_id":"7","count(*)":"5"}]
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT *, count(*) FROM `skill` where competence_id = :id Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . [{"id":"20","skill":"Ventilation en immersion ","competence_id":"8","count(*)":"3"}]
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT *, count(*) FROM `skill` where competence_id = :id Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . [{"id":"23","skill":"Gestion du gilet de stabilisation","competence_id":"9","count(*)":"2"}]
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT *, count(*) FROM `skill` where competence_id = :id Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . [{"id":"25","skill":"Ex\u00e9cution des signes conventionnels","competence_id":"10","count(*)":"1"}]
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT *, count(*) FROM `skill` where competence_id = :id Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . [{"id":"26","skill":"Application des proc\u00e9dures mises e \u0153uvre par le GP","competence_id":"11","count(*)":"2"}]
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT *, count(*) FROM `skill` where competence_id = :id Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . [{"id":"28","skill":"Aisance aquatique","competence_id":"12","count(*)":"1"}]
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT *, count(*) FROM `skill` where competence_id = :id Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . [{"id":"29","skill":"Ma\u00eetrise de la vitesse de remont\u00e9e","competence_id":"13","count(*)":"5"}]
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT *, count(*) FROM `skill` where competence_id = :id Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . [{"id":null,"skill":null,"competence_id":null,"count(*)":"0"}]
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . [{"id":"11","skill":"Saut droit Bascule arri\u00e8re ","competence_id":"5"},{"id":"12","skill":"D\u00e9part plage Sortir de l\u2019eau ","competence_id":"5"}]
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . [{"id":"13","skill":"Canard ","competence_id":"6"},{"id":"14","skill":"Phoque ","competence_id":"6"}]
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . [{"id":"15","skill":" Palmage ventral en surface ","competence_id":"7"},{"id":"16","skill":"Palmage dorsal ","competence_id":"7"},{"id":"17","skill":"Palmage de sustentation ","competence_id":"7"},{"id":"18","skill":"Palmage en immersion ","competence_id":"7"},{"id":"19","skill":"Nage en capel\u00e9 ","competence_id":"7"}]
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . [{"id":"20","skill":"Ventilation en immersion ","competence_id":"8"},{"id":"21","skill":"Ventilation sur tuba et vidage du tuba ","competence_id":"8"},{"id":"22","skill":"Vidage du masque L\u00e2cher et reprise d\u2019embout","competence_id":"8"}]
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . [{"id":"23","skill":"Gestion du gilet de stabilisation","competence_id":"9"},{"id":"24","skill":" Poumon ballast","competence_id":"9"}]
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . [{"id":"25","skill":"Ex\u00e9cution des signes conventionnels","competence_id":"10"}]
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . [{"id":"26","skill":"Application des proc\u00e9dures mises e \u0153uvre par le GP","competence_id":"11"},{"id":"27","skill":" Intervention en relai ","competence_id":"11"}]
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . [{"id":"28","skill":"Aisance aquatique","competence_id":"12"}]
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . [{"id":"29","skill":"Ma\u00eetrise de la vitesse de remont\u00e9e","competence_id":"13"},{"id":"30","skill":" Tenue d\u2019un palier ","competence_id":"13"},{"id":"31","skill":"Tour d\u2019horizon ","competence_id":"13"},{"id":"32","skill":"Gonflage du gilet en surface ","competence_id":"13"},{"id":"33","skill":"Remont\u00e9e en expiration contr\u00f4l\u00e9e ","competence_id":"13"}]
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . []
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT date FROM seance WHERE student_id=:id order by date Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . [{"date":"04\/03\/2019"}]
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . [{"id":"11","skill":"Saut droit Bascule arri\u00e8re ","competence_id":"5"},{"id":"12","skill":"D\u00e9part plage Sortir de l\u2019eau ","competence_id":"5"}]
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . [{"id":"1","student_id":"6","skill_id":"11","validated":"1","date":"04\/03\/2019","commentaire":""}]
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . []
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . [{"id":"13","skill":"Canard ","competence_id":"6"},{"id":"14","skill":"Phoque ","competence_id":"6"}]
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . [{"id":"9","student_id":"6","skill_id":"13","validated":"1","date":"04\/03\/2019","commentaire":""}]
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . []
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . [{"id":"15","skill":" Palmage ventral en surface ","competence_id":"7"},{"id":"16","skill":"Palmage dorsal ","competence_id":"7"},{"id":"17","skill":"Palmage de sustentation ","competence_id":"7"},{"id":"18","skill":"Palmage en immersion ","competence_id":"7"},{"id":"19","skill":"Nage en capel\u00e9 ","competence_id":"7"}]
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . []
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . []
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . []
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . []
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . []
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . [{"id":"20","skill":"Ventilation en immersion ","competence_id":"8"},{"id":"21","skill":"Ventilation sur tuba et vidage du tuba ","competence_id":"8"},{"id":"22","skill":"Vidage du masque L\u00e2cher et reprise d\u2019embout","competence_id":"8"}]
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . []
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . []
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . []
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . [{"id":"23","skill":"Gestion du gilet de stabilisation","competence_id":"9"},{"id":"24","skill":" Poumon ballast","competence_id":"9"}]
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . []
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . []
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . [{"id":"25","skill":"Ex\u00e9cution des signes conventionnels","competence_id":"10"}]
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . []
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . [{"id":"26","skill":"Application des proc\u00e9dures mises e \u0153uvre par le GP","competence_id":"11"},{"id":"27","skill":" Intervention en relai ","competence_id":"11"}]
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . []
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . []
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . [{"id":"28","skill":"Aisance aquatique","competence_id":"12"}]
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . []
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . [{"id":"29","skill":"Ma\u00eetrise de la vitesse de remont\u00e9e","competence_id":"13"},{"id":"30","skill":" Tenue d\u2019un palier ","competence_id":"13"},{"id":"31","skill":"Tour d\u2019horizon ","competence_id":"13"},{"id":"32","skill":"Gonflage du gilet en surface ","competence_id":"13"},{"id":"33","skill":"Remont\u00e9e en expiration contr\u00f4l\u00e9e ","competence_id":"13"}]
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . []
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . []
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . []
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . []
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . []
+2019-06-14 07:54:52 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:54:52 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:54:52 [execStatement       ] . []
+2019-06-14 07:55:01 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:55:01 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:55:01 [getSkillFromId      ] SELECT * from skill where id = :id
+2019-06-14 07:55:01 [execStatement       ] SELECT * from skill where id = :id Successfull: 1
+2019-06-14 07:55:01 [execStatement       ] . [{"id":"11","skill":"Saut droit Bascule arri\u00e8re ","competence_id":"5"}]
+2019-06-14 07:55:01 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:55:01 [getSkillFromId      ] SELECT * from skill where id = :id
+2019-06-14 07:55:01 [execStatement       ] SELECT * from skill where id = :id Successfull: 1
+2019-06-14 07:55:01 [execStatement       ] . [{"id":"13","skill":"Canard ","competence_id":"6"}]
+2019-06-14 07:55:01 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:55:01 [getSkillFromId      ] SELECT * from skill where id = :id
+2019-06-14 07:55:01 [execStatement       ] SELECT * from skill where id = :id Successfull: 1
+2019-06-14 07:55:01 [execStatement       ] . [{"id":"14","skill":"Phoque ","competence_id":"6"}]
+2019-06-14 07:55:02 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:55:02 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:55:02 [execStatement       ] SELECT * FROM competences WHERE niveau = (SELECT level FROM student WHERE id_student = :id) Successfull: 1
+2019-06-14 07:55:02 [execStatement       ] . [{"competence_id":"5","name":"S\"\u00e9quiper et se d\u00e9s\u00e9quiper","niveau":"1"},{"competence_id":"6","name":"Se mettre \u00e0 l\"eau et en sortir","niveau":"1"},{"competence_id":"7","name":"Evoluer dans l\"eau  s\"immerger","niveau":"1"},{"competence_id":"8","name":"Evoluer dans l\"eau  se propulser","niveau":"1"},{"competence_id":"9","name":"Evoluer dans l\"eau  se ventiler","niveau":"1"},{"competence_id":"10","name":"\u00c9voluer dans l\"eau  s\"\u00e9quilibrer","niveau":"1"},{"competence_id":"11","name":"Communiquer","niveau":"1"},{"competence_id":"12","name":"Appliquer les conduites de s\u00e9curit\u00e9","niveau":"1"},{"competence_id":"13","name":"Respecter le milieu et l\"environnement","niveau":"1"},{"competence_id":"14","name":"Retourner en surface","niveau":"1"}]
+2019-06-14 07:55:02 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:55:02 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:55:02 [execStatement       ] . [{"id":"11","skill":"Saut droit Bascule arri\u00e8re ","competence_id":"5"},{"id":"12","skill":"D\u00e9part plage Sortir de l\u2019eau ","competence_id":"5"}]
+2019-06-14 07:55:02 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:55:02 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:55:02 [execStatement       ] . [{"id":"13","skill":"Canard ","competence_id":"6"},{"id":"14","skill":"Phoque ","competence_id":"6"}]
+2019-06-14 07:55:02 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:55:02 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:55:02 [execStatement       ] . [{"id":"15","skill":" Palmage ventral en surface ","competence_id":"7"},{"id":"16","skill":"Palmage dorsal ","competence_id":"7"},{"id":"17","skill":"Palmage de sustentation ","competence_id":"7"},{"id":"18","skill":"Palmage en immersion ","competence_id":"7"},{"id":"19","skill":"Nage en capel\u00e9 ","competence_id":"7"}]
+2019-06-14 07:55:02 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:55:02 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:55:02 [execStatement       ] . [{"id":"20","skill":"Ventilation en immersion ","competence_id":"8"},{"id":"21","skill":"Ventilation sur tuba et vidage du tuba ","competence_id":"8"},{"id":"22","skill":"Vidage du masque L\u00e2cher et reprise d\u2019embout","competence_id":"8"}]
+2019-06-14 07:55:02 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:55:02 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:55:02 [execStatement       ] . [{"id":"23","skill":"Gestion du gilet de stabilisation","competence_id":"9"},{"id":"24","skill":" Poumon ballast","competence_id":"9"}]
+2019-06-14 07:55:02 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:55:02 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:55:02 [execStatement       ] . [{"id":"25","skill":"Ex\u00e9cution des signes conventionnels","competence_id":"10"}]
+2019-06-14 07:55:02 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:55:02 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:55:02 [execStatement       ] . [{"id":"26","skill":"Application des proc\u00e9dures mises e \u0153uvre par le GP","competence_id":"11"},{"id":"27","skill":" Intervention en relai ","competence_id":"11"}]
+2019-06-14 07:55:02 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:55:02 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:55:02 [execStatement       ] . [{"id":"28","skill":"Aisance aquatique","competence_id":"12"}]
+2019-06-14 07:55:02 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:55:02 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:55:02 [execStatement       ] . [{"id":"29","skill":"Ma\u00eetrise de la vitesse de remont\u00e9e","competence_id":"13"},{"id":"30","skill":" Tenue d\u2019un palier ","competence_id":"13"},{"id":"31","skill":"Tour d\u2019horizon ","competence_id":"13"},{"id":"32","skill":"Gonflage du gilet en surface ","competence_id":"13"},{"id":"33","skill":"Remont\u00e9e en expiration contr\u00f4l\u00e9e ","competence_id":"13"}]
+2019-06-14 07:55:02 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:55:02 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:55:02 [execStatement       ] . []
+2019-06-14 07:55:02 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:55:02 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:55:02 [execStatement       ] . [{"id":"11","skill":"Saut droit Bascule arri\u00e8re ","competence_id":"5"},{"id":"12","skill":"D\u00e9part plage Sortir de l\u2019eau ","competence_id":"5"}]
+2019-06-14 07:55:02 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:55:02 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:55:02 [execStatement       ] . [{"id":"13","skill":"Canard ","competence_id":"6"},{"id":"14","skill":"Phoque ","competence_id":"6"}]
+2019-06-14 07:55:02 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:55:02 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:55:02 [execStatement       ] . [{"id":"15","skill":" Palmage ventral en surface ","competence_id":"7"},{"id":"16","skill":"Palmage dorsal ","competence_id":"7"},{"id":"17","skill":"Palmage de sustentation ","competence_id":"7"},{"id":"18","skill":"Palmage en immersion ","competence_id":"7"},{"id":"19","skill":"Nage en capel\u00e9 ","competence_id":"7"}]
+2019-06-14 07:55:02 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:55:02 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:55:02 [execStatement       ] . [{"id":"20","skill":"Ventilation en immersion ","competence_id":"8"},{"id":"21","skill":"Ventilation sur tuba et vidage du tuba ","competence_id":"8"},{"id":"22","skill":"Vidage du masque L\u00e2cher et reprise d\u2019embout","competence_id":"8"}]
+2019-06-14 07:55:02 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:55:02 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:55:02 [execStatement       ] . [{"id":"23","skill":"Gestion du gilet de stabilisation","competence_id":"9"},{"id":"24","skill":" Poumon ballast","competence_id":"9"}]
+2019-06-14 07:55:02 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:55:02 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:55:02 [execStatement       ] . [{"id":"25","skill":"Ex\u00e9cution des signes conventionnels","competence_id":"10"}]
+2019-06-14 07:55:02 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:55:02 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:55:02 [execStatement       ] . [{"id":"26","skill":"Application des proc\u00e9dures mises e \u0153uvre par le GP","competence_id":"11"},{"id":"27","skill":" Intervention en relai ","competence_id":"11"}]
+2019-06-14 07:55:02 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:55:02 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:55:02 [execStatement       ] . [{"id":"28","skill":"Aisance aquatique","competence_id":"12"}]
+2019-06-14 07:55:02 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:55:02 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:55:02 [execStatement       ] . [{"id":"29","skill":"Ma\u00eetrise de la vitesse de remont\u00e9e","competence_id":"13"},{"id":"30","skill":" Tenue d\u2019un palier ","competence_id":"13"},{"id":"31","skill":"Tour d\u2019horizon ","competence_id":"13"},{"id":"32","skill":"Gonflage du gilet en surface ","competence_id":"13"},{"id":"33","skill":"Remont\u00e9e en expiration contr\u00f4l\u00e9e ","competence_id":"13"}]
+2019-06-14 07:55:02 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:55:02 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:55:02 [execStatement       ] . []
+2019-06-14 07:55:02 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:55:02 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:55:02 [execStatement       ] . [{"id":"11","skill":"Saut droit Bascule arri\u00e8re ","competence_id":"5"},{"id":"12","skill":"D\u00e9part plage Sortir de l\u2019eau ","competence_id":"5"}]
+2019-06-14 07:55:02 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:55:02 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:55:02 [execStatement       ] . [{"id":"13","skill":"Canard ","competence_id":"6"},{"id":"14","skill":"Phoque ","competence_id":"6"}]
+2019-06-14 07:55:02 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:55:02 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:55:02 [execStatement       ] . [{"id":"15","skill":" Palmage ventral en surface ","competence_id":"7"},{"id":"16","skill":"Palmage dorsal ","competence_id":"7"},{"id":"17","skill":"Palmage de sustentation ","competence_id":"7"},{"id":"18","skill":"Palmage en immersion ","competence_id":"7"},{"id":"19","skill":"Nage en capel\u00e9 ","competence_id":"7"}]
+2019-06-14 07:55:02 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:55:02 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:55:02 [execStatement       ] . [{"id":"20","skill":"Ventilation en immersion ","competence_id":"8"},{"id":"21","skill":"Ventilation sur tuba et vidage du tuba ","competence_id":"8"},{"id":"22","skill":"Vidage du masque L\u00e2cher et reprise d\u2019embout","competence_id":"8"}]
+2019-06-14 07:55:02 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:55:02 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:55:02 [execStatement       ] . [{"id":"23","skill":"Gestion du gilet de stabilisation","competence_id":"9"},{"id":"24","skill":" Poumon ballast","competence_id":"9"}]
+2019-06-14 07:55:02 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:55:02 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:55:02 [execStatement       ] . [{"id":"25","skill":"Ex\u00e9cution des signes conventionnels","competence_id":"10"}]
+2019-06-14 07:55:02 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:55:02 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:55:02 [execStatement       ] . [{"id":"26","skill":"Application des proc\u00e9dures mises e \u0153uvre par le GP","competence_id":"11"},{"id":"27","skill":" Intervention en relai ","competence_id":"11"}]
+2019-06-14 07:55:02 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:55:02 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:55:02 [execStatement       ] . [{"id":"28","skill":"Aisance aquatique","competence_id":"12"}]
+2019-06-14 07:55:02 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:55:02 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:55:02 [execStatement       ] . [{"id":"29","skill":"Ma\u00eetrise de la vitesse de remont\u00e9e","competence_id":"13"},{"id":"30","skill":" Tenue d\u2019un palier ","competence_id":"13"},{"id":"31","skill":"Tour d\u2019horizon ","competence_id":"13"},{"id":"32","skill":"Gonflage du gilet en surface ","competence_id":"13"},{"id":"33","skill":"Remont\u00e9e en expiration contr\u00f4l\u00e9e ","competence_id":"13"}]
+2019-06-14 07:55:02 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:55:02 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:55:02 [execStatement       ] . []
+2019-06-14 07:57:13 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:13 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:13 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:13 [execStatement       ] SELECT * FROM competences WHERE niveau = (SELECT level FROM student WHERE id_student = :id) Successfull: 1
+2019-06-14 07:57:13 [execStatement       ] . [{"competence_id":"5","name":"S\"\u00e9quiper et se d\u00e9s\u00e9quiper","niveau":"1"},{"competence_id":"6","name":"Se mettre \u00e0 l\"eau et en sortir","niveau":"1"},{"competence_id":"7","name":"Evoluer dans l\"eau  s\"immerger","niveau":"1"},{"competence_id":"8","name":"Evoluer dans l\"eau  se propulser","niveau":"1"},{"competence_id":"9","name":"Evoluer dans l\"eau  se ventiler","niveau":"1"},{"competence_id":"10","name":"\u00c9voluer dans l\"eau  s\"\u00e9quilibrer","niveau":"1"},{"competence_id":"11","name":"Communiquer","niveau":"1"},{"competence_id":"12","name":"Appliquer les conduites de s\u00e9curit\u00e9","niveau":"1"},{"competence_id":"13","name":"Respecter le milieu et l\"environnement","niveau":"1"},{"competence_id":"14","name":"Retourner en surface","niveau":"1"}]
+2019-06-14 07:57:13 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:13 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:13 [execStatement       ] . [{"id":"11","skill":"Saut droit Bascule arri\u00e8re ","competence_id":"5"},{"id":"12","skill":"D\u00e9part plage Sortir de l\u2019eau ","competence_id":"5"}]
+2019-06-14 07:57:13 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:13 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:13 [execStatement       ] . [{"id":"13","skill":"Canard ","competence_id":"6"},{"id":"14","skill":"Phoque ","competence_id":"6"}]
+2019-06-14 07:57:13 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:13 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:13 [execStatement       ] . [{"id":"15","skill":" Palmage ventral en surface ","competence_id":"7"},{"id":"16","skill":"Palmage dorsal ","competence_id":"7"},{"id":"17","skill":"Palmage de sustentation ","competence_id":"7"},{"id":"18","skill":"Palmage en immersion ","competence_id":"7"},{"id":"19","skill":"Nage en capel\u00e9 ","competence_id":"7"}]
+2019-06-14 07:57:13 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:13 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:13 [execStatement       ] . [{"id":"20","skill":"Ventilation en immersion ","competence_id":"8"},{"id":"21","skill":"Ventilation sur tuba et vidage du tuba ","competence_id":"8"},{"id":"22","skill":"Vidage du masque L\u00e2cher et reprise d\u2019embout","competence_id":"8"}]
+2019-06-14 07:57:13 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:13 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:13 [execStatement       ] . [{"id":"23","skill":"Gestion du gilet de stabilisation","competence_id":"9"},{"id":"24","skill":" Poumon ballast","competence_id":"9"}]
+2019-06-14 07:57:13 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:13 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:13 [execStatement       ] . [{"id":"25","skill":"Ex\u00e9cution des signes conventionnels","competence_id":"10"}]
+2019-06-14 07:57:13 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:13 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:13 [execStatement       ] . [{"id":"26","skill":"Application des proc\u00e9dures mises e \u0153uvre par le GP","competence_id":"11"},{"id":"27","skill":" Intervention en relai ","competence_id":"11"}]
+2019-06-14 07:57:13 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:13 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:13 [execStatement       ] . [{"id":"28","skill":"Aisance aquatique","competence_id":"12"}]
+2019-06-14 07:57:13 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:13 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:13 [execStatement       ] . [{"id":"29","skill":"Ma\u00eetrise de la vitesse de remont\u00e9e","competence_id":"13"},{"id":"30","skill":" Tenue d\u2019un palier ","competence_id":"13"},{"id":"31","skill":"Tour d\u2019horizon ","competence_id":"13"},{"id":"32","skill":"Gonflage du gilet en surface ","competence_id":"13"},{"id":"33","skill":"Remont\u00e9e en expiration contr\u00f4l\u00e9e ","competence_id":"13"}]
+2019-06-14 07:57:13 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:13 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:13 [execStatement       ] . []
+2019-06-14 07:57:13 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:13 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:13 [execStatement       ] . [{"id":"11","skill":"Saut droit Bascule arri\u00e8re ","competence_id":"5"},{"id":"12","skill":"D\u00e9part plage Sortir de l\u2019eau ","competence_id":"5"}]
+2019-06-14 07:57:13 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:13 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:13 [execStatement       ] . [{"id":"13","skill":"Canard ","competence_id":"6"},{"id":"14","skill":"Phoque ","competence_id":"6"}]
+2019-06-14 07:57:13 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:13 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:13 [execStatement       ] . [{"id":"15","skill":" Palmage ventral en surface ","competence_id":"7"},{"id":"16","skill":"Palmage dorsal ","competence_id":"7"},{"id":"17","skill":"Palmage de sustentation ","competence_id":"7"},{"id":"18","skill":"Palmage en immersion ","competence_id":"7"},{"id":"19","skill":"Nage en capel\u00e9 ","competence_id":"7"}]
+2019-06-14 07:57:13 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:13 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:13 [execStatement       ] . [{"id":"20","skill":"Ventilation en immersion ","competence_id":"8"},{"id":"21","skill":"Ventilation sur tuba et vidage du tuba ","competence_id":"8"},{"id":"22","skill":"Vidage du masque L\u00e2cher et reprise d\u2019embout","competence_id":"8"}]
+2019-06-14 07:57:13 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:13 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:13 [execStatement       ] . [{"id":"23","skill":"Gestion du gilet de stabilisation","competence_id":"9"},{"id":"24","skill":" Poumon ballast","competence_id":"9"}]
+2019-06-14 07:57:13 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:13 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:13 [execStatement       ] . [{"id":"25","skill":"Ex\u00e9cution des signes conventionnels","competence_id":"10"}]
+2019-06-14 07:57:13 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:13 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:13 [execStatement       ] . [{"id":"26","skill":"Application des proc\u00e9dures mises e \u0153uvre par le GP","competence_id":"11"},{"id":"27","skill":" Intervention en relai ","competence_id":"11"}]
+2019-06-14 07:57:13 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:13 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:13 [execStatement       ] . [{"id":"28","skill":"Aisance aquatique","competence_id":"12"}]
+2019-06-14 07:57:13 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:13 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:13 [execStatement       ] . [{"id":"29","skill":"Ma\u00eetrise de la vitesse de remont\u00e9e","competence_id":"13"},{"id":"30","skill":" Tenue d\u2019un palier ","competence_id":"13"},{"id":"31","skill":"Tour d\u2019horizon ","competence_id":"13"},{"id":"32","skill":"Gonflage du gilet en surface ","competence_id":"13"},{"id":"33","skill":"Remont\u00e9e en expiration contr\u00f4l\u00e9e ","competence_id":"13"}]
+2019-06-14 07:57:13 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:13 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:13 [execStatement       ] . []
+2019-06-14 07:57:13 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:13 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:13 [execStatement       ] . [{"id":"11","skill":"Saut droit Bascule arri\u00e8re ","competence_id":"5"},{"id":"12","skill":"D\u00e9part plage Sortir de l\u2019eau ","competence_id":"5"}]
+2019-06-14 07:57:13 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:13 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:13 [execStatement       ] . [{"id":"13","skill":"Canard ","competence_id":"6"},{"id":"14","skill":"Phoque ","competence_id":"6"}]
+2019-06-14 07:57:13 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:13 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:13 [execStatement       ] . [{"id":"15","skill":" Palmage ventral en surface ","competence_id":"7"},{"id":"16","skill":"Palmage dorsal ","competence_id":"7"},{"id":"17","skill":"Palmage de sustentation ","competence_id":"7"},{"id":"18","skill":"Palmage en immersion ","competence_id":"7"},{"id":"19","skill":"Nage en capel\u00e9 ","competence_id":"7"}]
+2019-06-14 07:57:13 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:13 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:13 [execStatement       ] . [{"id":"20","skill":"Ventilation en immersion ","competence_id":"8"},{"id":"21","skill":"Ventilation sur tuba et vidage du tuba ","competence_id":"8"},{"id":"22","skill":"Vidage du masque L\u00e2cher et reprise d\u2019embout","competence_id":"8"}]
+2019-06-14 07:57:13 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:13 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:13 [execStatement       ] . [{"id":"23","skill":"Gestion du gilet de stabilisation","competence_id":"9"},{"id":"24","skill":" Poumon ballast","competence_id":"9"}]
+2019-06-14 07:57:13 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:13 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:13 [execStatement       ] . [{"id":"25","skill":"Ex\u00e9cution des signes conventionnels","competence_id":"10"}]
+2019-06-14 07:57:13 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:13 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:13 [execStatement       ] . [{"id":"26","skill":"Application des proc\u00e9dures mises e \u0153uvre par le GP","competence_id":"11"},{"id":"27","skill":" Intervention en relai ","competence_id":"11"}]
+2019-06-14 07:57:13 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:13 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:13 [execStatement       ] . [{"id":"28","skill":"Aisance aquatique","competence_id":"12"}]
+2019-06-14 07:57:13 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:13 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:13 [execStatement       ] . [{"id":"29","skill":"Ma\u00eetrise de la vitesse de remont\u00e9e","competence_id":"13"},{"id":"30","skill":" Tenue d\u2019un palier ","competence_id":"13"},{"id":"31","skill":"Tour d\u2019horizon ","competence_id":"13"},{"id":"32","skill":"Gonflage du gilet en surface ","competence_id":"13"},{"id":"33","skill":"Remont\u00e9e en expiration contr\u00f4l\u00e9e ","competence_id":"13"}]
+2019-06-14 07:57:13 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:13 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:13 [execStatement       ] . []
+2019-06-14 07:57:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:45 [execStatement       ] SELECT * FROM competences WHERE niveau = (SELECT level FROM student WHERE id_student = :id) Successfull: 1
+2019-06-14 07:57:45 [execStatement       ] . [{"competence_id":"5","name":"S\"\u00e9quiper et se d\u00e9s\u00e9quiper","niveau":"1"},{"competence_id":"6","name":"Se mettre \u00e0 l\"eau et en sortir","niveau":"1"},{"competence_id":"7","name":"Evoluer dans l\"eau  s\"immerger","niveau":"1"},{"competence_id":"8","name":"Evoluer dans l\"eau  se propulser","niveau":"1"},{"competence_id":"9","name":"Evoluer dans l\"eau  se ventiler","niveau":"1"},{"competence_id":"10","name":"\u00c9voluer dans l\"eau  s\"\u00e9quilibrer","niveau":"1"},{"competence_id":"11","name":"Communiquer","niveau":"1"},{"competence_id":"12","name":"Appliquer les conduites de s\u00e9curit\u00e9","niveau":"1"},{"competence_id":"13","name":"Respecter le milieu et l\"environnement","niveau":"1"},{"competence_id":"14","name":"Retourner en surface","niveau":"1"}]
+2019-06-14 07:57:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:45 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:45 [execStatement       ] . [{"id":"11","skill":"Saut droit Bascule arri\u00e8re ","competence_id":"5"},{"id":"12","skill":"D\u00e9part plage Sortir de l\u2019eau ","competence_id":"5"}]
+2019-06-14 07:57:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:45 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:45 [execStatement       ] . [{"id":"13","skill":"Canard ","competence_id":"6"},{"id":"14","skill":"Phoque ","competence_id":"6"}]
+2019-06-14 07:57:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:45 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:45 [execStatement       ] . [{"id":"15","skill":" Palmage ventral en surface ","competence_id":"7"},{"id":"16","skill":"Palmage dorsal ","competence_id":"7"},{"id":"17","skill":"Palmage de sustentation ","competence_id":"7"},{"id":"18","skill":"Palmage en immersion ","competence_id":"7"},{"id":"19","skill":"Nage en capel\u00e9 ","competence_id":"7"}]
+2019-06-14 07:57:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:45 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:45 [execStatement       ] . [{"id":"20","skill":"Ventilation en immersion ","competence_id":"8"},{"id":"21","skill":"Ventilation sur tuba et vidage du tuba ","competence_id":"8"},{"id":"22","skill":"Vidage du masque L\u00e2cher et reprise d\u2019embout","competence_id":"8"}]
+2019-06-14 07:57:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:45 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:45 [execStatement       ] . [{"id":"23","skill":"Gestion du gilet de stabilisation","competence_id":"9"},{"id":"24","skill":" Poumon ballast","competence_id":"9"}]
+2019-06-14 07:57:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:45 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:45 [execStatement       ] . [{"id":"25","skill":"Ex\u00e9cution des signes conventionnels","competence_id":"10"}]
+2019-06-14 07:57:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:45 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:45 [execStatement       ] . [{"id":"26","skill":"Application des proc\u00e9dures mises e \u0153uvre par le GP","competence_id":"11"},{"id":"27","skill":" Intervention en relai ","competence_id":"11"}]
+2019-06-14 07:57:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:45 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:45 [execStatement       ] . [{"id":"28","skill":"Aisance aquatique","competence_id":"12"}]
+2019-06-14 07:57:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:45 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:45 [execStatement       ] . [{"id":"29","skill":"Ma\u00eetrise de la vitesse de remont\u00e9e","competence_id":"13"},{"id":"30","skill":" Tenue d\u2019un palier ","competence_id":"13"},{"id":"31","skill":"Tour d\u2019horizon ","competence_id":"13"},{"id":"32","skill":"Gonflage du gilet en surface ","competence_id":"13"},{"id":"33","skill":"Remont\u00e9e en expiration contr\u00f4l\u00e9e ","competence_id":"13"}]
+2019-06-14 07:57:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:45 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:45 [execStatement       ] . []
+2019-06-14 07:57:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:45 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:45 [execStatement       ] . [{"id":"11","skill":"Saut droit Bascule arri\u00e8re ","competence_id":"5"},{"id":"12","skill":"D\u00e9part plage Sortir de l\u2019eau ","competence_id":"5"}]
+2019-06-14 07:57:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:45 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:45 [execStatement       ] . [{"id":"13","skill":"Canard ","competence_id":"6"},{"id":"14","skill":"Phoque ","competence_id":"6"}]
+2019-06-14 07:57:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:45 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:45 [execStatement       ] . [{"id":"15","skill":" Palmage ventral en surface ","competence_id":"7"},{"id":"16","skill":"Palmage dorsal ","competence_id":"7"},{"id":"17","skill":"Palmage de sustentation ","competence_id":"7"},{"id":"18","skill":"Palmage en immersion ","competence_id":"7"},{"id":"19","skill":"Nage en capel\u00e9 ","competence_id":"7"}]
+2019-06-14 07:57:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:45 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:45 [execStatement       ] . [{"id":"20","skill":"Ventilation en immersion ","competence_id":"8"},{"id":"21","skill":"Ventilation sur tuba et vidage du tuba ","competence_id":"8"},{"id":"22","skill":"Vidage du masque L\u00e2cher et reprise d\u2019embout","competence_id":"8"}]
+2019-06-14 07:57:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:45 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:45 [execStatement       ] . [{"id":"23","skill":"Gestion du gilet de stabilisation","competence_id":"9"},{"id":"24","skill":" Poumon ballast","competence_id":"9"}]
+2019-06-14 07:57:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:45 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:45 [execStatement       ] . [{"id":"25","skill":"Ex\u00e9cution des signes conventionnels","competence_id":"10"}]
+2019-06-14 07:57:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:45 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:45 [execStatement       ] . [{"id":"26","skill":"Application des proc\u00e9dures mises e \u0153uvre par le GP","competence_id":"11"},{"id":"27","skill":" Intervention en relai ","competence_id":"11"}]
+2019-06-14 07:57:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:45 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:45 [execStatement       ] . [{"id":"28","skill":"Aisance aquatique","competence_id":"12"}]
+2019-06-14 07:57:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:45 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:45 [execStatement       ] . [{"id":"29","skill":"Ma\u00eetrise de la vitesse de remont\u00e9e","competence_id":"13"},{"id":"30","skill":" Tenue d\u2019un palier ","competence_id":"13"},{"id":"31","skill":"Tour d\u2019horizon ","competence_id":"13"},{"id":"32","skill":"Gonflage du gilet en surface ","competence_id":"13"},{"id":"33","skill":"Remont\u00e9e en expiration contr\u00f4l\u00e9e ","competence_id":"13"}]
+2019-06-14 07:57:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:45 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:45 [execStatement       ] . []
+2019-06-14 07:57:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:45 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:45 [execStatement       ] . [{"id":"11","skill":"Saut droit Bascule arri\u00e8re ","competence_id":"5"},{"id":"12","skill":"D\u00e9part plage Sortir de l\u2019eau ","competence_id":"5"}]
+2019-06-14 07:57:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:45 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:45 [execStatement       ] . [{"id":"13","skill":"Canard ","competence_id":"6"},{"id":"14","skill":"Phoque ","competence_id":"6"}]
+2019-06-14 07:57:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:45 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:45 [execStatement       ] . [{"id":"15","skill":" Palmage ventral en surface ","competence_id":"7"},{"id":"16","skill":"Palmage dorsal ","competence_id":"7"},{"id":"17","skill":"Palmage de sustentation ","competence_id":"7"},{"id":"18","skill":"Palmage en immersion ","competence_id":"7"},{"id":"19","skill":"Nage en capel\u00e9 ","competence_id":"7"}]
+2019-06-14 07:57:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:45 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:45 [execStatement       ] . [{"id":"20","skill":"Ventilation en immersion ","competence_id":"8"},{"id":"21","skill":"Ventilation sur tuba et vidage du tuba ","competence_id":"8"},{"id":"22","skill":"Vidage du masque L\u00e2cher et reprise d\u2019embout","competence_id":"8"}]
+2019-06-14 07:57:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:45 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:45 [execStatement       ] . [{"id":"23","skill":"Gestion du gilet de stabilisation","competence_id":"9"},{"id":"24","skill":" Poumon ballast","competence_id":"9"}]
+2019-06-14 07:57:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:45 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:45 [execStatement       ] . [{"id":"25","skill":"Ex\u00e9cution des signes conventionnels","competence_id":"10"}]
+2019-06-14 07:57:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:45 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:45 [execStatement       ] . [{"id":"26","skill":"Application des proc\u00e9dures mises e \u0153uvre par le GP","competence_id":"11"},{"id":"27","skill":" Intervention en relai ","competence_id":"11"}]
+2019-06-14 07:57:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:45 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:45 [execStatement       ] . [{"id":"28","skill":"Aisance aquatique","competence_id":"12"}]
+2019-06-14 07:57:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:45 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:45 [execStatement       ] . [{"id":"29","skill":"Ma\u00eetrise de la vitesse de remont\u00e9e","competence_id":"13"},{"id":"30","skill":" Tenue d\u2019un palier ","competence_id":"13"},{"id":"31","skill":"Tour d\u2019horizon ","competence_id":"13"},{"id":"32","skill":"Gonflage du gilet en surface ","competence_id":"13"},{"id":"33","skill":"Remont\u00e9e en expiration contr\u00f4l\u00e9e ","competence_id":"13"}]
+2019-06-14 07:57:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:45 [execStatement       ] SELECT * FROM skill where competence_id = :id Successfull: 1
+2019-06-14 07:57:45 [execStatement       ] . []
+2019-06-14 07:57:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:45 [getSkillFromId      ] SELECT * from skill where id = :id
+2019-06-14 07:57:45 [execStatement       ] SELECT * from skill where id = :id Successfull: 1
+2019-06-14 07:57:45 [execStatement       ] . [{"id":"11","skill":"Saut droit Bascule arri\u00e8re ","competence_id":"5"}]
+2019-06-14 07:57:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:45 [getSkillFromId      ] SELECT * from skill where id = :id
+2019-06-14 07:57:45 [execStatement       ] SELECT * from skill where id = :id Successfull: 1
+2019-06-14 07:57:45 [execStatement       ] . [{"id":"13","skill":"Canard ","competence_id":"6"}]
+2019-06-14 07:57:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:45 [getSkillFromId      ] SELECT * from skill where id = :id
+2019-06-14 07:57:45 [execStatement       ] SELECT * from skill where id = :id Successfull: 1
+2019-06-14 07:57:45 [execStatement       ] . [{"id":"14","skill":"Phoque ","competence_id":"6"}]
+2019-06-14 07:57:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:45 [getSkillFromId      ] SELECT * from skill where id = :id
+2019-06-14 07:57:45 [execStatement       ] SELECT * from skill where id = :id Successfull: 1
+2019-06-14 07:57:45 [execStatement       ] . [{"id":"33","skill":"Remont\u00e9e en expiration contr\u00f4l\u00e9e ","competence_id":"13"}]
+2019-06-14 07:57:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:45 [getSkillFromId      ] SELECT * from skill where id = :id
+2019-06-14 07:57:45 [execStatement       ] SELECT * from skill where id = :id Successfull: 1
+2019-06-14 07:57:45 [execStatement       ] . [{"id":"33","skill":"Remont\u00e9e en expiration contr\u00f4l\u00e9e ","competence_id":"13"}]
+2019-06-14 07:57:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:45 [getSkillFromId      ] SELECT * from skill where id = :id
+2019-06-14 07:57:45 [execStatement       ] SELECT * from skill where id = :id Successfull: 1
+2019-06-14 07:57:45 [execStatement       ] . [{"id":"33","skill":"Remont\u00e9e en expiration contr\u00f4l\u00e9e ","competence_id":"13"}]
+2019-06-14 07:57:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:45 [getSkillFromId      ] SELECT * from skill where id = :id
+2019-06-14 07:57:45 [execStatement       ] SELECT * from skill where id = :id Successfull: 1
+2019-06-14 07:57:45 [execStatement       ] . [{"id":"33","skill":"Remont\u00e9e en expiration contr\u00f4l\u00e9e ","competence_id":"13"}]
+2019-06-14 07:57:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:45 [getSkillFromId      ] SELECT * from skill where id = :id
+2019-06-14 07:57:45 [execStatement       ] SELECT * from skill where id = :id Successfull: 1
+2019-06-14 07:57:45 [execStatement       ] . [{"id":"33","skill":"Remont\u00e9e en expiration contr\u00f4l\u00e9e ","competence_id":"13"}]
+2019-06-14 07:57:45 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 07:57:45 [getSkillFromId      ] SELECT * from skill where id = :id
+2019-06-14 07:57:45 [execStatement       ] SELECT * from skill where id = :id Successfull: 1
+2019-06-14 07:57:45 [execStatement       ] . [{"id":"33","skill":"Remont\u00e9e en expiration contr\u00f4l\u00e9e ","competence_id":"13"}]

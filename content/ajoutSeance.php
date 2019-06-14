@@ -73,6 +73,7 @@ if(isset($_POST['submit']))
             echo ' --> ';
             echo "La date entrée n'existe pas";
         }
+        header('Location: afficherSeance.php?id='.$_GET['id']);
     }
 }
 
