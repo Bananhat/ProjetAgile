@@ -3,6 +3,7 @@ include_once('../includes/utils_page.php');
 include_once('../persistance/DbSkillUpdater.php');
 include_once('../persistance/DbCompetenceWriter.php');
 include_once('../persistance/DbConnector.php');
+
 get_header();
 
 $user = get_logged_user();

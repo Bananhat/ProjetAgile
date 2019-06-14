@@ -3,6 +3,7 @@ include '../persistance/DbConnector.php';
 include '../persistance/DbSummaryReader.php';
 include_once '../settings.php';
 include_once('../includes/utils_page.php');
+
 get_header();
 
 $Dbreader = new DbSummaryReader(new DbConnector());

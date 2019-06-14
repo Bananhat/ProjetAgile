@@ -113,8 +113,8 @@ if ($user) {
         echo '<h4 style="margin-left:2%;"> Ajouter un eleve </h4>';
         echo '<form method="POST" action="" style="width: 25%; margin-left: 2%;">';
 
-        echo '<label for="name"><b>nom</b></label><input type="text" placeholder="name" name="name" required>';
-        echo '<label for="firstName"><b>prenom</b></label><input type="text" placeholder="firstName" name="firstName" required>';
+        echo '<label for="name"><b>nom</b></label><input type="text" placeholder="nom" name="name" required>';
+        echo '<label for="firstName"><b>prenom</b></label><input type="text" placeholder="prénom" name="firstName" required>';
 
         echo '
                 <div class="select" style="margin-right:1px; ">

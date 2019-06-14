@@ -83,3 +83,9 @@ footer
 	transform:scale(1) rotate(0);
 	opacity:1;
 }
+
+#nospace
+{
+	margin: 1px;
+	padding: 1px;
+}
