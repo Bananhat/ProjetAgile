@@ -7,7 +7,7 @@ include_once('../includes/utils_page.php');
 get_header();
 
 echo '<h3 class="" style="text-align:center; margin-top:2%;">
-    Résumer des éleve</h3>';
+    Résumé des élèves </h3>';
 
 $template = '
 <table class="striped centered" id="tableau">
