@@ -61,7 +61,7 @@ class DbSummaryReader
         return $this->dbConnector->execStatement($statement);
     }
 
-    public function getTrialsFromDate($date, $skillId)
+    public function getTrialsFromDate($date, $skillId, $studentId)
     {
         try {
             $pdo = $this->dbConnector->getConnection();
@@ -69,9 +69,10 @@ class DbSummaryReader
             $this->dbConnector::outlog($e);
             return false;
         }
-        $statement = $pdo->prepare('SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date');
+        $statement = $pdo->prepare('SELECT * FROM studendtrials WHERE skill_id=:skill and date=:date and student_id=:studentid');
         $statement->bindParam(':skill', $skillId);
         $statement->bindParam(':date', $date);
+        $statement->bindParam(':studentid', $studentId);
         return $this->dbConnector->execStatement($statement);
     }
 
