@@ -55,7 +55,7 @@ $html = "";?>
             $aptitude = $Dbreader->getSkillsFromCompetenceId($comp['competence_id']);
             foreach($aptitude as $apt)
             {
-                $trial = $Dbreader->getTrialsFromDate($dat['date'],$apt['id']);
+                $trial = $Dbreader->getTrialsFromDate($dat['date'],$apt['id'],$studentid);
 
                 if(!$trial[0]["validated"])
                 {
