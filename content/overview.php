@@ -90,7 +90,7 @@ foreach ($students as $student) {
                     $status = "style='background-color: green'> Acquis";
                     break;
                 }
-                echo $valInRow;
+                # echo $valInRow;
             }
         }
         $stHtml = $stHtml .  "<td id='tableau' $status </td>";
