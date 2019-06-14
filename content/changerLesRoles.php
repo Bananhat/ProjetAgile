@@ -46,12 +46,15 @@ if($user) {
         <?php
 
 
-        foreach ($reqUser as $rowUser)
-        {
+        foreach ($reqUser as $rowUser) {
             echo '<tr>';
-            echo '<td>' . $rowUser['name'] . '</td>';
-            echo '<td>' . $rowUser['role'] . '</td>';
-
+            echo '<td>' . $rowUser['name'] . ' ' . $rowUser['firstName'] . '</td>';
+            if ($rowUser['role'] == 'admin') {
+                echo '<td>' . 'Directeur technique' . '</td>';
+            } else
+            {
+                echo '<td>' . $rowUser['role'] . '</td>';
+            }
 
             echo '<td>';
             echo '<form method="POST" action="changerLesRoles.php">';

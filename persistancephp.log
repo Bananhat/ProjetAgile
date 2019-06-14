@@ -9354,3 +9354,7 @@
 2019-06-14 08:02:59 [getSkillFromId      ] SELECT * from skill where id = :id
 2019-06-14 08:02:59 [execStatement       ] SELECT * from skill where id = :id Successfull: 1
 2019-06-14 08:02:59 [execStatement       ] . [{"id":"33","skill":"Remont\u00e9e en expiration contr\u00f4l\u00e9e ","competence_id":"13"}]
+2019-06-14 08:06:26 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 08:06:26 [updateUserRole      ] UPDATE user set role = :userrole where id = :userid Successfull: 1
+2019-06-14 08:06:29 [getConnection       ] Connected to Database with connstring: mysql:host=localhost;dbname=agile1_bd;charset=utf8
+2019-06-14 08:06:29 [updateUserRole      ] UPDATE user set role = :userrole where id = :userid Successfull: 1
