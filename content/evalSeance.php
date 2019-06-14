@@ -55,7 +55,7 @@ if(isset($_POST['submit'])){
     }
     else{
         $addSkill = new DbAptitudeWriter(new DbConnector());
-        $suc = $addSkill->addApt($_GET['idskill'], $_GET['idstud'], $_POST['state'], $_GET['commentaire'], $_GET['date']);
+        $suc = $addSkill->addApt($_GET['idskill'], $_GET['idstud'], $_POST['state'], $_POST['commentaire'], $_GET['date']);
         if($suc){
             header('Location: studentOverview.php?id='.$_GET['idstud']);
         }
