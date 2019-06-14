@@ -17,7 +17,7 @@ class DbAptitudeWriter
         $this->dbConnector = $dbConnector;
     }
 
-    public function writeNewAptitude($aptitudeName, $validated) : bool
+    public function addApt($idskill, $idstud,$state, $comment, $date)
     {
         try {
             $pdo = $this->dbConnector->getConnection();
@@ -26,18 +26,20 @@ class DbAptitudeWriter
             return false;
         }
 
-        $statement = $pdo->prepare('INSERT INTO `aptitude`(`aptitude`,	`validated` )
-            VALUES (:aptitude, :validated)');
+        $statement = $pdo->prepare('INSERT INTO `studendtrials`(`student_id`,	`skill_id`, `validated`, `date`, `commentaire`) 
+            VALUES (:student_id, :skill_id, :validated, :date, :commentaire)');
 
-        $statement->bindParam(':aptitude', $aptitudeName);
-        $statement->bindParam(':validated', $validated);
+        $statement->bindParam(':student_id', $idstud);
+        $statement->bindParam(':skill_id', $idskill);
+        $statement->bindParam(':validated', $state);
+        $statement->bindParam(':date', $date);
+        $statement->bindParam(':commentaire', $comment);
         $suc = $statement->execute();
-        $this->dbConnector::outlog(preg_replace( "/\r|\n/", "", $statement->queryString )  ." Successfull: $suc");
 
         return $suc;
     }
 
-    public function validateAptitude($studentid, $skillid, $validated) : bool
+    public function validateAptitude($studentid, $skillid, $validated, $date) : bool
     {
         try {
             $pdo = $this->dbConnector->getConnection();
@@ -48,31 +50,13 @@ class DbAptitudeWriter
         }
 
 
-        $statement = $pdo->prepare('update `studendtrials` set validated = :validated where student_id = :aptid and skill_id = :skillid');
+        $statement = $pdo->prepare('update `studendtrials` set validated = :validated where student_id = :aptid and skill_id = :skillid and date = :date');
         $statement->bindParam(':aptid', $studentid);
         $statement->bindParam(':skillid', $skillid);
         $statement->bindParam(':validated', $validated);
+        $statement->bindParam(':date', $date);
 
         $suc = $statement->execute();
-        return $suc;
-    }
-
-    public function deleteAptitude($aptitudeId) : bool
-    {
-        try {
-            $pdo = $this->dbConnector->getConnection();
-        } catch (Exception $e) {
-
-            return false;
-        }
-
-        $statement = $pdo->prepare('delete from `aptitude` where id_apt = :aptid');
-
-        $statement->bindParam(':aptid', $aptitudeId);
-        $this->dbConnector::outlog("Executing: " . $statement);
-        $suc = $statement->execute();
-        $this->dbConnector::outlog(preg_replace( "/\r|\n/", "", $statement->queryString )  ." Successfull: $suc");
-
         return $suc;
     }
 }

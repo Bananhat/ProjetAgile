@@ -155,7 +155,7 @@ class DbSummaryReader
         return $this->dbConnector->execStatement($statement);
     }
 
-    public function updateStudentComment(int $studentid, string $comment, int $skill) : bool
+    public function updateStudentComment(int $studentid, string $comment, int $skill, $date) : bool
     {
         try {
             $pdo = $this->dbConnector->getConnection();
@@ -164,10 +164,11 @@ class DbSummaryReader
             return false;
         }
 
-        $statement = $pdo->prepare('UPDATE studendtrials set commentaire = :comment where student_id = :id and skill_id=:idskill');
+        $statement = $pdo->prepare('UPDATE studendtrials set commentaire = :comment where student_id = :id and skill_id=:idskill and date=:date');
         $statement->bindParam(':comment', $comment);
         $statement->bindParam(':id', $studentid);
         $statement->bindParam(':idskill', $skill);
+        $statement->bindParam(':date', $date);
         $suc = $statement->execute();
 
         return $suc;

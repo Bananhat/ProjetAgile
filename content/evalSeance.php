@@ -20,18 +20,19 @@ if(isset($_POST['submit'])){
         return false;
     }
 
-    $req = $pdo->prepare('SELECT COUNT(*) as nb from studendtrials where id_student = :idstud and skill_id = :idskill');
+    $req = $pdo->prepare('SELECT COUNT(*) as nb from studendtrials where student_id = :idstud and skill_id = :idskill and date= :date');
     $req->execute(array (
        ':idstud' => $_GET['idstud'],
-        ':idskill' => $_GET['idskill']
+        ':idskill' => $_GET['idskill'],
+        ':date' => $_GET['date']
     ));
 
     $result = $req->fetch();
-    echo $result['nb'];
-    if($result['nb'] != 0){
+    if($result['nb'] != 0)
+    {
         //validation
         $upSkill = new DbAptitudeWriter(new DbConnector());
-        $stat1= $upSkill->validateAptitude($_GET['idstud'], $_GET['idskill'], $_POST['state']);
+        $stat1= $upSkill->validateAptitude($_GET['idstud'], $_GET['idskill'], $_POST['state'], $_GET['date']);
         if($stat1){
             echo 'bon1';
         }else{
@@ -40,7 +41,7 @@ if(isset($_POST['submit'])){
 
         //commentaire
         $upComment = new DbSummaryReader(new DbConnector());
-        $stat2=$upComment->updateStudentComment($_GET['idstud'], $_POST['commentaire'], $_GET['idskill']);
+        $stat2=$upComment->updateStudentComment($_GET['idstud'], $_POST['commentaire'], $_GET['idskill'], $_GET['date']);
         if($stat2){
             echo 'bon2';
         }
@@ -52,9 +53,17 @@ if(isset($_POST['submit'])){
         }
 
     }
-else{
+    else{
+        $addSkill = new DbAptitudeWriter(new DbConnector());
+        $suc = $addSkill->addApt($_GET['idskill'], $_GET['idstud'], $_POST['state'], $_GET['commentaire'], $_GET['date']);
+        if($suc){
+            header('Location: studentOverview.php?id='.$_GET['idstud']);
+        }
+        else{
+            echo 'pasbon';
+        }
 
-}
+    }
 
 
 }
