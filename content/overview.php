@@ -12,7 +12,7 @@ echo '<h3 class="" style="text-align:center; margin-top:2%;">
 $template = '
 <table class="striped centered" id="tableau">
     <tr>
-        <td id="tableau"> Student / Competences </td>
+        <td id="tableau"> Elève / Compétences </td>
         <!--competences-->
     </tr>
     <tr>
@@ -71,9 +71,9 @@ foreach ($students as $student) {
     foreach ($allSkills as $skill) {
         $trials = $dbReader->getStudentTrialsFromIdAndSkillId($student['id_student'], $skill);
         if (count($trials) < 2) {
-            $status = "style='background-color: orange'> En Cours";
+            $status = "style='background-color: orange'> En cours";
         } else {
-            $status = "style='background-color: orange'> En Cours";
+            $status = "style='background-color: orange'> En cours";
             uasort($trials, 'date_compare');
             # var_dump($trials);
             $valInRow = 0;

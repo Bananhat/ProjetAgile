@@ -20,10 +20,10 @@ if($user) {
     $suc = $userUpdate->updateUserRole($userID, $nouveauRole);
 
     if($suc){
-        echo 'Mise a jour réussie !';
+        echo 'Mise à jour réussie !';
     }
     else {
-        echo 'Echec de la mise a jour';
+        echo 'Echec de la mise à jour';
     }
 
     }
@@ -37,8 +37,8 @@ if($user) {
 <div>
     <table class="table striped">
         <thead>
-        <th>Noms</th>
-        <th>Role</th>
+        <th>Nom</th>
+        <th>Rôle</th>
         </thead>
 
         <tbody>
@@ -64,7 +64,7 @@ if($user) {
             echo '<div class="select" style="margin-right:1px; "><select name="role" id="role">';
             echo '<option selected="selected"  value="initiateur">Initiateur</option>';
             echo '<option value="responsable">Responsable</option>';
-            echo '<option value="admin">Directeur Technique</option>';
+            echo '<option value="admin">Directeur technique</option>';
             echo '</select> </div>';
 
             echo '<input class="btn waves-effect waves-light" type="submit" id="submit" name="submit" value="Mettre à jour" />';

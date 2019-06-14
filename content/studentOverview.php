@@ -50,48 +50,48 @@ $html = "";?>
             echo '<td id="tableau">' . $dat['date'] . '</td>';
 
 
-        foreach($competence as $comp)
-        {
-            $aptitude = $Dbreader->getSkillsFromCompetenceId($comp['competence_id']);
-            foreach($aptitude as $apt)
+            foreach($competence as $comp)
             {
-                $trial = $Dbreader->getTrialsFromDate($dat['date'],$apt['id'],$studentid);
-
-                if(!$trial[0]["validated"])
+                $aptitude = $Dbreader->getSkillsFromCompetenceId($comp['competence_id']);
+                foreach($aptitude as $apt)
                 {
-                    $trial[0]["validated"] = 0;
-                }
+                    $trial = $Dbreader->getTrialsFromDate($dat['date'],$apt['id'],$studentid);
 
-                if($trial[0]["validated"] == 1)
-                {
-                    if(!$trial[0]["commentaire"])
+                    if(!$trial[0]["validated"])
                     {
-                        echo '<td id="tableau" style="background-color: green"><a href="evalSeance.php?date='.$dat['date'].'&idskill='.$apt['id'].'&idstud='.$_GET['id'].'" >Acquis</a></td>';
+                        $trial[0]["validated"] = 0;
+                    }
+
+                    if($trial[0]["validated"] == 1)
+                    {
+                        if(!$trial[0]["commentaire"])
+                        {
+                            echo '<td id="tableau" style="background-color: green"><a href="evalSeance.php?date='.$dat['date'].'&idskill='.$apt['id'].'&idstud='.$_GET['id'].'" >Acquis</a></td>';
+                        }
+                        else
+                        {
+                            echo '<td id="tableau" class="lienSurvol" style="background-color: green"><a href="evalSeance.php?date='.$dat['date'].'&idskill='.$apt['id'].'&idstud='.$_GET['id'].'" >Acquis</a><span id="tableau" class="popup">'.$trial[0]['commentaire'].'</span></td>';
+                        }
+                    }
+                    else if($trial[0]["validated"] == 2)
+                    {
+                        if(!$trial[0]["commentaire"])
+                        {
+                            echo '<td id="tableau" style="background-color: orange"><a href="evalSeance.php?date='.$dat['date'].'&idskill='.$apt['id'].'&idstud='.$_GET['id'].'" >En Cours</a></td>';
+                        }
+                        else
+                        {
+                            echo '<td id="tableau" class="lienSurvol" style="background-color: orange"><a href="evalSeance.php?date='.$dat['date'].'&idskill='.$apt['id'].'&idstud='.$_GET['id'].'" >En Cours</a><span id="tableau" class="popup">'.$trial[0]['commentaire'].'</span></td>';
+                        }
                     }
                     else
                     {
-                        echo '<td id="tableau" class="lienSurvol" style="background-color: green"><a href="evalSeance.php?date='.$dat['date'].'&idskill='.$apt['id'].'&idstud='.$_GET['id'].'" >Acquis</a><span id="tableau" class="popup">'.$trial[0]['commentaire'].'</span></td>';
-                    }
-                }
-                else if($trial[0]["validated"] == 2)
-                {
-                    if(!$trial[0]["commentaire"])
-                    {
-                        echo '<td id="tableau" style="background-color: orange"><a href="evalSeance.php?date='.$dat['date'].'&idskill='.$apt['id'].'&idstud='.$_GET['id'].'" >En Cours</a></td>';
-                    }
-                    else
-                    {
-                        echo '<td id="tableau" class="lienSurvol" style="background-color: orange"><a href="evalSeance.php?date='.$dat['date'].'&idskill='.$apt['id'].'&idstud='.$_GET['id'].'" >En Cours</a><span id="tableau" class="popup">'.$trial[0]['commentaire'].'</span></td>';
-                    }
-                }
-                else
-                {
-                    echo '<td  id="tableau" ><a href="evalSeance.php?date='.$dat['date'].'&idskill='.$apt['id'].'&idstud='.$_GET['id'].'" style="display: block; height: 100%; width: 100%;">&nbsp;</a></td>
+                        echo '<td  id="tableau" ><a href="evalSeance.php?date='.$dat['date'].'&idskill='.$apt['id'].'&idstud='.$_GET['id'].'" style="display: block; height: 100%; width: 100%;">&nbsp;</a></td>
 ';
+                    }
                 }
             }
-        }
-        echo '</tr>';
+            echo '</tr>';
         }
         $olddat = $dat;
     }?>

@@ -27,13 +27,13 @@ class DbAptitudeWriter
         }
 
         $statement = $pdo->prepare('INSERT INTO `studendtrials`(`student_id`,	`skill_id`, `validated`, `date`, `commentaire`) 
-            VALUES (:student_id, :skill_id, :validated, :date, :commentaire)');
+            VALUES (:student_id, :skill_id, :validated, :date, :comment)');
 
         $statement->bindParam(':student_id', $idstud);
         $statement->bindParam(':skill_id', $idskill);
         $statement->bindParam(':validated', $state);
         $statement->bindParam(':date', $date);
-        $statement->bindParam(':commentaire', $comment);
+        $statement->bindParam(':comment', $comment);
         $suc = $statement->execute();
 
         return $suc;

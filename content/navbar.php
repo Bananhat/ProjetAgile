@@ -33,14 +33,14 @@
                     }
                         if (is_admin($user->get('id')) || $user->get('role') == 'responsable' ||  $user->get('role') == 'initiateur') {
                             echo '<li><a href = "GererEleve.php">Liste des élèves</a></li>';
-                            echo '<li><a href = "overview.php">Resumer des éleves</a></li>';
+                            echo '<li><a href = "overview.php">Résumé des élèves</a></li>';
                         }
                     if($user->get('role') == 'responsable' ||$user->get('role') == 'admin'  ){
-                        echo '<li><a href = "competences.php">Gerer les compétences</a></li>';
+                        echo '<li><a href = "competences.php">Gérer les compétences</a></li>';
                     }
 
         if(is_admin($user->get('id'))) {
-            echo '<li><a href = "signup_initiateur.php">Inscrire initiateur</a></li>';
+            echo '<li><a href = "signup_initiateur.php">Inscrire un initiateur</a></li>';
         }
 
                     echo '</ul>';

@@ -36,12 +36,12 @@ if ($user) {
     ?>
 
     <h3 class="title has-text-dark has-text-weight-bold" style="text-align:center; margin-bottom:2%;margin-top:2%;">
-        Séance de <?php echo $res['name'];?></h3>
+        Séances de <?php echo $res['name'];?></h3>
 
     <div>
         <table class="table striped">
             <thead>
-            <th>date</th>
+            <th>Date</th>
             <th>Compétence(s) à travailler</th>
             <?php echo '<td><a class="waves-effect waves-light btn" href="ajoutSeance.php?id='.$_GET['id'].'">Ajouter Séance</a></td>'?>
             <?php echo '<td><a class="waves-effect waves-light btn" href="GererEleve.php">Page précédente</a></td>' ?>

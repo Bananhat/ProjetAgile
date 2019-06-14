@@ -46,7 +46,7 @@ get_header();
         }
     }
     else {
-        echo 'Les mots de passe doivent correspondre!';
+        echo 'Les mots de passe doivent correspondre !';
     }
 
 
@@ -74,7 +74,7 @@ get_header();
         <label for="confirm"><b>Confirmer le mot de passe</b></label>
         <input type="password" placeholder="Confirmer le mot de passe" name="confirm" required>
 <div>
-        <label for="role"><b>Role</b></label>
+        <label for="role"><b>Rôle</b></label>
         <select name="role" id="role" size="3">
             <option selected value="initiateur">Initiateur</option>
             <option value="reponsable">Responsable</option>

@@ -66,7 +66,7 @@ if ($user) {
         <table class="table striped" style="margin:auto; width : 50%;">
             <thead>
             <th>Nom</th>
-            <th>Prenom</th>
+            <th>Prénom</th>
             <th>Niveau</th>
             </thead>
 
@@ -83,7 +83,8 @@ if ($user) {
                         echo '<td><a class="waves-effect waves-light btn" href="fiche_eleve.php?id=' . $rowStudent['id_student'] . '">Modifier</a></td>';
                         echo '<td><a class="waves-effect waves-light btn" href="GererEleve.php?supp=del&id=' . $rowStudent['id_student'] . '">Supprimer</a></td>';
                     }
-                    echo '<td><a class="waves-effect waves-light btn" href="studentOverview.php?id=' . $rowStudent['id_student'] . '">Competences</a></td>';
+                    echo '<td><a class="waves-effect waves-light btn" href="studentOverview.php?id=' . $rowStudent['id_student'] . '">Compétences</a></td>';
+                    echo '<td><a class="waves-effect waves-light btn" href="afficherSeance.php?id='.$rowStudent['id_student'].'">Séances</a></td>';
                     echo '</tr>';
                 }
             }else{
@@ -96,8 +97,8 @@ if ($user) {
                     echo '<td><a class="waves-effect waves-light btn" href="fiche_eleve.php?id=' . $rowStudent['id_student'] . '">Modifier</a></td>';
                     echo '<td><a class="waves-effect waves-light btn" href="GererEleve.php?supp=del&id=' . $rowStudent['id_student'] . '">Supprimer</a></td>';
                 }
-                echo '<td><a class="waves-effect waves-light btn" href="studentOverview.php?id='. $rowStudent['id_student'] .'">Competences</a></td>';
-                echo '<td><a class="waves-effect waves-light btn" href="afficherSeance.php?id='.$rowStudent['id_student'].'">Séance</a></td>';
+                echo '<td><a class="waves-effect waves-light btn" href="studentOverview.php?id='. $rowStudent['id_student'] .'">Compétences</a></td>';
+                echo '<td><a class="waves-effect waves-light btn" href="afficherSeance.php?id='.$rowStudent['id_student'].'">Séances</a></td>';
                 echo '</tr>';
             }
                 }
@@ -110,19 +111,19 @@ if ($user) {
             </tbody>
         </table>
         <?php
-        echo '<h4 style="margin-left:2%;"> Ajouter un eleve </h4>';
+        echo '<h4 style="margin-left:2%;"> Ajouter un élève </h4>';
         echo '<form method="POST" action="" style="width: 25%; margin-left: 2%;">';
 
-        echo '<label for="name"><b>nom</b></label><input type="text" placeholder="nom" name="name" required>';
-        echo '<label for="firstName"><b>prenom</b></label><input type="text" placeholder="prénom" name="firstName" required>';
+        echo '<label for="name"><b>Nom</b></label><input type="text" placeholder="nom" name="name" required>';
+        echo '<label for="firstName"><b>Prénom</b></label><input type="text" placeholder="prénom" name="firstName" required>';
 
         echo '
                 <div class="select" style="margin-right:1px; ">
                     <select name="level">
                       <option value="" disabled selected>Niveau</option>
-                      <option value="1">niveau 1</option>
-                      <option value="2">niveau 2</option>
-                      <option value="3">niveau 3</option>
+                      <option value="1">Niveau 1</option>
+                      <option value="2">Niveau 2</option>
+                      <option value="3">Niveau 3</option>
                     </select>
                   </div>';
         echo '<input class="btn waves-effect waves-light" type="submit" id="submit" name="submit" value="Mettre à jour"/>';
