@@ -40,11 +40,8 @@ foreach ($competences as $competence) {
         $allSkills[] = $skill['id'];
     }
 
-<<<<<<< Updated upstream
     # var_dump($skillHtml);
 
-=======
->>>>>>> Stashed changes
     # var_dump($students);
     $competence['name'];
     $htmlString = $htmlString . "<td id='tableau' colspan='" . $skillCount . "'>" . $competence['name'] . "</td>";
