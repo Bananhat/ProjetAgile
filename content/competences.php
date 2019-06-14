@@ -86,7 +86,7 @@ if ($user) {
             echo '<tr>
                 
         <form method="POST" action="competences.php?cid='.$user->get('id').'">
-       <td> <label for="name"><b>Aptitude</b></label><input type="text" placeholder="name" name="name" required /></td>
+       <td> <label for="name"><b>Aptitude</b></label><input type="text" placeholder="Nom de la compétence" name="name" required /></td>
              
             <td>      
         <input class="btn waves-effect waves-light" type="submit" id="submit" name="submit" value="Ajouter"/>

@@ -42,7 +42,7 @@ if ($user) {
         <table class="table striped">
             <thead>
             <th>date</th>
-            <th>skill à travailler</th>
+            <th>Compétence(s) à travailler</th>
             <?php echo '<td><a class="waves-effect waves-light btn" href="ajoutSeance.php?id='.$_GET['id'].'">Ajouter Séance</a></td>'?>
             </thead>
 
