@@ -75,7 +75,7 @@ foreach ($students as $student) {
         } else {
             $status = "style='background-color: orange'> En Cours";
             uasort($trials, 'date_compare');
-            var_dump($trials);
+            # var_dump($trials);
             $valInRow = 0;
             $success = false;
             foreach ($trials as $trial) {
