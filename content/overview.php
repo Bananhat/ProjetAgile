@@ -33,8 +33,7 @@ $students = $dbReader->getStudents();
 
 foreach ($competences as $competence) {
     $skills = $dbReader->getSkillsFromCompetenceId($competence['competence_id']);
-    $skillCount = count($skills[0]);
-    # var_dump($skills);
+    $skillCount = count($skills);
 
     foreach ($skills as $skill) {
         $skillHtml = $skillHtml . "<td id='tableau'>" . $skill['skill'] . "</td>";
@@ -52,8 +51,10 @@ foreach ($competences as $competence) {
 
 //sorting the trials after date
 function date_compare($element1, $element2) {
-    $e1 = str_replace('/', '-', $element1['date']);
-    $e2 = str_replace('/', '-', $element2['date']);
+    $e1 = explode('/', $element1['date']);
+    $e2 = explode('/', $element2['date']);
+    $e1 = $e1[1] . "/" . $e1[0] . "/" . $e1[2];
+    $e2 = $e2[1] . "/" . $e2[0] . "/" . $e2[2];
     $datetime1 = strtotime($e1);
     $datetime2 = strtotime($e2);
     return $datetime1 - $datetime2;
@@ -74,6 +75,7 @@ foreach ($students as $student) {
         } else {
             $status = "style='background-color: orange'> En Cours";
             uasort($trials, 'date_compare');
+            var_dump($trials);
             $valInRow = 0;
             $success = false;
             foreach ($trials as $trial) {
@@ -88,6 +90,7 @@ foreach ($students as $student) {
                     $status = "style='background-color: green'> Acquis";
                     break;
                 }
+                echo $valInRow;
             }
         }
         $stHtml = $stHtml .  "<td id='tableau' $status </td>";
