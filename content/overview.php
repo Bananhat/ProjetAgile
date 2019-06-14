@@ -69,8 +69,8 @@ foreach ($students as $student) {
     $stHtml = $stHtml . "<td id='tableau'>" .  $student['name'] . "</td>";
 
     foreach ($allSkills as $skill) {
-        $trials = $dbReader->getStudentTrialsFromIdAndSkillId($student['id_student'], $skill['id']);
-        if (count($trials) < 3) {
+        $trials = $dbReader->getStudentTrialsFromIdAndSkillId($student['id_student'], $skill);
+        if (count($trials) < 2) {
             $status = "style='background-color: orange'> En Cours";
         } else {
             $status = "style='background-color: orange'> En Cours";
