@@ -2,6 +2,8 @@
 include_once('../includes/utils_page.php');
 include('../persistance/DbConnector.php');
 include('../persistance/DbSeanceWriter.php');
+include '../persistance/DbSkillReader.php';
+
 get_header();
 
 $user = get_logged_user();
@@ -30,6 +32,7 @@ if ($user) {
     $statement->bindParam(':id',$_GET['id']);
     $suc = $statement->execute();
     $res = $statement->fetch();
+
     ?>
 
     <h3 class="title has-text-dark has-text-weight-bold" style="text-align:center; margin-bottom:2%;margin-top:2%;">
@@ -49,7 +52,11 @@ if ($user) {
     foreach ($reqSeance as $rowSeance) {
         echo '<tr>';
         echo '<td>' . $rowSeance['date'] . '</td>';
-        echo '<td>' . $rowSeance['id_skill1'] . $rowSeance['id_skill2'] . $rowSeance['id_skill3'] . '</td>';
+        $Dbreader = new DbSkillReader(new DbConnector());
+        $skill1 = $Dbreader->getSkillFromId($rowSeance['id_skill1']);
+        $skill2 = $Dbreader->getSkillFromId($rowSeance['id_skill2']);
+        $skill3 = $Dbreader->getSkillFromId($rowSeance['id_skill3']);
+        echo '<td><table><tr><td id="nospace">' . $skill1[0]['skill'].'</td></tr><tr><td id="nospace">'. $skill1[0]['skill'] .'</td></tr><tr><td id="nospace">'. $skill1[0]['skill'] . '</td></tr></table></td>';
 
         echo '<td>';
         echo '<td><a class="waves-effect waves-light btn" href="afficherSeance.php?supp=del&id='.$rowSeance['id_seance'].'">Supprimer</a></td>';

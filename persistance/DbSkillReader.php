@@ -33,7 +33,6 @@ class DbSkillReader
 
     public function getSkillFromId(int $id) : array
     {
-        echo 'la';
         $pdo = $this->dbConnector->getConnection();
         $statement = $pdo->prepare('SELECT * from skill where id = :id');
         $statement->bindParam(':id', $id);
