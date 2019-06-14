@@ -26,9 +26,8 @@ class DbConnector
     public function execStatement($statement) : array
     {
         $suc = $statement->execute();
-        $this::outlog(preg_replace( "/\r|\n/", "", $statement->queryString )  ." Successfull: $suc");
-
-        //$this::outlog($statement->errorInfo());
+        $filtered = preg_replace('/\s+/S', " ", $statement->queryString);
+        $this::outlog($filtered   ." Successfull: $suc");
 
         $result = $statement->fetchAll(2);
         $this::outlog($result);
