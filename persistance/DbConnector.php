@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-$GLOBALS["db_logpath"] = 'php.log';
+$GLOBALS["db_logpath"] = __DIR__ . 'php.log';
 $GLOBALS["bEchoLogs"] = false;
 $GLOBALS["bEnableLogging"] = true;
 $GLOBALS["bWriteLogs"] = true;
