@@ -25,7 +25,7 @@ class DbAptitudeWriter
             $this->dbConnector::outlog($e);
             return false;
         }
-
+        echo $comment;
         $statement = $pdo->prepare('INSERT INTO `studendtrials`(`student_id`,	`skill_id`, `validated`, `date`, `commentaire`) 
             VALUES (:student_id, :skill_id, :validated, :date, :comment)');
 

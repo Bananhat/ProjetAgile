@@ -1,3 +1,75 @@
+<<<<<<< HEAD
+*
+{
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.page
+{
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.dropdown
+{
+	display: inline-block;
+}
+
+.site-content
+{
+	flex: 1;
+}
+
+
+footer
+{
+	margin-top: 2%;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: lightblue;
+	padding: 1rem;
+}
+#tableau
+{
+	border: 1px solid black;
+	border-collapse: collapse;
+	margin-top:10px;
+}
+
+.lienSurvol:hover,.lienSurvol:focus{
+	background:rgba(0,0,0,.4);
+	box-shadow:0 1px 0 rgba(255,255,255,.4);
+}
+
+.popup
+{
+	position:absolute;
+	margin-top:23px;
+	margin-left:-35px;
+	color:white;
+	background:rgba(0,0,0,.9);
+	padding:15px;
+	border-radius:3px;
+	box-shadow:0 0 2px rgba(0,0,0,.5);
+	transform:scale(0) rotate(-12deg);
+	transition:all .25s;
+	opacity:0;
+}
+
+.lienSurvol:hover .popup,.lienSurvol:focus .popup{
+	transform:scale(1) rotate(0);
+	opacity:1;
+}
+
+#nospace
+{
+	margin: 1px;
+	padding: 1px;
+}
+=======
 *
 {
 	-moz-box-sizing: border-box;
@@ -79,3 +151,4 @@ footer
 	margin: 1px;
 	padding: 1px;
 }
+>>>>>>> 0aa2b0ab6985f4cae6ee420e211b1e2c1be1bd55

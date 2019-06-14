@@ -162,8 +162,8 @@ $competence = $Dbreader->getCompetencesFromStudentId($studentid);
             }
             echo '</select> </div>';?>
 
-            <table><tr><td><input class="btn waves-effect waves-light" type="submit" name="submit" /></td>
-            <?php echo '<td><a class="waves-effect waves-light btn" href="afficherSeance.php?id='.$_GET['id'].'">Page précédente</a></td></tr></table>' ?>
+            <input class="btn waves-effect waves-light" type="submit" name="submit" />
+            </button>
         </div>
     </form>
 
