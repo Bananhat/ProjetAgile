@@ -9,24 +9,7 @@ get_header();
 
 if(isset($_POST['submit']))
 {
-    $non_remplis = array();
 
-    foreach($_POST as $key=>$value){
-        if(empty($value))
-            $non_remplis[] = $key;
-    }
-
-    if(count($non_remplis) > 0)
-    {
-        echo 'Veuillez remplir ces champs : <br />';
-
-        foreach($non_remplis as $non_rempli)
-        {
-            echo $non_rempli.'<br />';
-        }
-    }
-    else
-    {
         $jour = $_POST['jour'];
         $mois = $_POST['mois'];
         $annee = $_POST['annee'];
@@ -74,12 +57,12 @@ if(isset($_POST['submit']))
             echo "La date entrée n'existe pas";
         }
         header('Location: afficherSeance.php?id='.$_GET['id']);
-    }
+
 }
 
 $studentid = $_GET['id'];
 $pdo = (new DbConnector())->getConnection();
-$statement = $pdo->prepare('select name from student where id_student=:id');
+$statement = $pdo->prepare('select * from student where id_student=:id');
 $statement->bindParam(':id',$studentid);
 $suc = $statement->execute();
 $res = $statement->fetch();
@@ -88,7 +71,7 @@ $Dbreader = new DbSummaryReader(new DbConnector());
 $competence = $Dbreader->getCompetencesFromStudentId($studentid);
 ?>
     <h3 class="title has-text-dark has-text-weight-bold" style="text-align:center;margin-bottom : 5%;">
-        Ajouter une séance à <?php echo $res['name'];?></h3>
+        Ajouter une séance à <?php echo $res['name']." ".$res['firstName'];?></h3>
 
     <?php echo '<form method="POST" action="ajoutSeance.php?id='.$_GET['id'].'">';?>
         <div class="formulaire" style="margin-left: 30%; width: 25%;">
@@ -142,6 +125,7 @@ $competence = $Dbreader->getCompetencesFromStudentId($studentid);
             foreach($competence as $comp)
             {
                 $skill = $Dbreader->getSkillsFromCompetenceId($comp['competence_id']);
+
                 foreach ($skill as $sk)
                 {
                     echo '<option selected="selected" value="'.$sk['id'].'">'.$sk['skill'].'</option>';
@@ -152,18 +136,21 @@ $competence = $Dbreader->getCompetencesFromStudentId($studentid);
             <label for="id3"><b>aptitude 3</b></label>
             <?php
             echo '<div class="select" style="margin-right:1px; "><select name="id3" id="id3">';
+
             foreach($competence as $comp)
             {
                 $skill = $Dbreader->getSkillsFromCompetenceId($comp['competence_id']);
+
                 foreach ($skill as $sk)
                 {
                     echo '<option selected="selected" value="'.$sk['id'].'">'.$sk['skill'].'</option>';
                 }
             }
             echo '</select> </div>';?>
+            <?php
+            echo '<a class="waves-effect waves-light btn" href="afficherSeance.php?id='.$_GET['id'].'">Page précédente</a>';?>
+            <input style="margin-left:5%;" class="btn waves-effect waves-light" type="submit" name="submit" />
 
-            <input class="btn waves-effect waves-light" type="submit" name="submit" />
-            </button>
         </div>
     </form>
 

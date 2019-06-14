@@ -67,9 +67,23 @@ if(isset($_POST['submit'])){
 
 
 }
+
+$pdo = (new DbConnector())->getConnection();
+$statement = $pdo->prepare('select * from student where id_student=:id');
+$statement->bindParam(':id',$_GET['idstud']);
+$suc = $statement->execute();
+$res = $statement->fetch();
+
+$pdo = (new DbConnector())->getConnection();
+$aptitudeStatement = $pdo->prepare('select * from skill where id=:id');
+$aptitudeStatement->bindParam(':id',$_GET['idskill']);
+$suc = $aptitudeStatement->execute();
+$skill = $aptitudeStatement->fetch();
 ?>
     <h4 class="title has-text-dark has-text-weight-bold" style="text-align:center; margin-bottom:2%;margin-top:2%;">
-        Evaluer  l'aptitude durant la séance du <?php echo $_GET['date'] ?></h4>
+        Séance du <?php echo $_GET['date'] ?> pour <?php echo $res['name']." ".$res['firstName'];?></h4>
+    <h5 class="" style="font-size: 1.2em; color: grey; text-align:center; margin-bottom:2%">
+        Aptitude évaluée : <?php echo $skill['skill']?></h5>
 
 
 

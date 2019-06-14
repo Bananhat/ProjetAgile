@@ -9,11 +9,17 @@ get_header();
 $Dbreader = new DbSummaryReader(new DbConnector());
 $result = $Dbreader->readSummaryFromStudentId(3);
 
-$html = "";?>
+$html = "";
+$pdo = (new DbConnector())->getConnection();
+$statement = $pdo->prepare('select * from student where id_student=:id');
+$statement->bindParam(':id',$_GET['id']);
+$suc = $statement->execute();
+$res = $statement->fetch();
+?>
 <h3 class="" style="text-align:center; margin-top:2%;">
-    Competence de l'eleve</h3>
+    Compétences de <?php echo $res['name']." ".$res['firstName'];?></h3>
 <h5 class="" style="font-size: 1.2em; color: grey; text-align:center; margin-bottom:2%">
-    Cliquez sur la case d'une aptitude pour l'evaluer..</h5>
+    Cliquez sur la case d'une aptitude pour l'évaluer</h5>
 <table class="striped centered" id="tableau">
     <tr>
         <td id="tableau"></td>
@@ -70,7 +76,7 @@ $html = "";?>
                         }
                         else
                         {
-                            echo '<td id="tableau" class="lienSurvol" style="background-color: green"><a href="evalSeance.php?date='.$dat['date'].'&idskill='.$apt['id'].'&idstud='.$_GET['id'].'" >Acquis</a><span id="tableau" class="popup">'.$trial[0]['commentaire'].'</span></td>';
+                            echo '<td id="tableau" class="lienSurvol" style="background-color: green"><a href="evalSeance.php?date='.$dat['date'].'&idskill='.$apt['id'].'&idstud='.$_GET['id'].'" >Acquis<i class="tiny material-icons">notifications</i></a><span id="tableau" class="popup">'.$trial[0]['commentaire'].'</span></td>';
                         }
                     }
                     else if($trial[0]["validated"] == 2)
@@ -81,7 +87,7 @@ $html = "";?>
                         }
                         else
                         {
-                            echo '<td id="tableau" class="lienSurvol" style="background-color: orange"><a href="evalSeance.php?date='.$dat['date'].'&idskill='.$apt['id'].'&idstud='.$_GET['id'].'" >En Cours</a><span id="tableau" class="popup">'.$trial[0]['commentaire'].'</span></td>';
+                            echo '<td id="tableau" class="lienSurvol" style="background-color: orange"><a href="evalSeance.php?date='.$dat['date'].'&idskill='.$apt['id'].'&idstud='.$_GET['id'].'" >En Cours<i class="tiny material-icons">notifications</i></a><span id="tableau" class="popup">'.$trial[0]['commentaire'].'</span></td>';
                         }
                     }
                     else

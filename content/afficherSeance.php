@@ -23,12 +23,12 @@ if ($user) {
         header('Location: afficherSeance.php?id='.$_GET['idstud']);
     }
 
-    $reqSeance = $db->prepare("SELECT * FROM seance where student_id=:id");
+    $reqSeance = $db->prepare("SELECT * FROM seance where student_id=:id order by STR_TO_DATE(date, '%d/%m/%Y') desc");
     $reqSeance->bindParam(':id',$_GET['id']);
     $reqSeance->execute();
 
     $pdo = (new DbConnector())->getConnection();
-    $statement = $pdo->prepare('select name from student where id_student=:id');
+    $statement = $pdo->prepare('select * from student where id_student=:id');
     $statement->bindParam(':id',$_GET['id']);
     $suc = $statement->execute();
     $res = $statement->fetch();
@@ -36,7 +36,7 @@ if ($user) {
     ?>
 
     <h3 class="title has-text-dark has-text-weight-bold" style="text-align:center; margin-bottom:2%;margin-top:2%;">
-        Séances de <?php echo $res['name'];?></h3>
+        Séances de <?php echo $res['name']." ".$res['firstName'];?></h3>
 
     <div>
         <table class="table striped">
