@@ -135,7 +135,7 @@ class DbSummaryReader
             return false;
         }
 
-        $statement = $pdo->prepare('select name, niveau from competences');
+        $statement = $pdo->prepare('select * from competences');
 
         return $this->dbConnector->execStatement($statement);
     }
@@ -171,6 +171,49 @@ class DbSummaryReader
         $suc = $statement->execute();
 
         return $suc;
+    }
+
+    public function getStudentTrialsFromIdAndSkillId($studentId, $skillId)
+    {
+        try {
+            $pdo = $this->dbConnector->getConnection();
+        } catch (Exception $e) {
+            $this->dbConnector::outlog($e);
+            return false;
+        }
+
+        $statement = $pdo->prepare('SELECT * FROM studendtrials where student_id=:id and skill_id=:skillid');
+        $statement->bindParam(':id', $studentId);
+        $statement->bindParam(':skillid', $skillId);
+        return $this->dbConnector->execStatement($statement);
+    }
+
+    public function getStudentTrialsFromSkillId($id)
+    {
+        try {
+            $pdo = $this->dbConnector->getConnection();
+        } catch (Exception $e) {
+            $this->dbConnector::outlog($e);
+            return false;
+        }
+
+        $statement = $pdo->prepare('SELECT * FROM studendtrials where skill_id=:id');
+        $statement->bindParam(':id', $id);
+        return $this->dbConnector->execStatement($statement);
+    }
+
+    public function getStudents()
+    {
+        try {
+            $pdo = $this->dbConnector->getConnection();
+        } catch (Exception $e) {
+            $this->dbConnector::outlog($e);
+            return false;
+        }
+
+        $statement = $pdo->prepare('SELECT * FROM student');
+
+        return $this->dbConnector->execStatement($statement);
     }
 
     public function getCommentFromStudent($studid) : array
